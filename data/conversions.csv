@@ -1,3 +1,4 @@
+"country","city","long","lat","isp","network","dOs","dType","dOsVersion","dBrowser","dBrowserVersion","offer"
 ID,Makassar,119.437,-5.152,PT. Telekomunikasi Selular,114.120.0.0/13,Android,mobile,5.0.2,UCBrowser,11.3.8.976,2
 PE,Lima,-77.0428,-12.0464,America Movil Peru S.A.C.,190.113.192.0/19,Android,mobile,5.1,Chrome,65.0.3325.109,2
 TH,Ban Yang Sam Ton,101.003,15.5027,Total Access Communication PLC.,1.46.0.0/15,Android,mobile,7.1.1,Android Browser,4.0,1
@@ -3200,29 +3201,29 @@ TH,Bangkok,100.4688,13.8583,True Internet,Cellular,Android,mobile,6.0,Chrome Web
 TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.126,1
 MX,Mexico City,-99.1386,19.4342,"Cablevisión, S.A. de C.V.",Cable/DSL,Android,mobile,6.0,Chrome WebView,44.0.2403.119,1
 BD,Dhaka,90.4086,23.7231,Banglalink,Cellular,Android,mobile,4.4.2,Android Browser,4.0,2
-LB,Tripoli,35.85,34.4333,Fiber Communication Network S.A.R.L,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,1
+LB,Tripoli,35.85,34.4333,Fiber Communication Network S.A.R.L,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,2
 MX,Mexico City,-99.1386,19.4342,"Cablevisión, S.A. de C.V.",Cable/DSL,Android,mobile,5.1,Android Browser,4.0,1
 MX,Monterrey,-100.3167,25.6667,Telmex,Cable/DSL,Android,mobile,5.1.1,Chrome,66.0.3359.158,2
 IT,Turin,7.6868,45.0705,Telecom Italia Mobile,Cellular,iOS,tablet,11.2.5,WebKit,604.5.6,1
 VN,Hanoi,105.85,21.0333,Vietnamobile Telecommunications Joint Stock Compan,Cellular,Android,mobile,4.4.2,Chrome,64.4.3282.216,1
-TH,Bangkok,100.531,13.7625,True Internet,Cellular,Android,mobile,4.2.2,Android Browser,4.0,2
+TH,Bangkok,100.531,13.7625,True Internet,Cellular,Android,mobile,4.2.2,Android Browser,4.0,1
 MX,Morelia,-101.2247,19.6641,Redes y Comunicaciones de Michoacan S.A. de C.V.,Cable/DSL,Android,mobile,4.4.4,Chrome,66.0.3359.158,2
 FR,Strasbourg,7.7455,48.5839,Caisse Federale de Credit Mutuel SA,Cellular,Android,mobile,6.0,Chrome WebView,66.0.3359.158,1
 VN,Ho Chi Minh City,106.6438,10.8142,FPT Telecom Company,Cable/DSL,Android,mobile,5.0.2,Facebook,170.0.0.52.95,1
 MX,Zumpango,-99.1017,19.7978,Megacable,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,1
-VN,Ho Chi Minh City,106.6438,10.8142,SaiGon Tourist cable Televition Company,Cable/DSL,Android,mobile,7.0,Facebook,173.0.0.62.99,2
+VN,Ho Chi Minh City,106.6438,10.8142,SaiGon Tourist cable Televition Company,Cable/DSL,Android,mobile,7.0,Facebook,173.0.0.62.99,1
 PL,Warsaw,21,52.25,Play,Cellular,Android,mobile,5.1,Chrome WebView,66.0.3359.158,1
 PE,Lima,-77.05,-12.05,Claro Peru,Cellular,Android,mobile,6.0.1,Chrome WebView,66.0.3359.158,1
 NP,Ilam,87.9279,26.8974,Broadlink Nepal,182.50.64.0/22,Android,mobile,6.0,Chrome,63.0.3239.111,2
-VN,Ho Chi Minh City,106.6438,10.8142,SaiGon Tourist cable Televition Company,Cable/DSL,Android,mobile,5.0.1,Facebook,173.0.0.62.99,2
-TH,Bangkok,100.4562,13.7083,True Internet,Cable/DSL,Android,mobile,7.0,Chrome WebView,63.0.3239.111,1
+VN,Ho Chi Minh City,106.6438,10.8142,SaiGon Tourist cable Televition Company,Cable/DSL,Android,mobile,5.0.1,Facebook,173.0.0.62.99,1
+TH,Bangkok,100.4562,13.7083,True Internet,Cable/DSL,Android,mobile,7.0,Chrome WebView,63.0.3239.111,2
 BD,Dhaka,90.4086,23.7231,Banglalink,Cellular,Android,mobile,6.0,Android Browser,4.0,1
-ID,Jakarta,106.8294,-6.1744,Orion Cyber Internet,Cable/DSL,Android,mobile,4.4.2,UCBrowser,12.5.0.1109,2
+ID,Jakarta,106.8294,-6.1744,Orion Cyber Internet,Cable/DSL,Android,mobile,4.4.2,UCBrowser,12.5.0.1109,1
 TH,Bangkok,100.4167,13.7167,True Internet,Cellular,Android,mobile,7.1.1,Chrome WebView,61.0.3163.98,1
 CL,Santiago,-70.6667,-33.45,Claro Chile,Cellular,Android,mobile,5.0.1,Chrome WebView,64.0.3282.137,1
 AZ,Baku,49.8822,40.3953,Azercell,Cellular,Android,tablet,4.4.2,Chrome,63.0.3239.83,1
-BD,Dhaka,90.4086,23.7231,Banglalink,Cellular,Android,mobile,5.1,Android Browser,4.0,1
-TH,Bangkok,100.531,13.7625,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,1
+BD,Dhaka,90.4086,23.7231,Banglalink,Cellular,Android,mobile,5.1,Android Browser,4.0,2
+TH,Bangkok,100.531,13.7625,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,2
 NP,Jawalakhel,85.3167,27.6667,WorldLink Communications Pvt,Cable/DSL,Android,mobile,5.1,Chrome,66.0.3359.158,1
 US,Minneapolis,-93.245,45.0203,Comcast Business,Cable/DSL,Android,tablet,5.1.1,Android Browser,4.0,2
 RO,Bucharest,26.1,44.4333,Orange Romania,Cellular,Android,mobile,6.0,Android Browser,4.0,1
@@ -3233,52 +3234,52 @@ DZ,'Ain Deheb,1.5478,34.8447,Optimum-Telecom-Algeria,Cellular,Android,mobile,5.1
 TH,Bangkok,100.4562,13.7083,True Internet,Cable/DSL,Android,mobile,7.0,Chrome WebView,66.0.3359.158,1
 TH,Bangkok,100.4562,13.7083,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,1
 BD,Dhaka,90.4086,23.7231,DeVoteD NBN,Cellular,Android,mobile,4.4.2,Android Browser,4.0,2
-TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,7.1.1,Chrome WebView,66.0.3359.106,2
+TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,7.1.1,Chrome WebView,66.0.3359.106,1
 TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,1
-CL,Santiago,-70.6667,-33.45,Claro Chile,Cellular,Android,mobile,7.0,Chrome,66.0.3359.158,1
+CL,Santiago,-70.6667,-33.45,Claro Chile,Cellular,Android,mobile,7.0,Chrome,66.0.3359.158,2
 LB,Beirut,35.5097,33.8719,Libantelecom,Cable/DSL,Android,mobile,6.0,Chrome,66.0.3359.158,1
-TH,Bangkok,100.5,13.7333,True Internet,Cellular,Android,mobile,4.1.2,Android Browser,4.0,1
+TH,Bangkok,100.5,13.7333,True Internet,Cellular,Android,mobile,4.1.2,Android Browser,4.0,2
 VN,Thanh Hóa,105.7667,19.8,Vietnam Posts And Telecommunications Group,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,2
 TH,Bangkok,100.4688,13.8583,True Internet,Cellular,Android,mobile,4.4.2,Mobile Safari,,2
 BD,Dhaka,90.4086,23.7231,aamra networks limited,Cable/DSL,Android,mobile,5.0,Chrome,64.0.3282.137,1
-TH,Bangkok,100.4833,13.7333,True Internet,Cable/DSL,Android,mobile,7.0,Chrome WebView,64.0.3282.137,2
+TH,Bangkok,100.4833,13.7333,True Internet,Cable/DSL,Android,mobile,7.0,Chrome WebView,64.0.3282.137,1
 TH,Bangkok,100.4833,13.75,True Internet,Cable/DSL,Android,mobile,7.1.1,Chrome WebView,66.0.3359.158,1
 IR,Tehran,51.3304,35.7261,Iran Cell Service and Communication Company,Cellular,Android,mobile,5.1,Android Browser,4.0,1
-TH,Bangkok,100.531,13.7625,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,1
+TH,Bangkok,100.531,13.7625,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,2
 PL,Warsaw,21,52.25,Play,Cellular,Android,mobile,6.0,Chrome WebView,66.0.3359.126,1
-TH,Huai Khwang,100.579,13.7768,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,1
+TH,Huai Khwang,100.579,13.7768,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,2
 ES,Prado del Rey,-5.5559,36.7876,Vodafone Ono,Cable/DSL,Android,mobile,6.0,Chrome WebView,66.0.3359.158,1
-TH,Bangkok,100.4562,13.7083,True Internet,Cellular,Android,mobile,5.1,Chrome WebView,66.0.3359.158,2
-AZ,Baku,49.8822,40.3953,Nar,Cellular,Android,mobile,5.1,Chrome,66.0.3359.126,1
-TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,5.0.2,Chrome WebView,43.0.2357.121,2
+TH,Bangkok,100.4562,13.7083,True Internet,Cellular,Android,mobile,5.1,Chrome WebView,66.0.3359.158,1
+AZ,Baku,49.8822,40.3953,Nar,Cellular,Android,mobile,5.1,Chrome,66.0.3359.126,2
+TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,5.0.2,Chrome WebView,43.0.2357.121,1
 TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,7.1.1,Chrome WebView,66.0.3359.158,2
-TH,Bangkok,100.531,13.7625,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,1
+TH,Bangkok,100.531,13.7625,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,2
 FR,Paris,2.3487999999999998,48.8534,Bouygues Mobile,Cellular,Android,mobile,8.0.0,Chrome WebView,66.0.3359.158,1
-LB,Tyre,35.1964,33.2711,farahnet,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,1
+LB,Tyre,35.1964,33.2711,farahnet,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,2
 IR,Ahvaz,48.6693,31.3203,Iran Cell Service and Communication Company,Cellular,Android,mobile,7.0,Android Browser,4.0,2
 SD,Khartoum,32.5342,15.5881,Sudatel,Cellular,Android,mobile,6.0,Android Browser,4.0,1
 TH,Bangkok,100.4562,13.7083,True Internet,Cable/DSL,Android,mobile,8.0.0,Chrome WebView,66.0.3359.158,1
 TN,Sousse,10.637,35.8254,Tunisie Telecom,Cable/DSL,Android,mobile,6.0,Chrome,50.0.2661.89,1
-TH,Bangkok,100.4167,13.7167,True Internet,Cellular,Android,mobile,6.0,Chrome WebView,44.0.2403.119,1
-DZ,Constantine,6.6147,36.365,Telecom Algeria,Cable/DSL,Android,mobile,5.0,Chrome,53.0.2785.124,1
+TH,Bangkok,100.4167,13.7167,True Internet,Cellular,Android,mobile,6.0,Chrome WebView,44.0.2403.119,2
+DZ,Constantine,6.6147,36.365,Telecom Algeria,Cable/DSL,Android,mobile,5.0,Chrome,53.0.2785.124,2
 TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,6.0,Chrome WebView,55.0.2883.91,1
 FR,Lyon,4.8467,45.7485,Orange,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,1
-VN,Thanh Pho Thai Nguyen,105.8442,21.5928,Vietnam Posts and Telecommunications(VNPT),Cable/DSL,Android,mobile,5.0.2,Chrome,66.0.3359.158,2
+VN,Thanh Pho Thai Nguyen,105.8442,21.5928,Vietnam Posts and Telecommunications(VNPT),Cable/DSL,Android,mobile,5.0.2,Chrome,66.0.3359.158,1
 MX,Mexico City,-99.1386,19.4342,"Cablevisión, S.A. de C.V.",Cable/DSL,Android,mobile,4.4.2,Chrome,66.0.3359.158,2
 VN,Hanoi,105.85,21.0333,FPT Telecom Company,Cable/DSL,Android,mobile,6.0.1,Samsung Browser,6.4,2
-TH,Bangkok,100.4562,13.7083,True Internet,Cable/DSL,Android,mobile,7.0,Chrome WebView,66.0.3359.158,2
+TH,Bangkok,100.4562,13.7083,True Internet,Cable/DSL,Android,mobile,7.0,Chrome WebView,66.0.3359.158,1
 TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,tablet,6.0.1,Chrome WebView,66.0.3359.158,1
 TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,6.0,Chrome WebView,66.0.3359.158,1
 IN,Chennai,80.2833,13.0833,Jio,Cellular,Android,mobile,5.1.1,UCBrowser,10.10.5.809,2
-TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,5.0,Chrome WebView,43.0.2357.121,1
+TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,5.0,Chrome WebView,43.0.2357.121,2
 NP,Jawalakhel,85.3167,27.6667,WorldLink Communications Pvt,Cable/DSL,Android,mobile,5.1,Chrome,66.0.3359.158,2
 LB,Beirut,35.5097,33.8719,Libantelecom,Cable/DSL,Android,mobile,5.0,Chrome,66.0.3359.158,2
-TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,4.1.2,Android Browser,4.0,1
+TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,4.1.2,Android Browser,4.0,2
 LB,Beirut,35.5097,33.8719,Econsult Technology SARL,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,1
-LB,Tripoli,35.85,34.4333,Fiber Communication Network S.A.R.L,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,2
+LB,Tripoli,35.85,34.4333,Fiber Communication Network S.A.R.L,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,1
 BD,Dhaka,90.4086,23.7231,Banglalink,Cellular,Android,mobile,4.4.4,Android Browser,4.0,1
 BD,Dhaka,90.4086,23.7231,DeVoteD NBN,Cellular,Android,mobile,6.0,Android Browser,4.0,1
-LB,Beirut,35.5097,33.8719,New Net Technology SARL,Cable/DSL,Android,mobile,4.4.2,Chrome,66.0.3359.158,2
+LB,Beirut,35.5097,33.8719,New Net Technology SARL,Cable/DSL,Android,mobile,4.4.2,Chrome,66.0.3359.158,1
 PL,Warsaw,21,52.25,Play,Cellular,Android,mobile,5.1.1,Android Browser,4.0,1
 IR,Tehran,51.3304,35.7261,Iran Cell Service and Communication Company,Cellular,Android,mobile,5.1,Android Browser,4.0,1
 TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,6.0,Chrome WebView,44.0.2403.119,1
@@ -3290,7 +3291,7 @@ TH,Bangkok,100.5,13.7333,True Internet,Cellular,Android,mobile,6.0,Chrome WebVie
 CL,Santiago,-70.6667,-33.45,Claro Chile,Cellular,Android,mobile,6.0,Android Browser,4.0,1
 LB,Tripoli,35.85,34.4333,Wave Net LLC,Cable/DSL,Android,mobile,6.0,Chrome,66.0.3359.126,2
 BD,Dhaka,90.4086,23.7231,DeVoteD NBN,Cellular,Android,mobile,4.4.2,Android Browser,4.0,2
-NG,Lagos,3.3958,6.4531,MTN Nigeria,Cellular,Android,tablet,4.4.4,Chrome,40.0.2214.109,2
+NG,Lagos,3.3958,6.4531,MTN Nigeria,Cellular,Android,tablet,4.4.4,Chrome,40.0.2214.109,1
 TH,Bangkok,100.531,13.7625,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,2
 YT,Koungou,45.2053,-12.7299,Societe Reunionnaise Du Radiotelephone Scs,195.115.116.0/22,Android,mobile,6.0,Chrome,66.0.3359.158,1
 TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,5.1,Chrome WebView,66.0.3359.126,1
@@ -3299,327 +3300,327 @@ PL,Katowice,19.0356,50.2554,Play,Cellular,Android,mobile,5.0.2,Chrome,66.0.3359.
 TH,Bangkok,100.5,13.7333,True Internet,Cellular,Android,mobile,4.4.2,Android Browser,4.0,1
 TH,Bangkok,100.4562,13.7083,True Internet,Cable/DSL,Android,mobile,5.1,Android Browser,4.0,1
 LB,Beirut,35.5097,33.8719,Smart Networks S.a.r.l,Cable/DSL,Android,mobile,6.0.1,Chrome,66.0.3359.158,1
-TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,2
+TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,1
 TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,5.1,Chrome WebView,66.0.3359.158,1
-TH,Bangkok,100.4667,13.7,True Internet,Cellular,Android,mobile,4.1.2,Android Browser,4.0,2
-TH,Bangkok,100.5,13.7333,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,2
-NP,Patan,85.3333,27.6667,Ncell Pvt.,Cellular,Android,tablet,6.0,Chrome WebView,48.0.2531.0,1
+TH,Bangkok,100.4667,13.7,True Internet,Cellular,Android,mobile,4.1.2,Android Browser,4.0,1
+TH,Bangkok,100.5,13.7333,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,1
+NP,Patan,85.3333,27.6667,Ncell Pvt.,Cellular,Android,tablet,6.0,Chrome WebView,48.0.2531.0,2
 DE,Bergrheinfeld,10.1809,50.0103,Vodafone DSL,Cable/DSL,Android,mobile,6.0.1,Chrome,66.0.3359.126,1
 TH,Bangkok,100.4167,13.7167,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,2
 NP,Kathmandu,85.3167,27.7167,Nepal International Internet Gateway,Cable/DSL,Android,mobile,5.1,Android Browser,4.0,1
 BD,Dhaka,90.4086,23.7231,Banglalink,Cellular,Android,mobile,5.1,Android Browser,4.0,2
 NP,Kathmandu,85.3167,27.7167,WorldLink Communications Pvt,Cable/DSL,Android,mobile,7.0,MIUI Browser,9.5.6,1
-TH,Bangkok,100.4688,13.8583,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,2
+TH,Bangkok,100.4688,13.8583,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,1
 NP,Kathmandu,85.3167,27.7167,ClassicTech Pvt.,Cable/DSL,Android,mobile,7.0,UCBrowser,12.5.5.1111,2
 DZ,Tiaret,1.3045,35.372,Telecom Algeria,41.96.0.0/12,Android,mobile,4.4.2,Android Browser,4.0,1
 BO,La Paz,-68.15,-16.5,Entel S.A. - EntelNet,Cellular,Android,mobile,6.0,Chrome,66.0.3359.158,1
-VE,Caracas,-66.9167,10.5,Telefonica Venezolana,Cellular,Android,mobile,6.0,Chrome WebView,66.0.3359.126,2
-DZ,Sétif,5.4055,36.1938,Telecom Algeria,105.96.0.0/12,Android,mobile,4.4.2,Android Browser,4.0,2
-TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,5.0.1,Chrome WebView,66.0.3359.126,2
+VE,Caracas,-66.9167,10.5,Telefonica Venezolana,Cellular,Android,mobile,6.0,Chrome WebView,66.0.3359.126,1
+DZ,Sétif,5.4055,36.1938,Telecom Algeria,105.96.0.0/12,Android,mobile,4.4.2,Android Browser,4.0,1
+TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,5.0.1,Chrome WebView,66.0.3359.126,1
 TH,Huai Khwang,100.579,13.7768,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,1
 KE,Nairobi,36.8155,-1.2841,SAFARICOM-LIMITED,41.81.0.0/16,Android,mobile,6.0,Chrome,66.0.3359.126,2
 VN,Ha Long,105.0667,21.35,FPT Telecom Company,Cable/DSL,Android,mobile,4.4.2,Chrome,63.0.3239.111,2
-CL,Valdivia,-73.2333,-39.8,Telefonica del Sur S.A.,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,1
+CL,Valdivia,-73.2333,-39.8,Telefonica del Sur S.A.,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,2
 VN,Hanoi,105.85,21.0333,FPT Telecom Company,Cable/DSL,Android,mobile,4.4.2,Android Browser,4.0,1
 RO,Buhusi,26.7,46.7167,Nextgen Communications Srl,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,1
 TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,4.4.2,Android Browser,4.0,1
-LB,Beirut,35.5097,33.8719,Libantelecom,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,1
+LB,Beirut,35.5097,33.8719,Libantelecom,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,2
 TH,Bangkok,100.5333,13.8,True Internet,Cellular,Android,mobile,6.0,Chrome WebView,44.0.2403.119,1
 VN,Hanoi,105.85,21.0333,FPT Telecom Company,Cable/DSL,Android,mobile,7.0,Facebook,173.0.0.62.99,2
 TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,1
 NG,Lagos,3.3958,6.4531,MTN Nigeria,Cellular,Android,desktop,7.0,Chrome,58.0.3029.83,2
-TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,1
-TH,Huai Khwang,100.579,13.7768,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,2
-SA,Jeddah,39.2192,21.5169,Zain Saudi Arabia,Cellular,Android,mobile,7.0,Chrome,65.0.3325.109,1
+TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,2
+TH,Huai Khwang,100.579,13.7768,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,1
+SA,Jeddah,39.2192,21.5169,Zain Saudi Arabia,Cellular,Android,mobile,7.0,Chrome,65.0.3325.109,2
 TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,4.1.2,Android Browser,4.0,2
 ES,Valencia,-0.3667,39.4667,Vodafone Spain,Cellular,Android,mobile,7.1.1,Chrome WebView,66.0.3359.158,1
 TH,Bangkok,100.4562,13.7083,True Internet,Cellular,Android,mobile,4.4.4,Android Browser,4.0,2
 VN,Ho Chi Minh City,106.6438,10.8142,Viettel Group,Cellular,Android,mobile,5.1.1,Chrome,66.0.3359.158,2
-TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,6.0,Chrome WebView,44.0.2403.119,2
+TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,6.0,Chrome WebView,44.0.2403.119,1
 US,Belleview,-82.0623,29.0553,Spectrum,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,1
 TH,Bangkok,100.4833,13.7333,True Internet,Cable/DSL,Android,mobile,6.0,Chrome WebView,65.0.3325.109,1
-TH,Bangkok,100.4562,13.7083,True Internet,Cable/DSL,Android,mobile,5.1,Android Browser,4.0,1
+TH,Bangkok,100.4562,13.7083,True Internet,Cable/DSL,Android,mobile,5.1,Android Browser,4.0,2
 BD,Chittagong,91.8317,22.3384,TM International Bangladesh,Cellular,Android,mobile,5.1.1,Android Browser,4.0,1
-TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,tablet,6.0.1,Chrome WebView,66.0.3359.158,1
+TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,tablet,6.0.1,Chrome WebView,66.0.3359.158,2
 TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,4.4.4,Android Browser,4.0,1
 MX,Iztapalapa,-99.0234,19.3506,"Cablevisión, S.A. de C.V.",Cable/DSL,Android,mobile,5.1,Chrome WebView,64.0.3282.137,1
 VN,Ho Chi Minh City,106.6438,10.8142,Viettel Group,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,2
 TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,63.0.3239.111,1
-TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,63.0.3239.111,1
+TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,63.0.3239.111,2
 TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,66.0.3359.158,2
 TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,4.1.2,Android Browser,4.0,2
 BD,Dhaka,90.4086,23.7231,Banglalink,Cellular,Android,mobile,5.1,Android Browser,4.0,1
-TH,Bangkok,100.4562,13.7083,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,66.0.3359.158,2
-TH,Bangkok,100.4562,13.7083,True Internet,Cellular,Android,mobile,4.3,Android Browser,4.0,1
+TH,Bangkok,100.4562,13.7083,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,66.0.3359.158,1
+TH,Bangkok,100.4562,13.7083,True Internet,Cellular,Android,mobile,4.3,Android Browser,4.0,2
 CL,Santiago,-70.6667,-33.45,Claro Chile,Cellular,Android,mobile,6.0,Android Browser,4.0,1
 RO,Bucharest,26.1,44.4333,RCS & RDS Mobile,Cellular,Android,mobile,6.0,Chrome WebView,66.0.3359.126,1
 VN,Tay Ninh,106.1,11.3,Viettel Group,Cellular,Android,mobile,6.0.1,Chrome,66.0.3359.158,2
 PE,Lima,-77.05,-12.05,Claro Peru,Cellular,Android,mobile,7.0,Chrome WebView,62.0.3202.84,2
 PL,Wrocław,17.0026,51.0913,Play,Cellular,Android,mobile,6.0,Chrome WebView,65.0.3325.109,1
 TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,8.0.0,Chrome WebView,66.0.3359.126,2
-TH,Bangkok,100.5,13.7333,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,2
-MX,Morelos,-102.6167,22.8833,Movistar México,Cellular,Android,mobile,4.4.2,Android Browser,4.0,1
-TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,4.3,Android Browser,4.0,2
+TH,Bangkok,100.5,13.7333,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,1
+MX,Morelos,-102.6167,22.8833,Movistar México,Cellular,Android,mobile,4.4.2,Android Browser,4.0,2
+TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,4.3,Android Browser,4.0,1
 TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,6.0,Chrome WebView,65.0.3325.109,2
 FR,Suresnes,2.2293,48.8714,SFR,Cable/DSL,Android,mobile,6.0,Chrome WebView,66.0.3359.158,1
-NP,Kathmandu,85.3167,27.7167,WorldLink Communications Pvt,Cable/DSL,Android,mobile,6.0.1,Samsung Browser,6.4,1
+NP,Kathmandu,85.3167,27.7167,WorldLink Communications Pvt,Cable/DSL,Android,mobile,6.0.1,Samsung Browser,6.4,2
 NP,Kathmandu,85.3167,27.7167,Nepal Telecom,Cellular,Android,mobile,4.4.4,Android Browser,4.0,1
 TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,2
-TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,5.1.1,Chrome WebView,66.0.3359.158,2
-TH,Bangkok,100.5,13.7333,True Internet,Cellular,Android,mobile,6.0,Chrome WebView,66.0.3359.158,1
+TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,5.1.1,Chrome WebView,66.0.3359.158,1
+TH,Bangkok,100.5,13.7333,True Internet,Cellular,Android,mobile,6.0,Chrome WebView,66.0.3359.158,2
 BD,Dhaka,90.4086,23.7231,Banglalink,Cellular,Android,mobile,4.4.2,Android Browser,4.0,2
-TH,Bangkok,100.4688,13.8583,True Internet,Cellular,Android,mobile,4.1.2,Android Browser,4.0,1
+TH,Bangkok,100.4688,13.8583,True Internet,Cellular,Android,mobile,4.1.2,Android Browser,4.0,2
 DZ,'Ain Deheb,1.5478,34.8447,Optimum-Telecom-Algeria,Cellular,Android,mobile,5.1,Android Browser,4.0,1
-TH,Bangkok,100.4667,13.7,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,66.0.3359.158,1
-CI,Abidjan,-4.0127,5.3097,Mtn Cote D'ivoire S.A,Cable/DSL,Android,mobile,5.1,Chrome WebView,50.0.2661.86,2
-SA,Jeddah,39.2192,21.5169,SaudiNet,Cellular,Android,mobile,4.4.4,Chrome,66.0.3359.158,1
+TH,Bangkok,100.4667,13.7,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,66.0.3359.158,2
+CI,Abidjan,-4.0127,5.3097,Mtn Cote D'ivoire S.A,Cable/DSL,Android,mobile,5.1,Chrome WebView,50.0.2661.86,1
+SA,Jeddah,39.2192,21.5169,SaudiNet,Cellular,Android,mobile,4.4.4,Chrome,66.0.3359.158,2
 LB,Beirut,35.5097,33.8719,touch Lebanon,Cellular,Android,mobile,7.0,Chrome,66.0.3359.158,1
 TH,Bangkok,100.5,13.7333,True Internet,Cellular,Android,mobile,5.1.1,Chrome WebView,66.0.3359.126,1
-LB,Beirut,35.5097,33.8719,farahnet,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,1
+LB,Beirut,35.5097,33.8719,farahnet,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,2
 RO,Cluj-Napoca,23.6,46.7667,Vodafone Romania,Cable/DSL,Android,mobile,6.0,Chrome WebView,62.0.3202.84,1
 TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,2
 TH,Bangkok,100.4833,13.7333,True Internet,Cable/DSL,Android,mobile,6.0.1,Chrome WebView,66.0.3359.158,2
 PL,Łódź,19.5235,51.7808,Play,Cellular,Android,mobile,7.0,Chrome,66.0.3359.158,1
-TH,Bangkok,100.5333,13.8,True Internet,Cellular,Android,mobile,4.4.2,Android Browser,4.0,2
+TH,Bangkok,100.5333,13.8,True Internet,Cellular,Android,mobile,4.4.2,Android Browser,4.0,1
 MX,Tapachula,-92.2777,14.9221,Telmex,Cable/DSL,Android,mobile,7.0,Chrome,58.0.3029.83,2
-TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,1
-TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,4.2.2,Android Browser,4.0,2
+TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,2
+TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,4.2.2,Android Browser,4.0,1
 BD,Dhaka,90.4086,23.7231,Banglalink,Cellular,Android,mobile,4.4.2,Android Browser,4.0,2
 BD,Dhaka,90.4086,23.7231,Banglalink,Cellular,Android,mobile,6.0,Chrome WebView,46.0.2490.76,2
 MX,Morelos,-102.6167,22.8833,Movistar México,Cellular,Android,mobile,6.0,Chrome WebView,66.0.3359.158,1
 TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,5.1.1,Chrome WebView,66.0.3359.158,1
-TH,Bangkok,100.4562,13.7083,True Internet,Cellular,Android,mobile,4.4.2,Android Browser,4.0,2
+TH,Bangkok,100.4562,13.7083,True Internet,Cellular,Android,mobile,4.4.2,Android Browser,4.0,1
 NP,Kathmandu,85.3167,27.7167,Nepal Telecom,Cable/DSL,Android,mobile,5.1.1,Chrome,66.0.3359.158,1
 TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,4.1.2,Android Browser,4.0,1
-TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,8.0.0,Chrome WebView,66.0.3359.158,2
-TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,tablet,4.4.2,Android Browser,4.0,1
+TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,8.0.0,Chrome WebView,66.0.3359.158,1
+TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,tablet,4.4.2,Android Browser,4.0,2
 BO,La Paz,-68.15,-16.5,Entel S.A. - EntelNet,Cellular,Android,mobile,6.0,Chrome,66.0.3359.158,1
-SA,Dammam,50.1116,26.4336,Online S.a.s.,51.15.0.0/16,Android,mobile,7.0,Chrome,66.0.3359.158,1
-ID,Jakarta,106.8294,-6.1744,PT Excelcomindo Pratama,Cellular,Android,mobile,6.0.1,UCBrowser,12.5.0.1109,1
-TH,Bangkok,100.4562,13.7083,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,2
+SA,Dammam,50.1116,26.4336,Online S.a.s.,51.15.0.0/16,Android,mobile,7.0,Chrome,66.0.3359.158,2
+ID,Jakarta,106.8294,-6.1744,PT Excelcomindo Pratama,Cellular,Android,mobile,6.0.1,UCBrowser,12.5.0.1109,2
+TH,Bangkok,100.4562,13.7083,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,1
 TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,66.0.3359.158,1
 VN,Quang Ninh,106.4917,10.4043,Vietnam Posts And Telecommunications Group,Cable/DSL,Android,mobile,8.0.0,Facebook,173.0.0.62.99,2
 TH,Bangkok,100.4833,13.7333,True Internet,Cable/DSL,Android,mobile,5.1,Chrome WebView,65.0.3325.109,2
-VN,Hanoi,105.85,21.0333,FPT Telecom Company,Cable/DSL,Android,mobile,4.4.2,Facebook,95.0.0.2.184,1
+VN,Hanoi,105.85,21.0333,FPT Telecom Company,Cable/DSL,Android,mobile,4.4.2,Facebook,95.0.0.2.184,2
 BD,Dhaka,90.4086,23.7231,Banglalink,Cellular,Android,mobile,7.0,MIUI Browser,9.4.11,2
-VN,Ho Chi Minh City,106.6438,10.8142,Viettel Group,Cable/DSL,Android,mobile,5.1,Chrome,66.0.3359.158,1
+VN,Ho Chi Minh City,106.6438,10.8142,Viettel Group,Cable/DSL,Android,mobile,5.1,Chrome,66.0.3359.158,2
 MA,Casablanca,-7.6192,33.5928,Inwi Mobile,Cellular,Android,mobile,6.0,Android Browser,4.0,1
-TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.126,1
-TH,Bangkok,100.4833,13.7333,True Internet,Cable/DSL,Android,mobile,5.1,Android Browser,4.0,2
+TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.126,2
+TH,Bangkok,100.4833,13.7333,True Internet,Cable/DSL,Android,mobile,5.1,Android Browser,4.0,1
 BD,Dhaka,90.4086,23.7231,DeVoteD NBN,Cellular,Android,mobile,4.4.2,Android Browser,4.0,2
 TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,66.0.3359.158,1
 BD,Dhaka,90.4086,23.7231,DeVoteD NBN,Cellular,Android,tablet,6.0,Android Browser,4.0,1
 TH,Bangkok,100.5,13.7333,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,63.0.3239.111,1
 TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,4.1.2,Android Browser,4.0,2
-TH,Bangkok,100.4688,13.8583,True Internet,Cellular,Android,mobile,4.4.2,Android Browser,4.0,1
+TH,Bangkok,100.4688,13.8583,True Internet,Cellular,Android,mobile,4.4.2,Android Browser,4.0,2
 TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,4.4.4,Android Browser,4.0,1
 TH,Bangkok,100.5833,13.6667,True Internet,Cellular,Android,mobile,6.0,Chrome WebView,66.0.3359.158,2
 LB,Beirut,35.5089,33.874,Virtual ISP s.a.l.,80.83.16.0/20,Android,mobile,4.4.4,Chrome,66.0.3359.158,2
 TH,Bangkok,100.531,13.7625,True Internet,Cellular,Android,mobile,4.4.2,Android Browser,4.0,1
 TH,Bangkok,100.4562,13.7083,True Internet,Cellular,Android,mobile,7.1.1,Chrome WebView,66.0.3359.158,1
 MX,Morelos,-102.6167,22.8833,Movistar México,Cellular,Android,mobile,6.0,Chrome WebView,66.0.3359.158,2
-AE,Abu Dhabi,54.3667,24.4667,Emirates Telecommunications Corporation,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,1
-DZ,Laghouat,2.8833,33.8,Telecom Algeria,Cable/DSL,Android,mobile,4.2.2,Android Browser,4.0,1
-TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,5.1,Chrome WebView,66.0.3359.158,1
+AE,Abu Dhabi,54.3667,24.4667,Emirates Telecommunications Corporation,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,2
+DZ,Laghouat,2.8833,33.8,Telecom Algeria,Cable/DSL,Android,mobile,4.2.2,Android Browser,4.0,2
+TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,5.1,Chrome WebView,66.0.3359.158,2
 OM,Muscat,58.5933,23.6133,Awaser Oman LLC,Cable/DSL,Android,mobile,8.0.0,Chrome,66.0.3359.158,1
 CL,Santiago,-70.6667,-33.45,VTR Banda Ancha S.A.,Cable/DSL,Android,mobile,6.0.1,Chrome,66.0.3359.158,2
-TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,1
+TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,2
 TN,Tunis,10.1711,36.8061,Tunisie Telecom,Cable/DSL,Android,mobile,4.0.4,Android Browser,4.0,1
 BD,Dhaka,90.4086,23.7231,Banglalink,Cellular,Android,mobile,5.1,Android Browser,4.0,2
-NP,Kathmandu,85.3167,27.7167,WorldLink Communications Pvt,Cable/DSL,Android,mobile,6.0.1,Samsung Browser,6.2,2
+NP,Kathmandu,85.3167,27.7167,WorldLink Communications Pvt,Cable/DSL,Android,mobile,6.0.1,Samsung Browser,6.2,1
 PL,Gliwice,18.665399999999998,50.31,Play,Cellular,Android,tablet,7.1.1,Chrome WebView,66.0.3359.158,1
-KE,Nairobi,36.8167,-1.2833,Jamii Telecommunications Limited,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,2
-FR,Périgueux,0.7167,45.1833,Free SAS,Cable/DSL,Android,mobile,7.1.1,Chrome,65.0.3325.109,1
+KE,Nairobi,36.8167,-1.2833,Jamii Telecommunications Limited,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,1
+FR,Périgueux,0.7167,45.1833,Free SAS,Cable/DSL,Android,mobile,7.1.1,Chrome,65.0.3325.109,2
 NA,Windhoek,17.0836,-22.57,MTC Namibia,Cellular,Android,mobile,5.1.1,Chrome WebView,66.0.3359.158,2
 TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,1
 GR,Pátrai,21.7344,38.2444,OTEnet S.A.,Cable/DSL,Android,tablet,4.4.2,Chrome,66.0.3359.158,1
-BD,Dhaka,90.4086,23.7231,DeVoteD NBN,Cellular,Android,mobile,4.2.2,Android Browser,4.0,1
+BD,Dhaka,90.4086,23.7231,DeVoteD NBN,Cellular,Android,mobile,4.2.2,Android Browser,4.0,2
 BD,Dhaka,90.4086,23.7231,Banglalink,Cellular,Android,mobile,4.3,Android Browser,4.0,1
 ES,Cambados,-8.667300000000001,42.5062,"Telefonica Moviles Espana, S.A.",Cellular,Android,mobile,5.1,Android Browser,4.0,1
 TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,4.1.2,Android Browser,4.0,2
 TH,Bangkok,100.4562,13.7083,True Internet,Cellular,Android,mobile,4.2.2,Android Browser,4.0,1
-TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,4.4.2,Android Browser,4.0,2
-TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,65.0.3325.109,1
+TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,4.4.2,Android Browser,4.0,1
+TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,65.0.3325.109,2
 TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,2
 TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,4.4.4,Android Browser,4.0,2
 TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,2
 TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,4.3,Android Browser,4.0,1
 TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,6.0,Chrome WebView,66.0.3359.158,1
 TN,Zeramedine,10.7443,35.5757,Tunisie-Telecom,197.8.0.0/15,Android,mobile,7.1.1,Chrome,56.0.2924.87,1
-TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,1
-TH,Bangkok,100.5,13.7333,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,1
+TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,2
+TH,Bangkok,100.5,13.7333,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,2
 US,Ridley Park,-75.3214,39.8751,Verizon Fios,Cable/DSL,Android,tablet,5.1.1,Android Browser,4.0,1
 TH,Bangkok,100.4562,13.7083,True Internet,Cable/DSL,Android,mobile,7.1.1,Samsung Browser,6.4,2
-TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,6.0.1,Android Browser,4.0,2
+TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,6.0.1,Android Browser,4.0,1
 PE,Lima,-77.05,-12.05,Telefonica del Peru,Cable/DSL,Android,mobile,7.1.1,Chrome,66.0.3359.158,2
-TH,Nonthaburi,100.4333,13.89,True Internet,Cellular,Android,mobile,8.0.0,Chrome WebView,66.0.3359.158,2
-VN,Ho Chi Minh City,106.6438,10.8142,SaiGon Tourist cable Televition Company,Cable/DSL,Android,mobile,5.1.1,Facebook,173.0.0.62.99,2
+TH,Nonthaburi,100.4333,13.89,True Internet,Cellular,Android,mobile,8.0.0,Chrome WebView,66.0.3359.158,1
+VN,Ho Chi Minh City,106.6438,10.8142,SaiGon Tourist cable Televition Company,Cable/DSL,Android,mobile,5.1.1,Facebook,173.0.0.62.99,1
 VN,Hanoi,105.85,21.0333,Vietnam Posts And Telecommunications Group,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,1
 QA,Doha,51.5333,25.2867,OOREDOO,Cable/DSL,Android,mobile,6.0,Chrome WebView,65.0.3325.109,1
 TH,Bangkok,100.4562,13.7083,True Internet,Cellular,Android,tablet,4.4.2,Android Browser,1.5,1
 TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,65.0.3325.109,1
-TH,Huai Khwang,100.579,13.7768,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,1
-TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,desktop,5.1,Android Browser,4.0,1
-TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,4.4.2,Android Browser,4.0,1
-TH,Bangkok,100.4833,13.7333,True Internet,Cable/DSL,Android,mobile,7.0,Chrome WebView,66.0.3359.158,1
+TH,Huai Khwang,100.579,13.7768,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,2
+TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,desktop,5.1,Android Browser,4.0,2
+TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,4.4.2,Android Browser,4.0,2
+TH,Bangkok,100.4833,13.7333,True Internet,Cable/DSL,Android,mobile,7.0,Chrome WebView,66.0.3359.158,2
 SD,An Nuhud,28.4323,12.6961,Sudatel,197.252.0.0/16,Android,mobile,5.1,Chrome WebView,50.0.2661.86,1
 TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,4.4.2,Android Browser,4.0,2
-VN,Hanoi,105.85,21.0333,FPT Telecom Company,Cable/DSL,Android,mobile,7.1.1,Facebook,173.0.0.62.99,1
+VN,Hanoi,105.85,21.0333,FPT Telecom Company,Cable/DSL,Android,mobile,7.1.1,Facebook,173.0.0.62.99,2
 US,Atlanta,-84.4635,33.871,Comcast Cable,Cable/DSL,Android,mobile,4.4.2,Android Browser,4.0,2
 IQ,Mosul,43.1189,36.335,Asiacell Communications Pjsc,Cellular,Android,mobile,4.4.2,Android Browser,4.0,2
-TH,Bangkok,100.4562,13.7083,True Internet,Cable/DSL,Android,mobile,5.1.1,Chrome WebView,66.0.3359.158,2
+TH,Bangkok,100.4562,13.7083,True Internet,Cable/DSL,Android,mobile,5.1.1,Chrome WebView,66.0.3359.158,1
 LB,Beirut,35.5097,33.8719,Libantelecom,Cable/DSL,Android,mobile,4.4.2,Chrome,64.0.3282.137,1
 TH,Huai Khwang,100.579,13.7768,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,66.0.3359.158,2
-IR,Qeshm,56.2719,26.9581,Iran Cell Service and Communication Company,Cellular,Android,tablet,6.1,Android Browser,4.0,2
-TH,Bangkok,100.531,13.7625,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,66.0.3359.126,2
-BD,Dhaka,90.4086,23.7231,Banglalink,Cellular,Android,mobile,4.4.2,Android Browser,4.0,2
-TH,Bangkok,100.4562,13.7083,True Internet,Cable/DSL,Android,mobile,4.4.2,Android Browser,4.0,2
-TH,Bangkok,100.5333,13.7333,True Internet,Cellular,Android,mobile,8.0.0,Chrome WebView,66.0.3359.158,2
+IR,Qeshm,56.2719,26.9581,Iran Cell Service and Communication Company,Cellular,Android,tablet,6.1,Android Browser,4.0,1
+TH,Bangkok,100.531,13.7625,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,66.0.3359.126,1
+BD,Dhaka,90.4086,23.7231,Banglalink,Cellular,Android,mobile,4.4.2,Android Browser,4.0,1
+TH,Bangkok,100.4562,13.7083,True Internet,Cable/DSL,Android,mobile,4.4.2,Android Browser,4.0,1
+TH,Bangkok,100.5333,13.7333,True Internet,Cellular,Android,mobile,8.0.0,Chrome WebView,66.0.3359.158,1
 KZ,Shymkent,69.6,42.3,Kcell JSC,Cellular,Android,tablet,5.1,Android Browser,4.0,2
 VN,Thanh Pho Thai Nguyen,105.8442,21.5928,Viettel Group,Cellular,Android,mobile,4.4.4,Chrome,66.0.3359.158,2
-TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,2
+TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,1
 TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,5.0,Chrome WebView,66.0.3359.158,1
-TH,Huai Khwang,100.579,13.7768,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,66.0.3359.158,1
-TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,56.0.2924.87,2
-TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,2
-TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,5.1,Chrome WebView,65.0.3325.109,1
-TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,2
-DZ,Boumerdes,3.6667,36.75,Optimum-Telecom-Algeria,129.45.0.0/17,Android,mobile,4.4.2,Android Browser,4.0,2
-VN,Ho Chi Minh City,106.6438,10.8142,MOBIFONE Corporation,Cellular,Android,mobile,4.4.2,Chrome,66.0.3359.158,1
+TH,Huai Khwang,100.579,13.7768,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,66.0.3359.158,2
+TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,56.0.2924.87,1
+TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,1
+TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,5.1,Chrome WebView,65.0.3325.109,2
+TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,1
+DZ,Boumerdes,3.6667,36.75,Optimum-Telecom-Algeria,129.45.0.0/17,Android,mobile,4.4.2,Android Browser,4.0,1
+VN,Ho Chi Minh City,106.6438,10.8142,MOBIFONE Corporation,Cellular,Android,mobile,4.4.2,Chrome,66.0.3359.158,2
 IE,Dublin,-6.2489,53.3331,Three Ireland,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,1
 TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,tablet,4.4.4,Android Browser,4.0,2
 CL,Santiago,-70.6667,-33.45,Claro Chile,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,1
 CL,Santiago,-70.6667,-33.45,Claro Chile,Cellular,Android,tablet,6.0,Chrome WebView,44.0.2403.119,2
 TH,Bangkok,100.4562,13.7083,True Internet,Cable/DSL,Android,mobile,4.4.4,Android Browser,4.0,2
-TH,Bangkok,100.4562,13.7083,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,1
+TH,Bangkok,100.4562,13.7083,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,2
 TH,Bangkok,100.5,13.7333,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,2
 DZ,Saida,0.15,34.8333,Telecom Algeria,Cable/DSL,Android,tablet,4.1.2,Android Browser,4.0,2
-TH,Bangkok,100.4562,13.7083,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,55.0.2883.91,2
+TH,Bangkok,100.4562,13.7083,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,55.0.2883.91,1
 ES,Madrid,-3.6837999999999997,40.4167,Orange Espana,Cellular,Android,tablet,6.0,Chrome,66.0.3359.126,2
-TH,Bangkok,100.5,13.7333,True Internet,Cellular,Android,mobile,4.1.2,Android Browser,4.0,2
+TH,Bangkok,100.5,13.7333,True Internet,Cellular,Android,mobile,4.1.2,Android Browser,4.0,1
 TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,4.2.2,Android Browser,4.0,2
 CL,Santiago,-70.6667,-33.45,Claro Chile,Cellular,Android,mobile,6.0,Android Browser,4.0,1
 TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,5.0,Android Browser,4.0,1
 TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,6.0,Chrome WebView,44.0.2403.119,1
-TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,7.1.1,Chrome WebView,63.0.3239.111,2
-TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,desktop,6.0,Chrome WebView,66.0.3359.126,1
+TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,7.1.1,Chrome WebView,63.0.3239.111,1
+TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,desktop,6.0,Chrome WebView,66.0.3359.126,2
 KH,Phnom Penh,104.916,11.5625,"Smart Axiata Co.,Ltd",Cable/DSL,Android,mobile,6.0,Chrome WebView,51.0.2704.81,1
 CL,Santiago,-70.6667,-33.45,Claro Chile,Cellular,Android,mobile,4.2.2,Chrome,33.0.1750.136,1
 TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,5.1.1,Chrome WebView,66.0.3359.158,1
 KH,Phnom Penh,104.916,11.5625,SOUTH EAST ASIA TELECOM (Cambodia) Co.,Cable/DSL,Android,mobile,5.1,Android Browser,4.0,1
-LB,Beirut,35.5097,33.8719,Top Net SARL,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,1
-TH,Bangkok,100.531,13.7625,True Internet,Cellular,Android,mobile,6.0,Chrome WebView,66.0.3359.158,1
+LB,Beirut,35.5097,33.8719,Top Net SARL,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,2
+TH,Bangkok,100.531,13.7625,True Internet,Cellular,Android,mobile,6.0,Chrome WebView,66.0.3359.158,2
 IR,Mashhad,59.6062,36.297,Iran Cell Service and Communication Company,Cellular,Android,mobile,4.2.2,Android Browser,4.0,1
-TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,55.0.2883.91,1
+TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,55.0.2883.91,2
 ZA,Pretoria,28.2294,-25.7069,MTN SA MOBILE,Cellular,Android,mobile,4.4.2,Chrome,30.0.0.0,2
 PL,Zielona Góra,15.5117,51.9427,UPC Polska,Cable/DSL,Android,mobile,7.0,Samsung Browser,6.4,2
-ES,Madrid,-3.6837999999999997,40.4167,Orange Espana,Cellular,Android,mobile,7.0,Chrome,66.0.3359.106,2
-TH,Bangkok,100.5,13.7333,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,66.0.3359.158,2
-TH,Huai Khwang,100.579,13.7768,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,65.0.3325.109,1
+ES,Madrid,-3.6837999999999997,40.4167,Orange Espana,Cellular,Android,mobile,7.0,Chrome,66.0.3359.106,1
+TH,Bangkok,100.5,13.7333,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,66.0.3359.158,1
+TH,Huai Khwang,100.579,13.7768,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,65.0.3325.109,2
 TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,1
-TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,6.0,Chrome WebView,44.0.2403.119,1
-TH,Bangkok,100.4562,13.7083,True Internet,Cable/DSL,Android,mobile,5.1,Android Browser,4.0,2
+TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,6.0,Chrome WebView,44.0.2403.119,2
+TH,Bangkok,100.4562,13.7083,True Internet,Cable/DSL,Android,mobile,5.1,Android Browser,4.0,1
 TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,66.0.3359.126,2
 DZ,Reghaia,3.3414,36.7422,wataniya-telecom,Cellular,Android,mobile,4.4.2,Android Browser,4.0,1
 IR,Tehran,51.3304,35.7261,Rightel Communication Service Company PJS,Cable/DSL,Android,mobile,4.4.2,Android Browser,4.0,1
-TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,4.4.2,Android Browser,4.0,1
+TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,4.4.2,Android Browser,4.0,2
 MX,Mexico City,-99.1386,19.4342,"Cablevisión, S.A. de C.V.",Cable/DSL,Android,mobile,5.1,Chrome WebView,63.0.3239.111,1
-TH,Bangkok,100.5,13.7333,True Internet,Cellular,Android,mobile,6.0,Chrome WebView,44.0.2403.119,1
-TH,Bangkok,100.4833,13.7333,True Internet,Cable/DSL,Android,mobile,6.0,Chrome WebView,44.0.2403.119,1
+TH,Bangkok,100.5,13.7333,True Internet,Cellular,Android,mobile,6.0,Chrome WebView,44.0.2403.119,2
+TH,Bangkok,100.4833,13.7333,True Internet,Cable/DSL,Android,mobile,6.0,Chrome WebView,44.0.2403.119,2
 ES,Valencia,-0.3667,39.4667,Vodafone Spain,Cellular,Android,mobile,8.0.0,Chrome WebView,66.0.3359.158,1
 TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,2
-TH,Bangkok,100.4833,13.75,True Internet,Cable/DSL,Android,mobile,6.0,Android Browser,4.0,1
+TH,Bangkok,100.4833,13.75,True Internet,Cable/DSL,Android,mobile,6.0,Android Browser,4.0,2
 TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,5.1.1,Chrome WebView,43.0.2357.121,2
-LB,Beirut,35.5097,33.8719,Econsult Technology SARL,Cable/DSL,Android,mobile,6.0.1,Chrome,66.0.3359.158,2
+LB,Beirut,35.5097,33.8719,Econsult Technology SARL,Cable/DSL,Android,mobile,6.0.1,Chrome,66.0.3359.158,1
 FR,Drancy,2.4453,48.9258,Bouygues Telecom,Cable/DSL,Android,mobile,6.0,Chrome WebView,55.0.2883.91,1
 TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,59.0.3071.125,2
 DZ,Sidi Aissa,3.7761,35.8862,Optimum-Telecom-Algeria,129.45.0.0/17,Android,mobile,6.0.1,Chrome,56.0.2924.87,2
 TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,2
 TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,4.4.2,Android Browser,4.0,2
-TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,2
-CI,Abidjan,-4.0127,5.3097,Mtn Cote D'ivoire S.A,Cable/DSL,Android,mobile,7.0,Chrome WebView,61.0.3163.98,1
+TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,1
+CI,Abidjan,-4.0127,5.3097,Mtn Cote D'ivoire S.A,Cable/DSL,Android,mobile,7.0,Chrome WebView,61.0.3163.98,2
 ES,Barcelona,2.1741,41.3984,Vodafone Spain,Cellular,Android,mobile,7.0,Chrome,65.0.3325.109,2
-DZ,Blida,2.8289,36.4686,Telecom Algeria,Cable/DSL,Android,mobile,6.0.1,Chrome,66.0.3359.158,1
+DZ,Blida,2.8289,36.4686,Telecom Algeria,Cable/DSL,Android,mobile,6.0.1,Chrome,66.0.3359.158,2
 MX,Mexico City,-99.1391,19.3673,"Cablevisión, S.A. de C.V.",Cable/DSL,Android,mobile,5.1,Android Browser,4.0,1
-LB,Zgharta,35.893299999999996,34.3997,Wave Net LLC,Cable/DSL,Android,mobile,5.1,Chrome,66.0.3359.158,2
+LB,Zgharta,35.893299999999996,34.3997,Wave Net LLC,Cable/DSL,Android,mobile,5.1,Chrome,66.0.3359.158,1
 TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,63.0.3239.111,1
 ES,Valencia,-0.3667,39.4667,Vodafone Spain,Cellular,Android,mobile,7.1.2,Chrome WebView,66.0.3359.158,1
-TH,Bangkok,100.4833,13.7333,True Internet,Cable/DSL,Android,mobile,6.0,Chrome WebView,66.0.3359.158,2
+TH,Bangkok,100.4833,13.7333,True Internet,Cable/DSL,Android,mobile,6.0,Chrome WebView,66.0.3359.158,1
 TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,1
 KH,Phnom Penh,104.916,11.5625,"Smart Axiata Co.,Ltd",Cable/DSL,Android,mobile,7.0,Chrome WebView,56.0.2924.87,1
-TH,Bangkok,100.531,13.7625,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,66.0.3359.158,1
+TH,Bangkok,100.531,13.7625,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,66.0.3359.158,2
 TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,66.0.3359.126,1
 TH,Bangkok,100.4889,13.7594,True Internet,Cable/DSL,Android,mobile,7.0,Android Browser,4.0,1
-TH,Bangkok,100.4167,13.7167,True Internet,Cellular,Android,mobile,4.4.2,Android Browser,4.0,2
-SA,Jeddah,39.2192,21.5169,SaudiNet,Cable/DSL,Android,mobile,6.0,Chrome,65.0.3325.109,2
-VN,Yen Mo,106.0167,20.1,Vietnam Posts And Telecommunications Group,Cable/DSL,Android,mobile,6.0,Facebook,169.0.0.46.94,2
-TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,1
-TH,Huai Khwang,100.579,13.7768,True Internet,Cellular,Android,mobile,4.4.2,Android Browser,4.0,1
+TH,Bangkok,100.4167,13.7167,True Internet,Cellular,Android,mobile,4.4.2,Android Browser,4.0,1
+SA,Jeddah,39.2192,21.5169,SaudiNet,Cable/DSL,Android,mobile,6.0,Chrome,65.0.3325.109,1
+VN,Yen Mo,106.0167,20.1,Vietnam Posts And Telecommunications Group,Cable/DSL,Android,mobile,6.0,Facebook,169.0.0.46.94,1
+TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,2
+TH,Huai Khwang,100.579,13.7768,True Internet,Cellular,Android,mobile,4.4.2,Android Browser,4.0,2
 TH,Bangkok,100.4833,13.7333,True Internet,Cable/DSL,Android,mobile,6.0,Android Browser,4.0,2
-TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,66.0.3359.158,1
-PE,Lima,-77.05,-12.05,Claro Peru,Cellular,Android,mobile,7.1.1,Chrome,61.0.3163.98,2
+TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,66.0.3359.158,2
+PE,Lima,-77.05,-12.05,Claro Peru,Cellular,Android,mobile,7.1.1,Chrome,61.0.3163.98,1
 TH,Bangkok,100.4833,13.7333,True Internet,Cable/DSL,Android,mobile,5.1,Android Browser,4.0,2
-TH,Bangkok,100.5333,13.8,True Internet,Cellular,Android,mobile,6.0,Android Browser,4.0,1
-TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,2
+TH,Bangkok,100.5333,13.8,True Internet,Cellular,Android,mobile,6.0,Android Browser,4.0,2
+TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,1
 BD,Dhaka,90.4086,23.7231,Banglalink,Cellular,Android,mobile,5.1.1,Chrome WebView,46.0.2490.76,1
-VN,Thanh Pho Tuyen Quang,105.2181,21.8233,Vietnam Posts And Telecommunications Group,Cable/DSL,Android,mobile,4.3,Chrome,66.0.3359.158,2
-VN,Mỹ Tho,106.36,10.36,Vietnam Posts And Telecommunications Group,Cable/DSL,Android,mobile,7.1.1,Facebook,173.0.0.62.99,1
-VN,Hanoi,105.85,21.0333,Vietnam Posts And Telecommunications Group,Cellular,Android,mobile,7.0,Facebook,158.0.0.38.95,1
-TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,2
-VN,Ho Chi Minh City,106.6438,10.8142,Viettel Group,Cellular,Android,mobile,6.0.1,Chrome,66.0.3359.158,2
+VN,Thanh Pho Tuyen Quang,105.2181,21.8233,Vietnam Posts And Telecommunications Group,Cable/DSL,Android,mobile,4.3,Chrome,66.0.3359.158,1
+VN,Mỹ Tho,106.36,10.36,Vietnam Posts And Telecommunications Group,Cable/DSL,Android,mobile,7.1.1,Facebook,173.0.0.62.99,2
+VN,Hanoi,105.85,21.0333,Vietnam Posts And Telecommunications Group,Cellular,Android,mobile,7.0,Facebook,158.0.0.38.95,2
+TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,1
+VN,Ho Chi Minh City,106.6438,10.8142,Viettel Group,Cellular,Android,mobile,6.0.1,Chrome,66.0.3359.158,1
 VN,Phan Thiết,108.1,10.9333,Vietnam Posts And Telecommunications Group,Cable/DSL,Android,mobile,5.0,Facebook,173.0.0.62.99,2
-ES,Madrid,-3.6837999999999997,40.4167,Vodafone Spain,Cellular,Android,mobile,5.1,Android Browser,4.0,1
-DZ,Tadmait,3.9019,36.7394,Optimum-Telecom-Algeria,Cellular,Android,mobile,4.4.2,Android Browser,4.0,1
-TH,Bangkok,100.4833,13.7333,True Internet,Cable/DSL,Android,mobile,7.0,Chrome WebView,66.0.3359.158,2
+ES,Madrid,-3.6837999999999997,40.4167,Vodafone Spain,Cellular,Android,mobile,5.1,Android Browser,4.0,2
+DZ,Tadmait,3.9019,36.7394,Optimum-Telecom-Algeria,Cellular,Android,mobile,4.4.2,Android Browser,4.0,2
+TH,Bangkok,100.4833,13.7333,True Internet,Cable/DSL,Android,mobile,7.0,Chrome WebView,66.0.3359.158,1
 TN,Beja,9.1817,36.7256,Tunisie Telecom,Cable/DSL,Android,mobile,6.0,Android Browser,4.0,1
 BD,Chittagong,91.8317,22.3384,TM International Bangladesh,Cellular,Android,tablet,6.0,Android Browser,4.0,1
 TH,Bangkok,100.65,13.7667,True Internet,Cellular,Android,mobile,6.0,Chrome WebView,61.0.3163.98,1
-FR,Paris,2.3003,48.8412,Free SAS,Cable/DSL,Android,mobile,5.0,Chrome,66.0.3359.158,2
-TH,Bangkok,100.531,13.7625,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,66.0.3359.126,2
+FR,Paris,2.3003,48.8412,Free SAS,Cable/DSL,Android,mobile,5.0,Chrome,66.0.3359.158,1
+TH,Bangkok,100.531,13.7625,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,66.0.3359.126,1
 TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,6.0,Chrome WebView,44.0.2403.119,1
-VN,Hanoi,105.85,21.0333,Vietnam Posts And Telecommunications Group,Cable/DSL,Android,mobile,4.4.4,Facebook,95.0.0.2.184,2
+VN,Hanoi,105.85,21.0333,Vietnam Posts And Telecommunications Group,Cable/DSL,Android,mobile,4.4.4,Facebook,95.0.0.2.184,1
 TH,Huai Khwang,100.579,13.7768,True Internet,Cellular,Android,mobile,4.4.2,Android Browser,4.0,1
 UA,Kiev,30.5167,50.4333,lifecell,Cellular,Android,mobile,6.0,Chrome WebView,46.0.2490.76,2
 BD,Dhaka,90.4086,23.7231,DeVoteD NBN,Cellular,Android,mobile,6.0,Android Browser,4.0,1
 BD,Dhaka,90.4086,23.7231,Banglalink,Cellular,Android,mobile,4.4.2,Android Browser,4.0,2
 OM,Muscat,58.5933,23.6133,Omani Qatari Telecommunications Company SAOC,Cable/DSL,Android,mobile,5.0.1,Chrome,66.0.3359.158,1
 VN,Ho Chi Minh City,106.6438,10.8142,FPT Telecom Company,Cable/DSL,Android,mobile,7.0,Facebook,173.0.0.62.99,2
-TH,Bangkok,100.4167,13.7167,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,66.0.3359.158,1
+TH,Bangkok,100.4167,13.7167,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,66.0.3359.158,2
 NP,Narayangadh,84.4167,27.6833,Techminds Networks Pvt.,Cable/DSL,Android,mobile,5.1,Chrome,66.0.3359.158,1
-TH,Bangkok,100.5,13.7333,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,2
+TH,Bangkok,100.5,13.7333,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,1
 VN,Hanoi,105.85,21.0333,FPT Telecom Company,Cable/DSL,Android,mobile,6.0.1,Facebook,173.0.0.62.99,1
-VN,Vinh Yen,105.5967,21.31,FPT Telecom Company,Cable/DSL,Android,mobile,6.0.1,Facebook,95.0.0.2.184,1
+VN,Vinh Yen,105.5967,21.31,FPT Telecom Company,Cable/DSL,Android,mobile,6.0.1,Facebook,95.0.0.2.184,2
 GE,Tbilisi,44.7908,41.725,Geocell Ltd.,Cellular,Android,mobile,6.0.1,Facebook,167.0.0.28.94,2
 TH,Bangkok,100.4562,13.7083,True Internet,Cable/DSL,Android,mobile,6.1,Chrome WebView,66.0.3359.158,1
 AE,Dubai,55.3047,25.2582,Emirates Telecommunications Corporation,Cellular,Android,mobile,6.0.1,Chrome,66.0.3359.158,1
 TH,Huai Khwang,100.579,13.7768,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,66.0.3359.158,2
 TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,6.0,Chrome WebView,66.0.3359.158,2
-TH,Huai Khwang,100.579,13.7768,True Internet,Cellular,Android,mobile,7.1,Chrome WebView,66.0.3359.158,2
+TH,Huai Khwang,100.579,13.7768,True Internet,Cellular,Android,mobile,7.1,Chrome WebView,66.0.3359.158,1
 RO,Fagaras,24.9667,45.85,Nextgen Communications Srl,Cable/DSL,Android,mobile,5.1.1,Chrome,66.0.3359.158,1
 TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,2
-TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,64.0.3282.137,2
-DZ,Oran,-0.6472,35.6877,Optimum-Telecom-Algeria,129.45.0.0/17,Android,mobile,7.0,Chrome,60.0.3112.116,1
+TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,64.0.3282.137,1
+DZ,Oran,-0.6472,35.6877,Optimum-Telecom-Algeria,129.45.0.0/17,Android,mobile,7.0,Chrome,60.0.3112.116,2
 CM,Douala,9.7,4.0503,Viettel-cm,Cable/DSL,Android,mobile,5.1,Chrome WebView,56.0.2924.87,2
 TH,Bangkok,100.4562,13.7083,True Internet,Cellular,Android,mobile,4.4.2,Android Browser,4.0,2
 US,Chula Vista,-117.0296,32.6102,Cox Communications,Cable/DSL,Android,mobile,6.0.1,Chrome,66.0.3359.158,1
 MX,Mexico City,-99.1386,19.4342,Movistar México,Cellular,Android,mobile,5.1,Android Browser,4.0,1
 MY,Kuala Lumpur,101.6707,3.1317,Maxis Communications,Cellular,Android,mobile,7.0,Android Browser,4.0,1
-TH,Huai Khwang,100.579,13.7768,True Internet,Cellular,Android,tablet,7.0,Chrome WebView,66.0.3359.158,1
+TH,Huai Khwang,100.579,13.7768,True Internet,Cellular,Android,tablet,7.0,Chrome WebView,66.0.3359.158,2
 TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,1
 NP,Patan,85.3333,27.6667,Ncell Pvt.,Cellular,Android,mobile,7.0,Android Browser,4.0,1
-TH,Bangkok,100.4833,13.7333,True Internet,Cable/DSL,Android,mobile,6.0,Chrome WebView,66.0.3359.158,2
+TH,Bangkok,100.4833,13.7333,True Internet,Cable/DSL,Android,mobile,6.0,Chrome WebView,66.0.3359.158,1
 BD,Dhaka,90.4086,23.7231,Banglalink,Cellular,Android,mobile,7.0,Android Browser,4.0,2
 VN,Hanoi,105.85,21.0333,FPT Telecom Company,Cable/DSL,Android,mobile,5.1.1,Facebook,95.0.0.2.184,1
 TH,Bangkok,100.4688,13.8583,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,2
 NP,Kathmandu,85.3167,27.7167,WorldLink Communications Pvt,Cable/DSL,Android,mobile,4.3,Chrome,66.0.3359.158,1
-BD,Dhaka,90.4086,23.7231,Triangle Services Limited.,Cable/DSL,Android,mobile,5.0,Chrome,66.0.3359.158,2
+BD,Dhaka,90.4086,23.7231,Triangle Services Limited.,Cable/DSL,Android,mobile,5.0,Chrome,66.0.3359.158,1
 BD,Dhaka,90.4086,23.7231,Banglalink,Cellular,Android,mobile,4.4.2,Android Browser,4.0,2
-TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,6.0,Chrome WebView,66.0.3359.126,2
+TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,6.0,Chrome WebView,66.0.3359.126,1
 TH,Bangkok,100.5,13.7333,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.126,2
 TH,Bangkok,100.531,13.7625,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,1
-ES,Madrid,-3.6837999999999997,40.4167,Orange Espana,Cellular,Android,mobile,4.2.2,Chrome,61.0.3163.98,1
+ES,Madrid,-3.6837999999999997,40.4167,Orange Espana,Cellular,Android,mobile,4.2.2,Chrome,61.0.3163.98,2
 AE,Ras al-Khaimah,55.9432,25.7895,Emirates Telecommunications Corporation,Cable/DSL,Android,mobile,5.0.1,Chrome,66.0.3359.158,1
-TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,2
+TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,1
 TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,1
 EG,Cairo,31.2859,30.0771,Vodafone Egypt,Cellular,Android,mobile,7.0,UCBrowser,12.5.0.1109,1
 VN,Lao Cai,103.95,22.4833,Vietnam Posts And Telecommunications Group,Cable/DSL,Android,mobile,6.0,Facebook,95.0.0.2.184,1
@@ -3630,73 +3631,73 @@ TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,6.0,Chrome Web
 VN,Can Giuoc,106.6667,10.6167,Vietnam Posts and Telecommunications(VNPT),Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,2
 TH,Bangkok,100.4562,13.7083,True Internet,Cable/DSL,Android,mobile,4.4.2,Android Browser,4.0,2
 KZ,Almaty,76.9285,43.2565,Kcell JSC,Cellular,Android,mobile,6.0,Chrome WebView,50.0.2661.86,1
-VN,Tan An,106.4167,10.5333,Vietnam Posts And Telecommunications Group,Cellular,Android,mobile,8.0.0,Facebook,173.0.0.62.99,2
-VN,Hanoi,105.85,21.0333,FPT Telecom Company,Cable/DSL,Android,mobile,5.1.1,Facebook,173.0.0.62.99,2
+VN,Tan An,106.4167,10.5333,Vietnam Posts And Telecommunications Group,Cellular,Android,mobile,8.0.0,Facebook,173.0.0.62.99,1
+VN,Hanoi,105.85,21.0333,FPT Telecom Company,Cable/DSL,Android,mobile,5.1.1,Facebook,173.0.0.62.99,1
 RO,Pascani,26.7229,47.2469,Nextgen Communications Srl,Cable/DSL,Android,mobile,5.1,Chrome WebView,62.0.3202.84,1
 GA,Libreville,9.4487,0.381,Airtel,154.0.176.0/20,Android,mobile,6.0,Chrome,54.0.2840.85,1
-PL,Warsaw,21.0026,52.2484,Polkomtel Sp. z o.o.,31.0.0.0/15,Android,mobile,5.0.2,Chrome,67.0.3396.68,1
+PL,Warsaw,21.0026,52.2484,Polkomtel Sp. z o.o.,31.0.0.0/15,Android,mobile,5.0.2,Chrome,67.0.3396.68,2
 VN,Hanoi,105.85,21.0333,Viettel Group,Cable/DSL,Android,mobile,6.0,Chrome WebView,66.0.3359.158,1
-VN,Hanoi,105.85,21.0333,Viettel Group,Cable/DSL,Android,mobile,6.0,Chrome WebView,66.0.3359.158,1
-IN,Coimbatore,76.9614,10.9925,Bharti Airtel,Cellular,Android,mobile,7.1.2,UCBrowser,12.5.0.1109,2
-TH,Bangkok,100.4833,13.7333,True Internet,Cable/DSL,Android,mobile,4.4.2,Android Browser,4.0,2
+VN,Hanoi,105.85,21.0333,Viettel Group,Cable/DSL,Android,mobile,6.0,Chrome WebView,66.0.3359.158,2
+IN,Coimbatore,76.9614,10.9925,Bharti Airtel,Cellular,Android,mobile,7.1.2,UCBrowser,12.5.0.1109,1
+TH,Bangkok,100.4833,13.7333,True Internet,Cable/DSL,Android,mobile,4.4.2,Android Browser,4.0,1
 IR,Tehran,51.3304,35.7261,Rightel Communication Service Company PJS,Cable/DSL,Android,mobile,7.0,MIUI Browser,9.4.11,1
 VN,Hanoi,105.85,21.0333,Viettel Group,Cable/DSL,Android,mobile,5.1,Chrome WebView,43.0.2357.121,2
 TH,Bangkok,100.4833,13.7333,True Internet,Cable/DSL,Android,mobile,5.1,Android Browser,4.0,2
 AZ,Baku,49.8822,40.3953,Azedunet LLC,Cable/DSL,Android,tablet,5.1.1,Chrome,66.0.3359.158,1
 TH,Bangkok,100.4833,13.7333,True Internet,Cable/DSL,Android,mobile,6.0.1,Chrome WebView,66.0.3359.158,1
 VN,An Giang,109.1,14.35,Viettel Group,Cable/DSL,Android,mobile,5.1,Chrome WebView,67.0.3396.68,2
-VN,Ho Chi Minh City,106.6438,10.8142,Viettel Group,Cable/DSL,Android,mobile,6.0,Chrome WebView,67.0.3396.68,2
+VN,Ho Chi Minh City,106.6438,10.8142,Viettel Group,Cable/DSL,Android,mobile,6.0,Chrome WebView,67.0.3396.68,1
 PK,Lahore,74.3686,31.4888,Mobilink Mobile Internet,Cellular,Android,mobile,8.0.0,UCBrowser,12.0.0.1088,2
 MX,Tuxtla Gutiérrez,-93.1167,16.75,Telmex,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,2
 UA,Kiev,30.5238,50.4547,Kyivstar PJSC,Cellular,Android,mobile,5.1,Chrome WebView,66.0.3359.158,1
-DE,Leipzig,12.4312,51.3637,HL komm Telekommunikations GmbH,Cable/DSL,Mac OS,desktop,10.11.4,Opera,38.0.2220.41,2
+DE,Leipzig,12.4312,51.3637,HL komm Telekommunikations GmbH,Cable/DSL,Mac OS,desktop,10.11.4,Opera,38.0.2220.41,1
 NP,Kathmandu,85.3167,27.7167,WorldLink Communications Pvt,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,2
-UA,Kyiv,30.5303,50.458,Kyivstar PJSC,46.211.0.0/16,Android,tablet,6.0,Android Browser,4.0,2
+UA,Kyiv,30.5303,50.458,Kyivstar PJSC,46.211.0.0/16,Android,tablet,6.0,Android Browser,4.0,1
 LB,Beirut,35.5097,33.8719,Econsult Technology SARL,Cable/DSL,Android,mobile,4.4.4,Android Browser,4.0,2
 NP,Kathmandu,85.3167,27.7167,Arrownet Pvt.Ltd,Cable/DSL,Android,mobile,6.0.1,Chrome,66.0.3359.158,1
 VN,Soc Trang,105.98,9.6033,Viettel Group,Cable/DSL,Android,mobile,6.0,Chrome WebView,65.0.3325.109,2
 SA,Jeddah,39.2192,21.5169,SaudiNet,Cellular,Android,mobile,6.0.1,Chrome,67.0.3396.68,2
-AU,Rozelle,151.1705,-33.8614,Optus,Cellular,Android,mobile,6.0,Chrome,66.0.3359.158,1
+AU,Rozelle,151.1705,-33.8614,Optus,Cellular,Android,mobile,6.0,Chrome,66.0.3359.158,2
 TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,4.4.2,Chrome,66.0.3359.158,2
-TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,5.1,Chrome WebView,58.0.3029.83,2
+TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,5.1,Chrome WebView,58.0.3029.83,1
 IN,Coimbatore,76.9614,10.9925,Bharti Airtel,Cellular,Android,mobile,7.0,UCBrowser,12.2.5.1102,2
 TH,Huai Khwang,100.579,13.7768,True Internet,Cellular,Android,mobile,6.0,Chrome WebView,65.0.3325.109,1
-TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,64.0.3282.137,2
+TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,64.0.3282.137,1
 NP,Kathmandu,85.3167,27.7167,Nepal Telecom,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,1
 VN,Hanoi,105.85,21.0333,Viettel Group,Cable/DSL,Android,mobile,6.0,Chrome WebView,50.0.2661.86,1
 TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,2
-IN,Chennai,80.2833,13.0833,Bharti Airtel,Cellular,Android,mobile,7.0,UCBrowser,12.5.0.1109,2
+IN,Chennai,80.2833,13.0833,Bharti Airtel,Cellular,Android,mobile,7.0,UCBrowser,12.5.0.1109,1
 PT,Amarante,-8.0825,41.2727,MEO,Cable/DSL,Android,mobile,6.0.1,Android Browser,4.0,1
 TH,Bangkok,100.5,13.7333,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.126,1
-TH,Bangkok,100.5333,13.8,True Internet,Cellular,Android,mobile,7.0,Samsung Browser,6.2,2
+TH,Bangkok,100.5333,13.8,True Internet,Cellular,Android,mobile,7.0,Samsung Browser,6.2,1
 VN,Bac Ninh,106.0763,21.1861,FPT Telecom Company,Cable/DSL,Android,mobile,7.0,Facebook,174.0.0.54.96,1
-TH,Bangkok,100.4562,13.7083,True Internet,Cellular,Android,tablet,4.2.2,Chrome,66.0.3359.158,2
-TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,1
+TH,Bangkok,100.4562,13.7083,True Internet,Cellular,Android,tablet,4.2.2,Chrome,66.0.3359.158,1
+TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,2
 TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,2
 VN,Hanoi,105.85,21.0333,FPT Telecom Company,Cable/DSL,Android,mobile,5.1.1,Chrome,66.0.3359.158,2
 PL,Wrocław,17.0333,51.1,Orange Mobile,Cellular,Android,mobile,7.0,Samsung Browser,6.4,2
-VN,Qui Nhon,109.2333,13.7667,Viettel Group,Cable/DSL,Android,mobile,5.1.1,Chrome WebView,66.0.3359.158,2
+VN,Qui Nhon,109.2333,13.7667,Viettel Group,Cable/DSL,Android,mobile,5.1.1,Chrome WebView,66.0.3359.158,1
 IN,Tiruppur,77.35,11.1,Bharti Airtel,Cable/DSL,Android,mobile,6.0.1,UCBrowser,10.8.0.718,2
 TH,Bangkok,100.5,13.7333,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,66.0.3359.158,1
-TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,55.0.2883.91,2
-IN,Tiruchi,78.6856,10.805,Bharti Airtel,Cellular,Android,mobile,7.0,UCBrowser,11.4.8.1012,2
+TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,55.0.2883.91,1
+IN,Tiruchi,78.6856,10.805,Bharti Airtel,Cellular,Android,mobile,7.0,UCBrowser,11.4.8.1012,1
 TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,7.1.1,Samsung Browser,6.4,2
 OM,Muscat,58.5933,23.6133,Omani Qatari Telecommunications Company SAOC,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,1
-VN,Hanoi,105.85,21.0333,FPT Telecom Company,Cable/DSL,Android,mobile,5.0.2,Chrome,64.0.3282.137,2
-IN,Gaya,85,24.7833,Jio,Cellular,Android,mobile,7.1.2,UCBrowser,12.2.5.1102,1
+VN,Hanoi,105.85,21.0333,FPT Telecom Company,Cable/DSL,Android,mobile,5.0.2,Chrome,64.0.3282.137,1
+IN,Gaya,85,24.7833,Jio,Cellular,Android,mobile,7.1.2,UCBrowser,12.2.5.1102,2
 TH,Bangkok,100.5333,13.8,True Internet,Cellular,Android,mobile,6.0.1,Samsung Browser,4.2,1
-BR,São Paulo,-46.6409,-23.6283,GOOGLE,66.249.64.0/19,Android,mobile,8.1.0,Chrome,66.0.3359.158,1
+BR,São Paulo,-46.6409,-23.6283,GOOGLE,66.249.64.0/19,Android,mobile,8.1.0,Chrome,66.0.3359.158,2
 RO,Bucharest,26.1,44.4333,Orange Romania,Cellular,Android,mobile,5.1.1,Chrome,64.0.3282.137,2
 TH,Bangkok,100.4562,13.7083,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,1
-TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,1
+TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,2
 TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,67.0.3396.68,2
 OM,Muscat,58.5933,23.6133,Omani Qatari Telecommunications Company SAOC,Cable/DSL,Android,mobile,6.0,Chrome,66.0.3359.158,1
 VN,Hanoi,105.85,21.0333,FPT Telecom Company,Cable/DSL,Android,mobile,6.0,Chrome,51.0.2704.81,1
 CG,Brazzaville,15.2847,-4.2592,airtelcg,Cellular,Android,mobile,6.0,Chrome WebView,53.0.2785.124,2
-TH,Bangkok,100.5,13.7333,True Internet,Cellular,Android,mobile,4.4.2,Android Browser,4.0,2
+TH,Bangkok,100.5,13.7333,True Internet,Cellular,Android,mobile,4.4.2,Android Browser,4.0,1
 MX,La Paz,-110.2289,24.0814,Megacable,Cable/DSL,Android,mobile,5.1.1,Samsung Browser,3.3,2
 KH,Phnom Penh,104.916,11.5625,"Smart Axiata Co.,Ltd",Cable/DSL,Android,mobile,6.0.1,Chrome WebView,61.0.3163.98,2
-VN,Hanoi,105.85,21.0333,Viettel Group,Cable/DSL,Android,mobile,6.0,Chrome WebView,49.0.2623.105,2
+VN,Hanoi,105.85,21.0333,Viettel Group,Cable/DSL,Android,mobile,6.0,Chrome WebView,49.0.2623.105,1
 US,Fort Lauderdale,-80.2264,26.111,Comcast Cable,Cable/DSL,Android,tablet,5.0.2,Chrome,67.0.3396.68,1
 IN,Bhubaneswar,85.8333,20.2333,Jio,Cellular,Android,mobile,7.1.1,UCBrowser,12.5.5.1111,1
 UY,Montevideo,-56.1885,-34.8515,Administracion Nacional de Telecomunicaciones,Cellular,Android,mobile,5.1,Android Browser,4.0,1
@@ -3733,9 +3734,9 @@ TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,7.0,Chrome Web
 CG,Brazzaville,15.2847,-4.2592,airtelcg,Cable/DSL,Android,mobile,5.1,Android Browser,4.0,2
 VN,Thanh Pho Thai Binh,106.3333,20.45,Viettel Group,Cable/DSL,Android,mobile,6.0,Chrome,67.0.3396.68,1
 TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,tablet,5.1.1,Samsung Browser,3.5,1
-MM,Yangon,96.1667,16.7833,Ooredoo Myanmar,Cable/DSL,iOS,mobile,10.3.3,Facebook,147.0.0.46.81,2
+MM,Yangon,96.1667,16.7833,Ooredoo Myanmar,Cable/DSL,iOS,mobile,10.3.3,Facebook,147.0.0.46.81,1
 TH,Bangkok,100.4833,13.7333,True Internet,Cable/DSL,Android,mobile,8.0.0,Chrome WebView,66.0.3359.158,2
-AE,Dubai,55.3047,25.2582,Emirates Telecommunications Corporation,Cable/DSL,Android,mobile,4.4.2,Chrome,66.0.3359.158,2
+AE,Dubai,55.3047,25.2582,Emirates Telecommunications Corporation,Cable/DSL,Android,mobile,4.4.2,Chrome,66.0.3359.158,1
 TH,Bangkok,100.5333,13.8,True Internet,Cellular,Android,mobile,8.0.0,Chrome WebView,66.0.3359.158,1
 CL,Santiago,-70.6667,-33.45,WOM Chile,Cable/DSL,Android,mobile,6.0.1,Facebook,172.0.0.66.93,2
 TH,Huai Khwang,100.579,13.7768,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,66.0.3359.158,2
@@ -3749,7 +3750,7 @@ TH,Bangkok,100.4562,13.7083,True Internet,Cellular,Android,mobile,5.1,Chrome Web
 ES,Málaga,-4.4348,36.7267,Orange Espana,Cellular,Android,mobile,7.0,Chrome,67.0.3396.68,2
 IQ,Erbil,44.0105,36.1828,Net Tech Ltd,91.192.4.0/22,Android,mobile,4.1.2,Android Browser,4.0,2
 TH,Bangkok,100.5,13.7333,True Internet,Cellular,Android,mobile,7.1.1,Chrome,66.0.3359.158,2
-TH,Bangkok,100.4167,13.7167,True Internet,Cellular,Android,mobile,6.0.1,Samsung Browser,4.2,2
+TH,Bangkok,100.4167,13.7167,True Internet,Cellular,Android,mobile,6.0.1,Samsung Browser,4.2,1
 IQ,Mosul,43.1189,36.335,Asiacell Communications Pjsc,Cellular,Android,tablet,4.2.2,Android Browser,4.0,2
 TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,5.1,Chrome WebView,66.0.3359.158,2
 IN,Tiruppur,77.35,11.1,Bharti Airtel,Cellular,Android,mobile,5.1.1,UCBrowser,10.8.0.718,1
@@ -3761,7 +3762,7 @@ TH,Bangkok,100.531,13.7625,True Internet,Cellular,Android,mobile,7.0,Chrome WebV
 TH,Bangkok,100.5,13.7333,True Internet,Cellular,Android,mobile,7.1.2,Chrome WebView,66.0.3359.158,1
 SA,Jeddah,39.2192,21.5169,SaudiNet,Cellular,Android,mobile,5.1.1,Chrome,66.0.3359.106,2
 ES,Torres de la Alameda,-3.3577,40.4026,Orange Espana,Cellular,Android,mobile,7.1.2,Chrome,66.0.3359.158,2
-TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,6.0,Chrome WebView,65.0.3325.109,1
+TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,6.0,Chrome WebView,65.0.3325.109,2
 IN,Chennai,80.2833,13.0833,Bharti Airtel,Cellular,Android,mobile,7.1.2,UCBrowser,12.2.5.1102,1
 TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,66.0.3359.158,1
 TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,6.0.1,Samsung Browser,4.2,2
@@ -3779,8 +3780,8 @@ KE,Nairobi,36.8155,-1.2841,SAFARICOM-LIMITED,197.176.0.0/13,Android,mobile,6.0,C
 KE,Nairobi,36.8155,-1.2841,SAFARICOM-LIMITED,105.160.0.0/13,Android,mobile,6.0,Chrome WebView,50.0.2661.86,2
 NG,Lagos,3.3958,6.4531,MTN Nigeria,Cellular,Android,mobile,4.4.2,Chrome,40.0.2214.109,1
 TH,Bangkok,100.531,13.7625,True Internet,Cellular,Android,mobile,4.2.2,Android Browser,4.0,1
-KE,Nairobi,36.8167,-1.2833,Safaricom Business,Cellular,Android,mobile,6.0,Chrome WebView,65.0.3325.109,1
-IN,Madurai,78.1167,9.9333,Bharti Airtel,Cable/DSL,Android,mobile,6.0,UCBrowser,12.5.0.1109,1
+KE,Nairobi,36.8167,-1.2833,Safaricom Business,Cellular,Android,mobile,6.0,Chrome WebView,65.0.3325.109,2
+IN,Madurai,78.1167,9.9333,Bharti Airtel,Cable/DSL,Android,mobile,6.0,UCBrowser,12.5.0.1109,2
 TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,64.0.3282.137,1
 TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,67.0.3396.68,1
 TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,67.0.3396.68,1
@@ -3803,17 +3804,17 @@ TH,Huai Khwang,100.579,13.7768,True Internet,Cellular,Android,mobile,7.0,Chrome 
 MM,Yangon,96.1667,16.7833,Myanma Posts and Telecommunications,Cable/DSL,Android,mobile,4.4.2,Android Browser,4.0,2
 ES,Madrid,-3.7026,40.4165,Vodafone Spain,Cellular,Android,mobile,8.0.0,Chrome,67.0.3396.68,2
 VN,Hanoi,105.85,21.0333,Vietnam Posts And Telecommunications Group,Cable/DSL,Android,mobile,5.0.2,Chrome,66.0.3359.158,2
-IN,Puducherry,79.83,11.93,Bharti Airtel,Cellular,Android,mobile,7.1.2,UCBrowser,12.2.5.1102,2
+IN,Puducherry,79.83,11.93,Bharti Airtel,Cellular,Android,mobile,7.1.2,UCBrowser,12.2.5.1102,1
 PT,Quarteira,-8.1006,37.0695,MEO,Cable/DSL,Android,mobile,4.4.2,Android Browser,4.0,2
 TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,67.0.3396.68,1
-TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,4.4.2,Android Browser,4.0,1
+TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,4.4.2,Android Browser,4.0,2
 TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,4.4.2,Android Browser,4.0,2
 TH,Bangkok,100.5,13.7333,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,1
 VN,Hanoi,105.85,21.0333,FPT Telecom Company,Cable/DSL,Android,mobile,5.1.1,Chrome,66.0.3359.158,2
 TH,Bangkok,100.4833,13.7333,True Internet,Cable/DSL,Android,mobile,7.0,Chrome WebView,65.0.3325.109,2
 KH,Phnom Penh,104.916,11.5625,"Smart Axiata Co.,Ltd",Cellular,Android,mobile,6.0,Android Browser,4.0,2
 TH,Bangkok,100.4833,13.7333,True Internet,Cable/DSL,Android,mobile,7.0,Chrome WebView,66.0.3359.158,1
-CL,Rancagua,-70.7444,-34.1708,Movistar Chile,Cellular,Android,tablet,4.4.2,Chrome,66.0.3359.158,1
+CL,Rancagua,-70.7444,-34.1708,Movistar Chile,Cellular,Android,tablet,4.4.2,Chrome,66.0.3359.158,2
 CG,Madingou,13.55,-4.1536,airtelcg,Cable/DSL,Android,mobile,5.1,Android Browser,4.0,2
 UY,Montevideo,-56.1885,-34.8515,Administracion Nacional de Telecomunicaciones,Cable/DSL,Android,mobile,6.0.1,Samsung Browser,6.4,2
 GH,Accra,-0.2167,5.55,Ghana Telecom,Cable/DSL,Android,mobile,6.0,Chrome,66.0.3359.158,2
@@ -3846,8 +3847,8 @@ TH,Bangkok,100.4562,13.7083,True Internet,Cable/DSL,Android,mobile,7.0,Chrome We
 TH,Bangkok,100.4667,13.7,True Internet,Cable/DSL,Android,mobile,7.1.2,Chrome WebView,66.0.3359.126,1
 TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,1
 ID,Bandung,107.6186,-6.9039,Three Indonesia,Cellular,Android,mobile,5.1.1,Samsung Browser,3.5,1
-TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,2
-TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,4.3,Chrome,33.0.1750.136,2
+TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,1
+TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,4.3,Chrome,33.0.1750.136,1
 TH,Bangkok,100.531,13.7625,True Internet,Cable/DSL,Android,mobile,6.0.1,Chrome WebView,67.0.3396.68,1
 TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,2
 TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,5.1,Chrome WebView,66.0.3359.158,1
@@ -3860,13 +3861,13 @@ SA,Riyadh,46.7152,24.6537,SaudiNet,Cable/DSL,Android,mobile,7.0,Chrome,67.0.3396
 IN,Coimbatore,76.9614,10.9925,Bharti Airtel,Cellular,Android,mobile,7.1.2,UCBrowser,12.2.1.1108,2
 IN,Chennai,80.2833,13.0833,Bharti Airtel,Cellular,Android,mobile,5.1.1,UCBrowser,11.4.6.1017,1
 RW,Kigali,30.0606,-1.9536,MTN RwandaCell,Cable/DSL,Android,mobile,6.0,Chrome,63.0.3239.111,1
-ID,Surabaya,112.7508,-7.2492,PT Indosat Tbk.,Cellular,Android,mobile,6.0.1,UCBrowser,12.5.0.1109,2
+ID,Surabaya,112.7508,-7.2492,PT Indosat Tbk.,Cellular,Android,mobile,6.0.1,UCBrowser,12.5.0.1109,1
 TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,1
 TH,Bangkok,100.5,13.7333,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,66.0.3359.126,1
 IL,Tel Aviv,34.7667,32.0667,013 NetVision,Cellular,Android,mobile,6.0.1,Chrome,66.0.3359.158,2
 TH,Chiang Mai,98.9847,18.790399999999998,True Internet,Cable/DSL,Android,mobile,5.0,Chrome WebView,66.0.3359.158,1
 IN,Chennai,80.2833,13.0833,Bharti Airtel,Cellular,Android,tablet,5.1,UCBrowser,12.5.0.1109,2
-IR,Tehran,51.3336,35.727,Mobile Communication Company of Iran PLC,5.208.0.0/13,Android,mobile,5.1,Chrome,50.0.2661.89,1
+IR,Tehran,51.3336,35.727,Mobile Communication Company of Iran PLC,5.208.0.0/13,Android,mobile,5.1,Chrome,50.0.2661.89,2
 TH,Bangkok,100.4833,13.7333,True Internet,Cable/DSL,Android,mobile,7.0,Chrome WebView,66.0.3359.158,1
 TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,67.0.3396.68,2
 TH,Bangkok,100.531,13.7625,True Internet,Cellular,Android,mobile,6.1,Chrome WebView,43.0.2357.121,2
@@ -3877,7 +3878,7 @@ TH,Bangkok,100.5,13.7333,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebV
 TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,5.1,Chrome WebView,46.0.2490.76,2
 TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,7.0,Chrome,56.0.2924.87,2
 BD,Dhaka,90.4096,23.8175,Banglalink Digital Communications Ltd,116.58.200.0/21,Android,mobile,4.2.2,Android Browser,4.0,2
-TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,66.0.3359.158,2
+TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,66.0.3359.158,1
 DE,Lorsch,8.5667,49.65,O2 Deutschland,Cellular,iOS,mobile,11.3,WebKit,605.1.15,2
 KE,Nairobi,36.8155,-1.2841,SAFARICOM-LIMITED,41.81.0.0/16,Android,mobile,4.2.2,Chrome,28.0.1500.94,2
 TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,5.1,Chrome WebView,66.0.3359.126,2
@@ -4055,17 +4056,17 @@ KE,Nairobi,36.8167,-1.2833,Safaricom Business,Cellular,Android,mobile,7.0,Chrome
 KE,Nairobi,36.8155,-1.2841,SAFARICOM-LIMITED,196.96.0.0/12,Android,desktop,,Opera Mini,15.0.2125,2
 TH,Bangkok,100.5333,13.8,True Internet,Cellular,Android,mobile,6.0,Chrome WebView,44.0.2403.119,1
 SA,Riyadh,46.7152,24.6537,Zain Saudi Arabia,Cellular,Android,mobile,6.0.1,Chrome,65.0.3325.109,2
-TH,Bangkok,100.5,13.7333,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,1
+TH,Bangkok,100.5,13.7333,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,2
 VN,Hanoi,105.85,21.0333,FPT Telecom Company,Cable/DSL,Android,mobile,6.0,Facebook,173.0.0.62.99,1
-TH,Bangkok,100.4833,13.75,True Internet,Cable/DSL,Android,mobile,5.1,Android Browser,4.0,2
+TH,Bangkok,100.4833,13.75,True Internet,Cable/DSL,Android,mobile,5.1,Android Browser,4.0,1
 PL,Kielczow,17.1894,51.1369,Telemedia,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,2
 TH,Bangkok,100.5,13.7333,True Internet,Cellular,Android,mobile,6.0,Chrome WebView,44.0.2403.119,1
-KH,Phnom Penh,104.916,11.5625,SOUTH EAST ASIA TELECOM (Cambodia) Co.,Cable/DSL,Android,mobile,5.1,Android Browser,4.0,1
+KH,Phnom Penh,104.916,11.5625,SOUTH EAST ASIA TELECOM (Cambodia) Co.,Cable/DSL,Android,mobile,5.1,Android Browser,4.0,2
 BD,Dhaka,90.4086,23.7231,Banglalink,Cellular,Android,mobile,7.0,Android Browser,4.0,1
 NP,Kathmandu,85.3167,27.7167,Vianet Communications Pvt.,Cable/DSL,Android,mobile,6.0,Chrome,66.0.3359.158,1
 MX,Mexico City,-99.1386,19.4342,Telcel,Cellular,Android,mobile,7.1.1,Chrome,66.0.3359.158,2
-KZ,Astana,71.4278,51.1811,Kcell JSC,Cellular,Android,tablet,5.1,Chrome WebView,43.0.2357.121,2
-SA,Riyadh,46.7152,24.6537,Zain Saudi Arabia,Cellular,Android,mobile,5.0,Chrome,65.0.3325.109,2
+KZ,Astana,71.4278,51.1811,Kcell JSC,Cellular,Android,tablet,5.1,Chrome WebView,43.0.2357.121,1
+SA,Riyadh,46.7152,24.6537,Zain Saudi Arabia,Cellular,Android,mobile,5.0,Chrome,65.0.3325.109,1
 LB,Sidon,35.3689,33.5631,Mahmoud El Kasir trading as KASIR NETWORKS,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,2
 GT,Guatemala City,-90.5199,14.6328,Comcel Guatemala S.A.,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,1
 TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,6.0,Chrome WebView,66.0.3359.158,1
@@ -4073,9 +4074,9 @@ TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,5.1,Android Br
 TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,58.0.3029.83,2
 VN,Ho Chi Minh City,106.6438,10.8142,FPT Telecom Company,Cable/DSL,Android,mobile,7.0,Facebook,173.0.0.62.99,2
 TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,5.1.1,Chrome WebView,66.0.3359.158,2
-TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,tablet,4.4.2,Android Browser,4.0,2
+TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,tablet,4.4.2,Android Browser,4.0,1
 DZ,Béchar,-2.2167,31.6167,Telecom Algeria,Cable/DSL,Android,mobile,4.4.2,Android Browser,4.0,1
-DZ,Drea,7.88,36.1214,Optimum-Telecom-Algeria,Cellular,Android,mobile,7.0,Android Browser,4.0,1
+DZ,Drea,7.88,36.1214,Optimum-Telecom-Algeria,Cellular,Android,mobile,7.0,Android Browser,4.0,2
 CM,Douala,9.7,4.0503,MTN Network Solutions (Cameroon),Cable/DSL,Android,mobile,5.1,Android Browser,4.0,1
 ES,Cadiz,-6.2947,36.5298,Vodafone Spain,Cellular,Android,mobile,6.0,Chrome WebView,66.0.3359.158,1
 ES,Madrid,-3.7026,40.4165,Vodafone Spain,Cellular,Android,mobile,4.2.1,Android Browser,4.0,1
@@ -4090,51 +4091,51 @@ BD,Dhaka,90.4086,23.7231,DeVoteD NBN,Cellular,Android,mobile,6.0,Android Browser
 DZ,'Ain Deheb,1.5478,34.8447,Optimum-Telecom-Algeria,Cellular,Android,mobile,5.1.1,Opera,37.0.2192.110129,2
 TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,2
 NP,Kathmandu,85.3167,27.7167,WorldLink Communications Pvt,Cable/DSL,Android,mobile,5.1.1,Chrome,66.0.3359.158,1
-SV,San Salvador,-89.2031,13.7086,CTE S.A. de C.V.,Cellular,Android,mobile,4.4.2,Chrome,40.0.2214.109,1
+SV,San Salvador,-89.2031,13.7086,CTE S.A. de C.V.,Cellular,Android,mobile,4.4.2,Chrome,40.0.2214.109,2
 LB,Zahle,35.9042,33.8497,Net Pro sarl,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,2
-TH,Bangkok,100.4167,13.7167,True Internet,Cellular,Android,mobile,4.4.4,Android Browser,4.0,1
+TH,Bangkok,100.4167,13.7167,True Internet,Cellular,Android,mobile,4.4.4,Android Browser,4.0,2
 IN,Coimbatore,76.9614,10.9925,Airtel,Cellular,Android,mobile,6.0,UCBrowser,12.5.0.1109,2
 TH,Huai Khwang,100.579,13.7768,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,1
-TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,1
+TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,2
 PE,Lima,-77.05,-12.05,Claro Peru,Cellular,Android,mobile,5.1,Chrome,66.0.3359.158,1
-TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,4.4.2,Android Browser,4.0,1
-TH,Bangkok,100.4833,13.7333,True Internet,Cable/DSL,Android,mobile,7.1.1,Chrome WebView,61.0.3163.98,1
+TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,4.4.2,Android Browser,4.0,2
+TH,Bangkok,100.4833,13.7333,True Internet,Cable/DSL,Android,mobile,7.1.1,Chrome WebView,61.0.3163.98,2
 US,Atlanta,-84.4635,33.871,Comcast Cable,Cable/DSL,Android,mobile,5.1.1,Android Browser,4.0,2
-CL,Santiago,-70.6667,-33.45,Claro Chile,Cellular,Android,mobile,5.1.1,Chrome,63.0.3239.111,1
-TH,Bangkok,100.531,13.7625,True Internet,Cellular,Android,mobile,5.1.1,Chrome WebView,64.0.3282.137,2
+CL,Santiago,-70.6667,-33.45,Claro Chile,Cellular,Android,mobile,5.1.1,Chrome,63.0.3239.111,2
+TH,Bangkok,100.531,13.7625,True Internet,Cellular,Android,mobile,5.1.1,Chrome WebView,64.0.3282.137,1
 RO,Galați,28.05,45.45,RCS & RDS,Cable/DSL,Android,mobile,7.0,Chrome WebView,66.0.3359.158,1
-TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,5.1.1,Chrome WebView,55.0.2883.91,2
+TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,5.1.1,Chrome WebView,55.0.2883.91,1
 MX,Veracruz,-96.1333,19.2,Megacable,Cable/DSL,Android,mobile,5.1,Chrome WebView,46.0.2490.76,1
-TH,Bangkok,100.5,13.7333,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,1
+TH,Bangkok,100.5,13.7333,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,2
 IQ,Baghdad,44.3939,33.3386,EarthLink Iraq,Cable/DSL,Android,mobile,4.4.2,Chrome,66.0.3359.158,1
 CD,Kinshasa,15.3,-4.3,Oasis-sprl,Cable/DSL,Android,mobile,5.1,Chrome,39.0.2171.93,2
 BD,Dhaka,90.4086,23.7231,GrameenPhone,Cable/DSL,Android,mobile,7.0,Chrome,63.0.3239.111,1
-DZ,Algiers,3.0905,36.7295,Telecom Algeria,105.96.0.0/12,Android,mobile,7.0,Chrome,66.0.3359.158,1
+DZ,Algiers,3.0905,36.7295,Telecom Algeria,105.96.0.0/12,Android,mobile,7.0,Chrome,66.0.3359.158,2
 TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,6.0,Chrome WebView,44.0.2403.119,2
 TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,1
-TH,Bangkok,100.4688,13.8583,True Internet,Cellular,Android,mobile,5.1,Chrome WebView,43.0.2357.121,1
+TH,Bangkok,100.4688,13.8583,True Internet,Cellular,Android,mobile,5.1,Chrome WebView,43.0.2357.121,2
 TH,Bangkok,100.4833,13.7333,True Internet,Cable/DSL,Android,mobile,7.0,Chrome WebView,66.0.3359.158,1
-TH,Bangkok,100.4562,13.7083,True Internet,Cellular,Android,mobile,5.1.1,Chrome WebView,66.0.3359.158,1
+TH,Bangkok,100.4562,13.7083,True Internet,Cellular,Android,mobile,5.1.1,Chrome WebView,66.0.3359.158,2
 TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,5.1,Chrome WebView,66.0.3359.158,2
 TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,2
 TH,Huai Khwang,100.579,13.7768,True Internet,Cellular,Android,mobile,5.0.2,Android Browser,4.0,1
 TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,6.0,Chrome WebView,62.0.3202.84,1
 NP,Jawalakhel,85.3167,27.6667,WorldLink Communications Pvt,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,1
 CM,Yaoundé,11.5167,3.8667,MTN Network Solutions (Cameroon),Cable/DSL,Android,mobile,6.0,Chrome WebView,54.0.2840.85,1
-TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,1
-CD,Kinshasa,15.3,-4.3,Oasis-sprl,Cable/DSL,Android,mobile,6.0,Chrome,51.0.2704.81,2
-CL,Santiago,-70.6667,-33.45,Claro Chile,Cellular,Android,mobile,5.1,Chrome,64.0.3282.137,2
+TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,2
+CD,Kinshasa,15.3,-4.3,Oasis-sprl,Cable/DSL,Android,mobile,6.0,Chrome,51.0.2704.81,1
+CL,Santiago,-70.6667,-33.45,Claro Chile,Cellular,Android,mobile,5.1,Chrome,64.0.3282.137,1
 TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,1
-KW,Kuwait City,47.9783,29.3697,Viva Kuwait,Cellular,Android,mobile,6.0.1,Chrome,66.0.3359.158,1
-CL,Santiago,-70.6667,-33.45,Claro Chile,Cellular,Android,mobile,7.0,Chrome,58.0.3029.83,2
+KW,Kuwait City,47.9783,29.3697,Viva Kuwait,Cellular,Android,mobile,6.0.1,Chrome,66.0.3359.158,2
+CL,Santiago,-70.6667,-33.45,Claro Chile,Cellular,Android,mobile,7.0,Chrome,58.0.3029.83,1
 CL,Viña del Mar,-71.5197,-33.0081,Claro Chile,Cellular,Android,mobile,7.1.1,Chrome,66.0.3359.158,2
 KH,Phnom Penh,104.916,11.5625,"Smart Axiata Co.,Ltd",Cable/DSL,Android,mobile,6.0,Android Browser,4.0,1
 IN,Coimbatore,76.9614,10.9925,Bharti Airtel,Cellular,Android,mobile,5.1,UCBrowser,12.5.0.1109,2
-TH,Bangkok,100.4562,13.7083,True Internet,Cellular,Android,mobile,7.1.1,Chrome WebView,61.0.3163.98,2
-TH,Bangkok,100.5833,13.6667,True Internet,Cellular,Android,mobile,5.1.1,Chrome WebView,66.0.3359.158,2
+TH,Bangkok,100.4562,13.7083,True Internet,Cellular,Android,mobile,7.1.1,Chrome WebView,61.0.3163.98,1
+TH,Bangkok,100.5833,13.6667,True Internet,Cellular,Android,mobile,5.1.1,Chrome WebView,66.0.3359.158,1
 LB,Beirut,35.5097,33.8719,Matrix International SARL,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,2
 DK,Lynge,12.2772,55.8394,TDC Danmark,Cable/DSL,iOS,tablet,11.4,GSA,51.0.198805899,2
-VN,Ho Chi Minh City,106.6438,10.8142,SaiGon Tourist cable Televition Company,Cable/DSL,Android,mobile,6.0.1,Facebook,170.0.0.52.95,2
+VN,Ho Chi Minh City,106.6438,10.8142,SaiGon Tourist cable Televition Company,Cable/DSL,Android,mobile,6.0.1,Facebook,170.0.0.52.95,1
 KE,Nairobi,36.8167,-1.2833,Wananchi-,Cable/DSL,Android,mobile,8.0.0,Chrome,66.0.3359.158,1
 CI,Abidjan,-4.0127,5.3097,Mtn Cote D'ivoire S.A,Cable/DSL,Android,mobile,4.4.2,Android Browser,4.0,2
 TH,Bangkok,100.4562,13.7083,True Internet,Cable/DSL,Android,mobile,6.0.1,Chrome WebView,66.0.3359.126,1
@@ -4142,10 +4143,10 @@ LB,Mansoura,35.815,33.6794,Sky Waves SARL,Cable/DSL,Android,mobile,6.0,Chrome,66
 NA,Windhoek,17.0836,-22.57,MTC Namibia,Cellular,Android,mobile,5.1.1,Android Browser,4.0,2
 TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,1
 IQ,Mosul,43.1189,36.335,Asiacell Communications Pjsc,Cellular,Android,mobile,4.4.2,Chrome,66.0.3359.158,2
-TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,5.1.1,Chrome WebView,66.0.3359.158,1
+TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,5.1.1,Chrome WebView,66.0.3359.158,2
 BD,Dhaka,90.4277,23.7418,Business Network Ltd,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,1
-TH,Bangkok,100.4562,13.7083,True Internet,Cable/DSL,Android,mobile,6.0,Chrome WebView,65.0.3325.109,1
-UZ,Tashkent,69.25,41.3167,Uzbektelecom JSC,Cellular,Android,mobile,7.0,Chrome,66.0.3359.158,2
+TH,Bangkok,100.4562,13.7083,True Internet,Cable/DSL,Android,mobile,6.0,Chrome WebView,65.0.3325.109,2
+UZ,Tashkent,69.25,41.3167,Uzbektelecom JSC,Cellular,Android,mobile,7.0,Chrome,66.0.3359.158,1
 TR,Istanbul,28.9647,41.0186,Turk Telekom,Cable/DSL,Android,mobile,6.0,Chrome,67.0.3396.87,2
 TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,6.0,Chrome WebView,44.0.2403.119,1
 KZ,Almaty,76.9285,43.2565,Kcell JSC,Cellular,Android,mobile,5.1,Android Browser,4.0,2
@@ -4158,105 +4159,105 @@ TH,Bangkok,100.531,13.7625,True Internet,Cellular,Android,mobile,5.1,Android Bro
 TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,8.0.0,Chrome WebView,66.0.3359.158,2
 DZ,'Ain Deheb,1.5478,34.8447,Optimum-Telecom-Algeria,Cellular,Android,mobile,5.1,Android Browser,4.0,2
 MX,Tlaquiltenango,-99.1542,18.6553,Megacable,Cellular,Android,mobile,6.0.1,Chrome,66.0.3359.158,2
-TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,2
+TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,1
 TH,Bangkok,100.4562,13.7083,True Internet,Cellular,Android,mobile,5.0.2,Chrome WebView,45.0.2454.95,1
-TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,66.0.3359.158,1
-TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,5.0,Android Browser,4.0,2
+TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,66.0.3359.158,2
+TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,5.0,Android Browser,4.0,1
 TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,7.1.2,Chrome WebView,66.0.3359.158,1
 TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,66.0.3359.126,2
-TH,Bangkok,100.5,13.7333,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,65.0.3325.109,1
+TH,Bangkok,100.5,13.7333,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,65.0.3325.109,2
 TH,Bangkok,100.4833,13.7333,True Internet,Cable/DSL,Android,mobile,7.0,Chrome WebView,64.0.3282.137,2
 ES,Seville,-5.9761,37.3824,Vodafone Spain,Cellular,Android,mobile,6.0,Android Browser,4.0,1
 TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,1
 TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,66.0.3359.126,1
 TH,Huai Khwang,100.579,13.7768,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,67.0.3396.81,2
-TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,6.0,Chrome WebView,65.0.3325.109,2
+TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,6.0,Chrome WebView,65.0.3325.109,1
 NP,Kathmandu,85.3167,27.7167,WorldLink Communications Pvt,Cable/DSL,Android,mobile,6.0,Chrome,64.0.3282.137,1
-SA,Jeddah,39.2192,21.5169,Zain Saudi Arabia,Cellular,Android,mobile,8.1.0,Chrome,66.0.3359.158,2
+SA,Jeddah,39.2192,21.5169,Zain Saudi Arabia,Cellular,Android,mobile,8.1.0,Chrome,66.0.3359.158,1
 DZ,Annaba,7.7667,36.9,Telecom Algeria,Cable/DSL,Android,mobile,6.0,Chrome,66.0.3359.158,2
-TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,7.1.1,Chrome WebView,66.0.3359.158,2
-TH,Bangkok,100.4833,13.7333,True Internet,Cable/DSL,Android,mobile,5.0.2,Android Browser,4.0,2
+TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,7.1.1,Chrome WebView,66.0.3359.158,1
+TH,Bangkok,100.4833,13.7333,True Internet,Cable/DSL,Android,mobile,5.0.2,Android Browser,4.0,1
 TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,8.0.0,Chrome WebView,66.0.3359.158,2
 TN,Tunis,10.1711,36.8061,Tunisie Telecom,Cable/DSL,Android,mobile,5.1.1,Chrome,65.0.3325.109,1
 TH,Bangkok,100.4688,13.8583,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,66.0.3359.158,1
-TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,5.1,Chrome WebView,66.0.3359.158,2
+TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,5.1,Chrome WebView,66.0.3359.158,1
 TH,Bangkok,100.5833,13.6667,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,65.0.3325.109,2
-TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,66.0.3359.158,1
-TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,5.1.1,Chrome WebView,46.0.2490.76,2
-TH,Bangkok,100.531,13.7625,True Internet,Cellular,Android,mobile,6.0,Chrome WebView,44.0.2403.119,1
-TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,1
+TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,66.0.3359.158,2
+TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,5.1.1,Chrome WebView,46.0.2490.76,1
+TH,Bangkok,100.531,13.7625,True Internet,Cellular,Android,mobile,6.0,Chrome WebView,44.0.2403.119,2
+TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,2
 TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,8.0.0,Chrome WebView,66.0.3359.158,2
 TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,6.0,Chrome WebView,43.0.2357.121,1
-PE,Lima,-77.05,-12.05,Claro Peru,Cellular,Android,mobile,6.0.1,Chrome,53.0.2785.124,2
+PE,Lima,-77.05,-12.05,Claro Peru,Cellular,Android,mobile,6.0.1,Chrome,53.0.2785.124,1
 ES,Madrid,-3.7026,40.4165,Vodafone Spain,Cellular,Android,mobile,8.0.0,Chrome WebView,66.0.3359.158,1
 TH,Huai Khwang,100.579,13.7768,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,58.0.3029.83,2
 TH,Bangkok,100.4562,13.7083,True Internet,Cable/DSL,Android,mobile,4.4.2,Android Browser,4.0,1
 TH,Bangkok,100.4667,13.7,True Internet,Cellular,Android,desktop,5.1,Android Browser,4.0,2
-TH,Bangkok,100.4562,13.7083,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,66.0.3359.158,1
+TH,Bangkok,100.4562,13.7083,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,66.0.3359.158,2
 ES,Barcelona,2.159,41.3888,Vodafone Spain,Cellular,Android,mobile,7.0,Chrome,66.0.3359.158,1
 TH,Bangkok,100.5333,13.8,True Internet,Cellular,Android,mobile,5.0.2,Chrome WebView,45.0.2454.95,2
 BD,Dhaka,90.4086,23.7231,Banglalink,Cellular,Android,mobile,5.1,Chrome WebView,43.0.2357.121,2
 VN,Qui Nhon,109.2333,13.7667,Vietnam Posts And Telecommunications Group,Cable/DSL,Android,mobile,6.0,Facebook,148.0.0.51.62,1
 TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,7.1.1,Chrome WebView,66.0.3359.158,1
 TH,Huai Khwang,100.579,13.7768,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.126,1
-TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,1
-TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,4.3,Android Browser,4.0,2
-BD,Dhaka,90.3722,23.7534,GrameenPhone Ltd.,123.108.240.0/21,Android,mobile,6.0.1,Android Browser,4.0,1
+TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,2
+TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,4.3,Android Browser,4.0,1
+BD,Dhaka,90.3722,23.7534,GrameenPhone Ltd.,123.108.240.0/21,Android,mobile,6.0.1,Android Browser,4.0,2
 TN,Bizerte,9.8739,37.2744,SOCIETE NATIONALE DES TELECOMMUNICATIONS (Tunisie,Cable/DSL,Android,tablet,6.0,Chrome WebView,50.0.2661.86,2
 NP,Kathmandu,85.3167,27.7167,Vianet Communications Pvt.,Cable/DSL,Android,mobile,5.1.1,Chrome,66.0.3359.126,1
-MM,Yangon,96.1667,16.7833,Myanma Posts and Telecommunications,Cable/DSL,Android,tablet,4.2.2,Android Browser,4.0,1
+MM,Yangon,96.1667,16.7833,Myanma Posts and Telecommunications,Cable/DSL,Android,tablet,4.2.2,Android Browser,4.0,2
 IN,Salem,78.1667,11.65,Bharti Airtel,Cellular,Android,mobile,7.1.1,UCBrowser,12.5.0.1109,2
 TH,Bangkok,100.4562,13.7083,True Internet,Cable/DSL,Android,mobile,8.0.0,Chrome WebView,66.0.3359.158,1
 IR,Tehran,51.3336,35.727,Mobile Communication Company of Iran PLC,95.64.0.0/17,Android,mobile,7.0,Chrome,60.0.3112.116,1
 TH,Bangkok,100.4562,13.7083,True Internet,Cellular,Android,mobile,8.0.0,Chrome WebView,63.0.3239.111,1
-TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,desktop,5.1,Android Browser,4.0,2
+TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,desktop,5.1,Android Browser,4.0,1
 TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,66.0.3359.158,1
-TH,Bangkok,100.4833,13.7333,True Internet,Cable/DSL,Android,mobile,7.0,Chrome WebView,66.0.3359.158,1
-TH,Bangkok,100.5,13.7333,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.126,1
-TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,66.0.3359.158,2
+TH,Bangkok,100.4833,13.7333,True Internet,Cable/DSL,Android,mobile,7.0,Chrome WebView,66.0.3359.158,2
+TH,Bangkok,100.5,13.7333,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.126,2
+TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,66.0.3359.158,1
 TH,Bangkok,100.4562,13.7083,True Internet,Cable/DSL,Android,mobile,6.0.1,Chrome WebView,64.0.3282.137,1
 TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,55.0.2883.91,2
-TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,7.1.1,Chrome WebView,56.0.2924.87,2
+TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,7.1.1,Chrome WebView,56.0.2924.87,1
 HN,Tegucigalpa,-87.2167,14.1,Columbus Networks de Colombia Limitada,Cable/DSL,Android,mobile,6.0.1,Chrome,66.0.3359.158,1
 TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,1
 VN,Bien Hoa,106.8167,10.95,Viettel Group,Cable/DSL,Android,mobile,4.4.2,Chrome,66.0.3359.158,1
-TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,5.1,Chrome WebView,66.0.3359.158,2
+TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,5.1,Chrome WebView,66.0.3359.158,1
 MX,Cuernavaca,-99.2167,18.9,izzi,Cable/DSL,Android,mobile,5.1.1,Android Browser,4.0,2
-NA,Windhoek,17.0836,-22.57,MTC Namibia,Cellular,Android,mobile,4.4.2,Android Browser,4.0,2
-MX,Santa Catarina,-100.4667,25.6833,izzi,Cellular,Android,mobile,4.4.2,Chrome,66.0.3359.158,2
+NA,Windhoek,17.0836,-22.57,MTC Namibia,Cellular,Android,mobile,4.4.2,Android Browser,4.0,1
+MX,Santa Catarina,-100.4667,25.6833,izzi,Cellular,Android,mobile,4.4.2,Chrome,66.0.3359.158,1
 BJ,Cotonou,2.4183,6.3654,Spacetel,Cable/DSL,Android,mobile,7.0,Chrome,62.0.3202.84,1
 BJ,Cotonou,2.4183,6.3654,Spacetel,Cable/DSL,Android,mobile,7.1.1,Chrome,66.0.3359.158,1
 IT,Florence,11.1509,43.7421,Telecom Italia Mobile,Cellular,Android,mobile,6.0.1,Chrome,67.0.3396.87,2
-TH,Bangkok,100.4688,13.8583,True Internet,Cellular,Android,mobile,5.1.1,Chrome WebView,66.0.3359.158,2
-TH,Bangkok,100.5,13.7333,True Internet,Cellular,Android,mobile,6.0,Android Browser,4.0,2
+TH,Bangkok,100.4688,13.8583,True Internet,Cellular,Android,mobile,5.1.1,Chrome WebView,66.0.3359.158,1
+TH,Bangkok,100.5,13.7333,True Internet,Cellular,Android,mobile,6.0,Android Browser,4.0,1
 TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,4.4.2,Android Browser,4.0,1
-TH,Bangkok,100.4833,13.75,True Internet,Cable/DSL,Android,mobile,5.1,Chrome WebView,66.0.3359.158,2
+TH,Bangkok,100.4833,13.75,True Internet,Cable/DSL,Android,mobile,5.1,Chrome WebView,66.0.3359.158,1
 TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,5.1,Chrome WebView,66.0.3359.158,2
-TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,4.4.4,Android Browser,4.0,1
+TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,4.4.4,Android Browser,4.0,2
 TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,2
 TH,Huai Khwang,100.579,13.7768,True Internet,Cellular,Android,mobile,7.1.1,Chrome WebView,66.0.3359.158,1
 KZ,Shymkent,69.6,42.3,Kcell JSC,Cellular,Android,tablet,5.1,Android Browser,4.0,2
 BD,Dhaka,90.4086,23.7231,Banglalink,Cellular,Android,mobile,4.4.2,Android Browser,4.0,2
 MX,Ciudad Mante,-99.0966,22.853,izzi,Cable/DSL,Android,mobile,6.0,Chrome WebView,66.0.3359.158,1
-TH,Bangkok,100.4562,13.7083,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,63.0.3239.111,2
+TH,Bangkok,100.4562,13.7083,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,63.0.3239.111,1
 VN,Thanh Pho Hoa Binh,105.3383,20.8133,Vietnam Posts And Telecommunications Group,Cellular,Android,mobile,4.4.4,Chrome,66.0.3359.158,1
 TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,6.0,Chrome WebView,66.0.3359.158,1
 TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,2
-TH,Bangkok,100.4167,13.7167,True Internet,Cellular,Android,mobile,5.1.1,Chrome WebView,66.0.3359.126,2
-TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,6.0,Chrome WebView,44.0.2403.119,2
+TH,Bangkok,100.4167,13.7167,True Internet,Cellular,Android,mobile,5.1.1,Chrome WebView,66.0.3359.126,1
+TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,6.0,Chrome WebView,44.0.2403.119,1
 TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,64.0.3282.137,1
 BD,Dhaka,90.4277,23.7418,Cyber Communication Bangladesh,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,2
 VN,Hanoi,105.85,21.0333,FPT Telecom Company,Cable/DSL,Android,mobile,7.1.1,Facebook,173.0.0.62.99,2
 TH,Bangkok,100.4833,13.75,True Internet,Cable/DSL,Android,mobile,7.0,Chrome WebView,66.0.3359.158,2
 MX,Mexico City,-99.1386,19.4342,"Cablevisión, S.A. de C.V.",Cable/DSL,Android,mobile,4.4.2,Android Browser,4.0,1
 UG,Kampala,32.5656,0.3156,ZAINUGAS,Cable/DSL,Android,mobile,4.4.2,Android Browser,4.0,2
-TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,1
+TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,2
 TH,Bangkok,100.531,13.7625,True Internet,Cellular,Android,mobile,4.1.2,Android Browser,4.0,1
 TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,5.1,Chrome WebView,50.0.2661.86,1
-KZ,Almaty,76.9285,43.2565,Kcell JSC,Cellular,Android,mobile,6.0.1,Android Browser,4.0,1
+KZ,Almaty,76.9285,43.2565,Kcell JSC,Cellular,Android,mobile,6.0.1,Android Browser,4.0,2
 LB,Beirut,35.5097,33.8719,T.H. Global Vision SARL,Cable/DSL,Android,mobile,5.1.1,Chrome,66.0.3359.158,2
-TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,5.1,Chrome WebView,66.0.3359.126,2
-ES,Valencia,-0.3667,39.4667,Vodafone Spain,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,1
+TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,5.1,Chrome WebView,66.0.3359.126,1
+ES,Valencia,-0.3667,39.4667,Vodafone Spain,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,2
 RO,Cluj-Napoca,23.6,46.7667,Orange Romania,Cellular,Android,mobile,5.1.1,Chrome,66.0.3359.158,1
 TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,5.0,Chrome WebView,65.0.3325.109,1
 TH,Nonthaburi,100.5134,13.8622,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,1
@@ -4265,58 +4266,58 @@ TH,Bangkok,100.4167,13.7167,True Internet,Cellular,Android,mobile,7.0,Android Br
 CR,Heredia,-84.117,9.9981,telecarrier,Cable/DSL,Android,mobile,7.0,Facebook,173.0.0.62.99,1
 TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,2
 TH,Bangkok,100.5333,13.8,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,65.0.3325.109,2
-TH,Bangkok,100.4562,13.7083,True Internet,Cable/DSL,Android,mobile,6.0,Android Browser,4.0,1
-DZ,El Oued,4.1667,35.9833,Algerie Telecom Mobile MOBILIS,Cellular,Android,mobile,6.0,Chrome WebView,49.0.2623.105,2
+TH,Bangkok,100.4562,13.7083,True Internet,Cable/DSL,Android,mobile,6.0,Android Browser,4.0,2
+DZ,El Oued,4.1667,35.9833,Algerie Telecom Mobile MOBILIS,Cellular,Android,mobile,6.0,Chrome WebView,49.0.2623.105,1
 BD,Dhaka,90.4093,23.7272,TM International Bangladesh,58.145.184.0/21,Android,mobile,6.0,Android Browser,4.0,2
 TH,Bangkok,100.4562,13.7083,True Internet,Cable/DSL,Android,mobile,7.0,Chrome WebView,66.0.3359.158,2
 SA,Jeddah,39.2192,21.5169,SaudiNet,Cellular,Android,mobile,7.0,Chrome,66.0.3359.158,2
 TH,Bangkok,100.4167,13.7167,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,1
 TH,Bangkok,100.4667,13.7,True Internet,Cable/DSL,Android,mobile,5.1,Android Browser,4.0,1
 IN,Varanasi,83,25.3333,Jio,Cellular,Android,mobile,5.1.1,UCBrowser,11.3.5.972,2
-CL,Santiago,-70.6667,-33.45,Claro Chile,Cellular,Android,tablet,6.0,Chrome WebView,44.0.2403.119,2
+CL,Santiago,-70.6667,-33.45,Claro Chile,Cellular,Android,tablet,6.0,Chrome WebView,44.0.2403.119,1
 AU,Melbourne,144.9977,-37.8692,Vodafone Australia,Cellular,Android,mobile,6.0.1,Chrome,66.0.3359.158,1
 KH,Phnom Penh,104.916,11.5625,"Smart Axiata Co.,Ltd",Cable/DSL,Android,tablet,6.0,Android Browser,4.0,2
 TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,65.0.3325.109,1
 TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,2
-AE,Abu Dhabi,54.3667,24.4667,Emirates Telecommunications Corporation,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,2
+AE,Abu Dhabi,54.3667,24.4667,Emirates Telecommunications Corporation,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,1
 DZ,'Ain Deheb,1.5478,34.8447,Optimum-Telecom-Algeria,Cellular,Android,mobile,6.0,Chrome WebView,49.0.2623.105,2
 IN,Chennai,80.2833,13.0833,Jio,Cellular,Android,mobile,7.1.2,UCBrowser,12.5.0.1109,2
-IQ,Basrah,47.8192,30.4942,EarthLink Iraq,Cable/DSL,Android,tablet,4.4.4,Chrome,66.0.3359.158,1
-DZ,Tadmait,3.9019,36.7394,Optimum-Telecom-Algeria,Cellular,Android,mobile,7.0,Chrome,56.0.2924.87,2
-TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,5.0.2,Android Browser,4.0,2
+IQ,Basrah,47.8192,30.4942,EarthLink Iraq,Cable/DSL,Android,tablet,4.4.4,Chrome,66.0.3359.158,2
+DZ,Tadmait,3.9019,36.7394,Optimum-Telecom-Algeria,Cellular,Android,mobile,7.0,Chrome,56.0.2924.87,1
+TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,5.0.2,Android Browser,4.0,1
 TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,2
-TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,2
+TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,1
 TH,Bangkok,100.4562,13.7083,DTAC,Cellular,Android,mobile,7.1,Android Browser,4.0,2
 KW,Kuwait City,47.9783,29.3697,Mobile Telecommunications Company,Cellular,Android,mobile,6.0.1,Chrome,56.0.2924.87,2
 IL,Tel Aviv,34.7667,32.0667,Orange Israel,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,1
 SA,Jeddah,39.2192,21.5169,Zain Saudi Arabia,Cellular,Android,mobile,8.0.0,Chrome,67.0.3396.87,1
-TH,Bangkok,100.4562,13.7083,True Internet,Cable/DSL,Android,mobile,7.1.1,Chrome WebView,66.0.3359.158,1
+TH,Bangkok,100.4562,13.7083,True Internet,Cable/DSL,Android,mobile,7.1.1,Chrome WebView,66.0.3359.158,2
 TH,Bangkok,100.4833,13.7333,True Internet,Cable/DSL,Android,mobile,6.0.1,Chrome WebView,66.0.3359.158,2
 CI,Abidjan,-4.0124,5.3072,ORANGE-COTE-IVOIRE,41.66.0.0/18,Android,desktop,,Opera Mini,15.0.2125,2
 US,Bloomington,-86.5617,39.2495,Comcast Business,Cable/DSL,Android,tablet,5.0.2,Android Browser,4.0,2
 ES,Madrid,-3.6837999999999997,40.4167,Vodafone Spain,Cellular,Android,mobile,6.0.1,Chrome WebView,66.0.3359.158,1
 US,New York,-73.9314,40.8596,Time Warner Cable,Cable/DSL,Windows,desktop,7,Chrome,66.0.3359.181,2
-TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,tablet,7.0,Chrome WebView,66.0.3359.158,2
-TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,2
+TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,tablet,7.0,Chrome WebView,66.0.3359.158,1
+TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,1
 TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,1
 BD,Dhaka,90.4086,23.7231,DeVoteD NBN,Cellular,Android,mobile,7.1.1,Android Browser,4.0,1
-CY,Larnaca,33.6292,34.9167,Cablenet Communication Systems Ltd,Cable/DSL,Android,tablet,4.4.2,Android Browser,4.0,1
-TH,Huai Khwang,100.579,13.7768,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,2
+CY,Larnaca,33.6292,34.9167,Cablenet Communication Systems Ltd,Cable/DSL,Android,tablet,4.4.2,Android Browser,4.0,2
+TH,Huai Khwang,100.579,13.7768,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,1
 IN,Coimbatore,76.9614,10.9925,Bharti Airtel,Cellular,Android,tablet,4.4.2,UCBrowser,11.5.0.1015,1
-TH,Bangkok,100.4167,13.7167,True Internet,Cellular,Android,mobile,4.4.2,Android Browser,4.0,2
+TH,Bangkok,100.4167,13.7167,True Internet,Cellular,Android,mobile,4.4.2,Android Browser,4.0,1
 TH,Bangkok,100.4833,13.75,True Internet,Cable/DSL,Android,mobile,7.0,Chrome WebView,66.0.3359.158,2
 MX,Aguascalientes,-102.3,21.8833,Cablevision S.A. de C.V.,Cellular,Android,mobile,6.0,Android Browser,4.0,2
-IN,Tiruppur,77.35,11.1,Bharti Airtel,Cellular,Android,mobile,7.0,UCBrowser,12.2.1.1108,1
+IN,Tiruppur,77.35,11.1,Bharti Airtel,Cellular,Android,mobile,7.0,UCBrowser,12.2.1.1108,2
 TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,8.0.0,Samsung Browser,7.0,2
-TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,7.0,MIUI Browser,9.4.11,2
-TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,5.1.1,Chrome WebView,66.0.3359.158,1
+TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,7.0,MIUI Browser,9.4.11,1
+TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,5.1.1,Chrome WebView,66.0.3359.158,2
 KH,Phnom Penh,104.916,11.5625,"Smart Axiata Co.,Ltd",Cable/DSL,Android,tablet,4.4.2,Android Browser,4.0,1
-TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,65.0.3325.109,1
+TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,65.0.3325.109,2
 TH,Bangkok,100.4562,13.7083,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,67.0.3396.87,1
-TH,Bangkok,100.4833,13.7333,True Internet,Cable/DSL,Android,mobile,5.0,Chrome WebView,43.0.2357.121,1
+TH,Bangkok,100.4833,13.7333,True Internet,Cable/DSL,Android,mobile,5.0,Chrome WebView,43.0.2357.121,2
 IL,Tel Aviv,34.7667,32.0667,Pelephone,Cellular,Android,mobile,6.0.1,Samsung Browser,4.2,2
-TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,4.4.2,Android Browser,4.0,2
-TH,Bangkok,100.531,13.7625,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,66.0.3359.158,2
+TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,4.4.2,Android Browser,4.0,1
+TH,Bangkok,100.531,13.7625,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,66.0.3359.158,1
 TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,1
 TH,Bangkok,100.4562,13.7083,True Internet,Cable/DSL,Android,mobile,5.1.1,Chrome WebView,61.0.3163.98,1
 KE,Nairobi,36.8167,-1.2833,MyISP Limited,Cable/DSL,Android,mobile,4.4.2,Chrome,66.0.3359.158,2
@@ -4324,11 +4325,11 @@ TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,7.0,Chrome WebVi
 TH,Bangkok,100.531,13.7625,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,1
 US,Novato,-122.561,38.1348,Comcast Business,Cable/DSL,Android,tablet,4.4.2,Android Browser,4.0,2
 ES,Sant Cugat del Vallès,2.0833,41.4667,Vodafone Spain,Cellular,Android,mobile,6.0.1,Chrome,66.0.3359.158,1
-PY,Asunción,-57.6111,-25.2939,Telecel,Cellular,Android,mobile,7.0,Samsung Browser,6.0,1
+PY,Asunción,-57.6111,-25.2939,Telecel,Cellular,Android,mobile,7.0,Samsung Browser,6.0,2
 NP,Kathmandu,85.3167,27.7167,Nepal Telecom,Cable/DSL,Android,mobile,6.0.1,Chrome,66.0.3359.158,1
-TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,1
+TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,2
 TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,55.0.2883.91,1
-TH,Bangkok,100.5,13.7333,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,2
+TH,Bangkok,100.5,13.7333,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,1
 IN,Coimbatore,76.9614,10.9925,Airtel,Cellular,Android,tablet,5.1.1,UCBrowser,12.2.5.1102,2
 NP,Nepaltar,86.5333,26.9,Websurfer Nepal Internet Service Provider,118.91.160.0/20,Android,mobile,5.1.1,Chrome,65.0.3325.109,1
 FR,Lille,3.0511,50.624,Bouygues Telecom SA,176.176.0.0/12,Android,mobile,6.0,Chrome WebView,66.0.3359.158,1
@@ -4337,10 +4338,10 @@ BD,Dhaka,90.4086,23.7231,Banglalink,Cellular,Android,mobile,4.4.2,Android Browse
 TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,66.0.3359.158,1
 BD,Dhaka,90.4086,23.7231,Banglalink,Cellular,Android,mobile,5.1.1,Chrome WebView,56.0.2924.87,1
 TN,Nabeul,10.7376,36.4561,Tunisie Telecom,Cable/DSL,Android,mobile,6.0,Chrome,65.0.3325.109,2
-CL,Santiago,-70.6667,-33.45,Claro Chile,Cellular,Android,mobile,5.1,Chrome WebView,62.0.3202.84,2
+CL,Santiago,-70.6667,-33.45,Claro Chile,Cellular,Android,mobile,5.1,Chrome WebView,62.0.3202.84,1
 TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,67.0.3396.68,1
 KH,Phnom Penh,104.916,11.5625,"Smart Axiata Co.,Ltd",Cable/DSL,Android,mobile,7.1,Android Browser,4.0,2
-CI,Abidjan,-4.0127,5.3097,Mtn Cote D'ivoire S.A,Cable/DSL,Android,mobile,5.1,Android Browser,4.0,2
+CI,Abidjan,-4.0127,5.3097,Mtn Cote D'ivoire S.A,Cable/DSL,Android,mobile,5.1,Android Browser,4.0,1
 BD,Dhaka,90.4086,23.7231,DeVoteD NBN,Cellular,Android,mobile,7.0,Android Browser,4.0,1
 BD,Dhaka,90.4086,23.7231,Banglalink,Cellular,Android,mobile,6.0,Chrome WebView,66.0.3359.158,1
 TH,Bangkok,100.4833,13.7333,True Internet,Cable/DSL,Android,mobile,6.0.1,Chrome WebView,66.0.3359.158,1
@@ -4350,22 +4351,22 @@ NP,Kathmandu,85.3167,27.7167,"Subisu Cablenet (Pvt) Ltd, Baluwatar, Kathmandu, N
 NP,Kathmandu,85.3167,27.7167,Nepal International Internet Gateway,Cable/DSL,Android,mobile,5.1.1,Chrome,66.0.3359.158,1
 BD,Dhaka,90.4086,23.7231,Banglalink,Cellular,Android,mobile,7.0,Chrome WebView,62.0.3202.84,1
 ES,Madrid,-3.6837999999999997,40.4167,Vodafone Spain,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,1
-TH,Bangkok,100.4562,13.7083,True Internet,Cable/DSL,Android,mobile,7.1.1,Chrome WebView,66.0.3359.158,1
+TH,Bangkok,100.4562,13.7083,True Internet,Cable/DSL,Android,mobile,7.1.1,Chrome WebView,66.0.3359.158,2
 VN,Hanoi,105.85,21.0333,Viettel Group,Cable/DSL,Android,mobile,4.4.4,Chrome,66.0.3359.126,2
 DZ,Sétif,5.4055,36.1938,Optimum-Telecom-Algeria,129.45.0.0/17,Android,mobile,6.0,Chrome WebView,44.0.2403.119,1
 HN,Tegucigalpa,-87.2167,14.1,Telefónica Celular S.A,Cellular,Android,mobile,6.0.1,Chrome,66.0.3359.158,2
 TH,Bangkok,100.5333,13.8,True Internet,Cellular,Android,mobile,7.0,MIUI Browser,9.4.11,2
-PY,La Paloma,-54.6138,-24.1296,Telecel,Cellular,Android,mobile,6.0.1,Chrome,65.0.3325.109,2
+PY,La Paloma,-54.6138,-24.1296,Telecel,Cellular,Android,mobile,6.0.1,Chrome,65.0.3325.109,1
 TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,desktop,6.0,Chrome WebView,44.0.2403.119,1
 MX,Ciudad Hidalgo,-100.5667,19.6833,Televera Red S. A. P. I. De C.v.,Cable/DSL,Android,mobile,6.0.1,Chrome,56.0.2924.87,2
-TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,2
+TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,1
 BD,Dhaka,90.4086,23.7231,DeVoteD NBN,Cellular,Android,mobile,5.1,Android Browser,4.0,1
 BD,Dhaka,90.4086,23.7231,Banglalink,Cellular,Android,mobile,7.0,Chrome WebView,55.0.2883.91,2
 BD,Dhaka,90.4086,23.7231,GrameenPhone,Cable/DSL,Android,mobile,5.1,Chrome WebView,43.0.2357.121,1
 RO,Cluj-Napoca,23.6,46.7667,Orange Romania,Cellular,Android,mobile,7.0,Chrome WebView,66.0.3359.158,1
-LB,Beirut,35.5097,33.8719,Econsult Technology SARL,Cable/DSL,Android,mobile,6.0.1,Chrome,66.0.3359.158,2
-DZ,Tadjenanet,5.9902,36.126,Telecom Algeria,105.96.0.0/12,Android,mobile,5.1,Chrome WebView,50.0.2661.86,2
-KZ,Atyrau,51.8833,47.1167,Kcell JSC,Cellular,Android,tablet,5.1,Chrome WebView,66.0.3359.158,1
+LB,Beirut,35.5097,33.8719,Econsult Technology SARL,Cable/DSL,Android,mobile,6.0.1,Chrome,66.0.3359.158,1
+DZ,Tadjenanet,5.9902,36.126,Telecom Algeria,105.96.0.0/12,Android,mobile,5.1,Chrome WebView,50.0.2661.86,1
+KZ,Atyrau,51.8833,47.1167,Kcell JSC,Cellular,Android,tablet,5.1,Chrome WebView,66.0.3359.158,2
 NP,Kathmandu,85.3167,27.7167,"Subisu Cablenet (Pvt) Ltd, Baluwatar, Kathmandu, N",Cable/DSL,Android,mobile,5.1.1,Chrome,60.0.3112.116,1
 VN,Ca Mau,105.15,9.1769,Viettel Group,Cable/DSL,Android,mobile,5.1,Chrome,66.0.3359.158,2
 PE,Lima,-77.05,-12.05,Claro Peru,Cellular,Android,mobile,5.0.2,Chrome,66.0.3359.158,2
@@ -4373,19 +4374,19 @@ HU,Heves,20.2833,47.6,Magyar Telekom,Cable/DSL,Android,mobile,4.4.4,Android Brow
 TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,4.4.4,Android Browser,4.0,1
 TH,Bangkok,100.5833,13.6667,True Internet,Cellular,Android,mobile,4.4.2,Android Browser,4.0,1
 IQ,Baghdad,44.3939,33.3386,Al Atheer Telecommunication-Iraq Co. Ltd. Incorpor,Cellular,Android,tablet,4.2.2,Chrome,65.0.3325.109,2
-TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,65.0.3325.109,1
+TH,Bangkok,100.4889,13.7594,True Internet,Cellular,Android,mobile,7.0,Chrome WebView,65.0.3325.109,2
 TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,2
 AZ,Baku,49.8822,40.3953,Baksell,Cellular,Android,mobile,7.0,Chrome,66.0.3359.158,2
 ES,Valencia,-0.3667,39.4667,Vodafone Spain,Cellular,Android,mobile,4.4.4,Android Browser,4.0,1
 FR,Cenon,-0.5184,44.8559,Bouygues Telecom,Cable/DSL,Android,mobile,8.0.0,Chrome,67.0.3396.68,2
-US,Westminster,-117.9939,33.7474,Time Warner Cable,Cable/DSL,Windows,desktop,7,Chrome,65.0.3325.181,1
+US,Westminster,-117.9939,33.7474,Time Warner Cable,Cable/DSL,Windows,desktop,7,Chrome,65.0.3325.181,2
 NP,Kathmandu,85.3167,27.7167,Vianet Communications Pvt.,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,1
 BD,Dhaka,90.4086,23.7231,Banglalink,Cellular,Android,mobile,7.0,Android Browser,4.0,1
 NP,Kathmandu,85.3167,27.7167,Techminds Networks Pvt.,Cable/DSL,Android,mobile,7.1.2,Chrome,66.0.3359.158,1
 FR,Andryes,3.4857,47.5189,Absolight,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,2
 FR,Saint-Vincent,4.6442,43.8081,SFR,Cable/DSL,Android,mobile,5.1,Chrome WebView,66.0.3359.158,1
-PE,Arequipa,-71.535,-16.3989,Claro Peru,Cellular,Android,mobile,5.0,Chrome,63.0.3239.111,1
-SA,Dhahran,50.1353,26.3032,Zain Saudi Arabia,Cellular,Android,mobile,5.1,Chrome,65.0.3325.109,1
+PE,Arequipa,-71.535,-16.3989,Claro Peru,Cellular,Android,mobile,5.0,Chrome,63.0.3239.111,2
+SA,Dhahran,50.1353,26.3032,Zain Saudi Arabia,Cellular,Android,mobile,5.1,Chrome,65.0.3325.109,2
 ID,Jakarta,106.8296,-6.1741,PT XL Axiata,140.213.0.0/22,Android,mobile,5.0.2,UCBrowser,12.2.0.1089,2
 FR,Roubaix,3.1746,50.6942,OVH Hosting,Corporate,Android,mobile,7.0,Chrome,64.0.3282.137,1
 MX,Manzanillo,-104.2171,19.1185,Cablevision S.A. de C.V.,Cable/DSL,Android,mobile,6.0,Android Browser,4.0,2
@@ -4393,10 +4394,10 @@ DZ,Saida,0.15,34.8333,Telecom Algeria,Cable/DSL,Android,mobile,4.1.2,Android Bro
 FR,Paris,2.3507,48.8601,SFR,Cable/DSL,Android,mobile,7.0,Android Browser,4.0,1
 ES,Puerto Real,-6.1901,36.5282,Vodafone Spain,Cellular,Android,mobile,6.0.1,Chrome WebView,66.0.3359.158,1
 CZ,Spytihnev,17.4986,49.145,UPC Ceska Republica,Cable/DSL,BlackBerry,mobile,10,Mobile Safari,10.3.3.2163,1
-SA,Riyadh,46.7152,24.6537,SaudiNet,Cellular,Android,tablet,7.0,Chrome,64.0.3282.137,2
+SA,Riyadh,46.7152,24.6537,SaudiNet,Cellular,Android,tablet,7.0,Chrome,64.0.3282.137,1
 NP,Jawalakhel,85.3167,27.6667,WorldLink Communications Pvt,Cable/DSL,Android,mobile,7.1.1,Chrome,66.0.3359.158,1
 DZ,ash-Shalif,1.3281,36.1684,Telecom Algeria,41.96.0.0/12,Android,mobile,4.0.4,Android Browser,4.0,2
-IN,Chennai,80.2833,13.0833,Bharti Airtel,Cellular,Android,mobile,7.0,UCBrowser,12.5.0.1109,2
+IN,Chennai,80.2833,13.0833,Bharti Airtel,Cellular,Android,mobile,7.0,UCBrowser,12.5.0.1109,1
 NP,Kathmandu,85.3167,27.7167,Classic Tech Pvt.,Cable/DSL,Android,mobile,5.1.1,Chrome,63.0.3239.111,1
 SA,Jeddah,39.2192,21.5169,SaudiNet,Cellular,Android,mobile,7.0,Chrome,66.0.3359.158,1
 MX,Mexico City,-99.1386,19.4342,"Cablevisión, S.A. de C.V.",Cable/DSL,Android,mobile,7.0,Chrome,58.0.3029.83,1
@@ -4404,11 +4405,11 @@ ES,Madrid,-3.7026,40.4165,Vodafone Spain,Cellular,Android,mobile,7.0,Chrome,66.0
 ES,Seville,-5.9761,37.3824,Vodafone Spain,Cellular,Android,mobile,7.0,Chrome,67.0.3396.68,1
 IQ,Baghdad,44.3939,33.3386,Orient Company for Internet Services LTD,Cable/DSL,iOS,tablet,10.2.1,Mobile Safari,10.0,2
 NP,Kathmandu,85.3145,27.7142,Classic Tech Pvt. Ltd.,43.231.208.0/22,Android,mobile,8.0.0,Chrome,67.0.3396.68,1
-IN,Bengaluru,77.5833,12.9833,Bharti Airtel,Cellular,Android,mobile,4.4.4,UCBrowser,11.3.8.976,1
+IN,Bengaluru,77.5833,12.9833,Bharti Airtel,Cellular,Android,mobile,4.4.4,UCBrowser,11.3.8.976,2
 DZ,'Ain Deheb,1.5478,34.8447,Optimum-Telecom-Algeria,Cellular,Android,mobile,6.0,Android Browser,4.0,1
-DZ,Hussein Dey,3.1065,36.7296,Telecom Algeria,105.96.0.0/12,Android,mobile,4.4.4,Android Browser,4.0,2
+DZ,Hussein Dey,3.1065,36.7296,Telecom Algeria,105.96.0.0/12,Android,mobile,4.4.4,Android Browser,4.0,1
 NP,Kathmandu,85.3167,27.7167,Vianet Communications Pvt.,Cable/DSL,Android,mobile,6.0,Chrome,66.0.3359.158,1
-TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,5.1.1,Chrome,66.0.3359.158,2
+TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,5.1.1,Chrome,66.0.3359.158,1
 LK,Colombo,79.8863,6.9318,Mobitel Pvt Ltd,43.250.240.0/22,Android,mobile,6.0,Chrome,63.0.3239.111,1
 NP,Kathmandu,85.3167,27.7167,ClassicTech Pvt.,Cable/DSL,Android,mobile,5.1.1,Chrome,66.0.3359.158,1
 AZ,Baku,49.8822,40.3953,Aztelekom,Cable/DSL,Android,tablet,4.4.2,Chrome,66.0.3359.158,1
@@ -4419,18 +4420,18 @@ NP,Kathmandu,85.3167,27.7167,Nepal Telecom,Cable/DSL,Android,mobile,7.1.2,Chrome
 NP,Kathmandu,85.3167,27.7167,Nepal Telecom,Cable/DSL,Android,mobile,5.0.2,UCBrowser,12.5.0.1109,2
 CM,Douala,9.7,4.0503,MTN Network Solutions (Cameroon),Cable/DSL,Android,mobile,5.1,Chrome WebView,61.0.3163.98,1
 PE,Lima,-77.05,-12.05,Claro Peru,Cellular,Android,mobile,6.0,Chrome,55.0.2883.91,2
-HN,Tegucigalpa,-87.2167,14.1,Telefónica Celular S.A,Cellular,Android,mobile,5.1.1,Chrome,66.0.3359.158,1
-PE,Huánuco,-76.2333,-9.9167,Claro Peru,Cellular,Android,mobile,5.1,Chrome,64.0.3282.137,1
-BD,Chittagong,91.8317,22.3384,Broad Band Telecom Services,Cable/DSL,Android,mobile,5.1,Android Browser,4.0,1
+HN,Tegucigalpa,-87.2167,14.1,Telefónica Celular S.A,Cellular,Android,mobile,5.1.1,Chrome,66.0.3359.158,2
+PE,Huánuco,-76.2333,-9.9167,Claro Peru,Cellular,Android,mobile,5.1,Chrome,64.0.3282.137,2
+BD,Chittagong,91.8317,22.3384,Broad Band Telecom Services,Cable/DSL,Android,mobile,5.1,Android Browser,4.0,2
 DZ,Oran,-0.6417,35.6911,Telecom Algeria,Cable/DSL,Android,mobile,4.4.2,Chrome,66.0.3359.158,1
 NP,Patan,85.3333,27.6667,Arrownet Pvt.Ltd,Cable/DSL,Android,mobile,6.0,Chrome,66.0.3359.158,1
-SE,Uppsala,17.6333,59.8667,Com Hem AB,Cable/DSL,Windows,desktop,8.1,Firefox,56.0,1
+SE,Uppsala,17.6333,59.8667,Com Hem AB,Cable/DSL,Windows,desktop,8.1,Firefox,56.0,2
 NP,Kathmandu,85.3167,27.7167,Nepal Telecom,Cable/DSL,Android,mobile,7.1.2,Chrome,66.0.3359.158,1
 IT,Bovisio-Masciago,9.153,45.6102,Wind Telecomunicazioni,Cellular,Android,tablet,4.4.2,Android Browser,4.0,2
-UA,Dnipro,35.046,48.4735,Kyivstar PJSC,46.211.0.0/16,Android,mobile,5.0.2,Chrome,66.0.3359.158,2
+UA,Dnipro,35.046,48.4735,Kyivstar PJSC,46.211.0.0/16,Android,mobile,5.0.2,Chrome,66.0.3359.158,1
 IQ,Basere,44.8244,36.0994,EarthLink Iraq,Cable/DSL,Android,tablet,4.4.4,Chrome,66.0.3359.158,1
 FR,Romorantin-Lanthenay,1.8316,47.3989,SFR,Cable/DSL,Android,mobile,6.0,Chrome WebView,66.0.3359.158,1
-TR,Adana,35.3289,37.0017,Turkcell,Cellular,Android,mobile,6.0.1,Chrome,66.0.3359.158,2
+TR,Adana,35.3289,37.0017,Turkcell,Cellular,Android,mobile,6.0.1,Chrome,66.0.3359.158,1
 KE,Nairobi,36.8155,-1.2841,CKL1-ASN,154.76.0.0/14,Android,mobile,6.0.1,Android Browser,4.0,2
 TH,Bangkok,100.4688,13.8583,True Internet,Cellular,Android,mobile,6.0,Chrome WebView,64.0.3282.123,1
 NP,Kathmandu,85.3167,27.7167,Nepal International Internet Gateway,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,1
@@ -4441,13 +4442,13 @@ NP,Kathmandu,85.3167,27.7167,WorldLink Communications Pvt,Cable/DSL,Android,mobi
 DO,Santo Domingo,-69.9,18.4667,Altice Dominicana S.A.,Cable/DSL,Android,mobile,4.4.4,Chrome,66.0.3359.158,2
 US,Salt Lake City,-111.9231,40.6583,CenturyLink,Cable/DSL,iOS,mobile,11.2.5,WebKit,604.5.6,2
 TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,8.0.0,Chrome WebView,66.0.3359.158,1
-TH,Bangkok,100.4833,13.7333,True Internet,Cable/DSL,Android,mobile,6.0.1,Chrome WebView,67.0.3396.68,2
+TH,Bangkok,100.4833,13.7333,True Internet,Cable/DSL,Android,mobile,6.0.1,Chrome WebView,67.0.3396.68,1
 DZ,Bordj Bou Arreridj,4.7727,36.0721,Optimum-Telecom-Algeria,129.45.0.0/17,Android,mobile,6.0,Chrome WebView,44.0.2403.119,1
 CM,Buea,9.2367,4.1594,MTN Network Solutions (Cameroon),Cable/DSL,Android,mobile,7.0,Chrome WebView,66.0.3359.158,1
-TH,Bangkok,100.4833,13.7333,True Internet,Cable/DSL,Android,mobile,7.0,Chrome WebView,60.0.3112.116,2
+TH,Bangkok,100.4833,13.7333,True Internet,Cable/DSL,Android,mobile,7.0,Chrome WebView,60.0.3112.116,1
 NP,Kathmandu,85.3145,27.7142,Classic Tech Pvt. Ltd.,43.231.208.0/22,Android,mobile,6.0.1,Chrome,66.0.3359.158,1
-DZ,Annaba,7.77,36.8977,Telecom Algeria,105.96.0.0/12,Android,mobile,7.0,Chrome,66.0.3359.158,1
-DZ,Sidi Aissa,3.7761,35.8862,Telecom Algeria,105.96.0.0/12,Android,mobile,7.0,Facebook,174.0.0.54.96,2
+DZ,Annaba,7.77,36.8977,Telecom Algeria,105.96.0.0/12,Android,mobile,7.0,Chrome,66.0.3359.158,2
+DZ,Sidi Aissa,3.7761,35.8862,Telecom Algeria,105.96.0.0/12,Android,mobile,7.0,Facebook,174.0.0.54.96,1
 IN,Bengaluru,77.5833,12.9833,Airtel,Cellular,Android,mobile,7.0,UCBrowser,12.5.0.1109,2
 JO,Amman,35.9333,31.95,Linkdotnet-Jordan,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,1
 NP,Kathmandu,85.3167,27.7167,Nepal Telecom,Cable/DSL,Android,mobile,5.1.1,Chrome,66.0.3359.158,1
@@ -4455,14 +4456,14 @@ ML,Bamako,-8,12.65,Sotelmabgp,Cable/DSL,Android,mobile,6.0,Chrome,66.0.3359.158,
 NP,Kathmandu,85.3167,27.7167,WorldLink Communications Pvt,Cable/DSL,Android,mobile,5.0.2,Chrome,66.0.3359.158,1
 ES,Málaga,-4.4348,36.7267,Vodafone Spain,Cellular,Android,mobile,6.0,Android Browser,4.0,1
 TH,Bangkok,100.4562,13.7083,True Internet,Cable/DSL,Android,mobile,7.0,Chrome WebView,67.0.3396.68,1
-PH,Cagayan de Oro,124.648,8.485,Globe Telecom Inc.,110.54.248.0/22,Android,mobile,5.1.1,Chrome,66.0.3359.158,1
+PH,Cagayan de Oro,124.648,8.485,Globe Telecom Inc.,110.54.248.0/22,Android,mobile,5.1.1,Chrome,66.0.3359.158,2
 NP,Kathmandu,85.3167,27.7167,WorldLink Communications Pvt,Cable/DSL,Android,mobile,7.0,Chrome,67.0.3396.68,1
 ES,Valencia,-0.3667,39.4667,Orange Espana,Cellular,Android,mobile,6.0,Chrome WebView,55.0.2883.91,1
-ML,Bamako,-8,12.65,Orange Mali SA,Cable/DSL,Android,mobile,7.0,Android Browser,4.0,2
-DZ,Jijel,5.7667,36.8,Telecom Algeria,Cable/DSL,Android,mobile,7.0,Chrome WebView,66.0.3359.158,2
+ML,Bamako,-8,12.65,Orange Mali SA,Cable/DSL,Android,mobile,7.0,Android Browser,4.0,1
+DZ,Jijel,5.7667,36.8,Telecom Algeria,Cable/DSL,Android,mobile,7.0,Chrome WebView,66.0.3359.158,1
 SA,Jeddah,39.2192,21.5169,SaudiNet,Cellular,Android,mobile,5.1.1,Chrome,65.0.3325.109,2
 MM,Yangon,96.1667,16.7833,Ooredoo Myanmar,Cable/DSL,iOS,mobile,10.2.1,Facebook,100.0.0.43.70,2
-SA,Riyadh,46.7152,24.6537,SaudiNet,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,2
+SA,Riyadh,46.7152,24.6537,SaudiNet,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,1
 MX,Mexico City,-99.1386,19.4342,"Cablevisión, S.A. de C.V.",Cable/DSL,Android,mobile,4.2.2,Android Browser,4.0,1
 MX,Tijuana,-116.7997,32.405,"Operbes, S.A. de C.V.",Cable/DSL,Android,mobile,5.1,Facebook,174.0.0.54.96,2
 NP,Beltar,82.8713,27.8022,"Subisu Cablenet Pvt Ltd, Baluwatar, Kathmandu, Nepal",103.232.152.0/22,Android,mobile,5.1.1,Chrome,66.0.3359.158,1
@@ -4475,8 +4476,8 @@ BD,Dhaka,90.4086,23.7231,Sky View Online,Cable/DSL,Android,mobile,4.4.2,Chrome,6
 NP,Kathmandu,85.3145,27.7142,Cherry World Communication Pvt Ltd,103.214.76.0/22,Android,mobile,6.0.1,Chrome,66.0.3359.158,1
 PE,Lima,-77.05,-12.05,Claro Peru,Cellular,Android,tablet,6.0,Chrome,53.0.2785.124,2
 NP,Kathmandu,85.3167,27.7167,WorldLink Communications Pvt,Cable/DSL,Android,mobile,4.4.2,Chrome,64.0.3282.137,1
-IN,Chennai,80.2833,13.0833,Bharti Airtel,Cellular,Android,mobile,6.0.1,UCBrowser,12.0.0.1088,2
-AU,Ermington,151.0547,-33.8148,Optus,Cellular,Android,mobile,8.0.0,Chrome,63.0.3239.111,2
+IN,Chennai,80.2833,13.0833,Bharti Airtel,Cellular,Android,mobile,6.0.1,UCBrowser,12.0.0.1088,1
+AU,Ermington,151.0547,-33.8148,Optus,Cellular,Android,mobile,8.0.0,Chrome,63.0.3239.111,1
 DZ,Tadmait,3.9019,36.7394,Optimum-Telecom-Algeria,Cellular,Android,mobile,6.0,Chrome WebView,50.0.2661.86,2
 BD,Dhaka,90.3722,23.7534,GrameenPhone Ltd.,123.108.240.0/21,Android,mobile,5.1,Android Browser,4.0,1
 DZ,Algiers,3.0905,36.7295,Optimum-Telecom-Algeria,129.45.0.0/17,Android,mobile,6.0,Chrome,50.0.2661.89,2
@@ -4488,14 +4489,14 @@ YE,Al Hudaydah,42.9522,14.7978,Public Telecommunication Corporation,Cellular,And
 BD,Dhaka,90.4086,23.7231,Banglalink,Cellular,Android,mobile,5.1,Android Browser,4.0,2
 FR,Marseille,5.3761,43.2854,SFR,Cable/DSL,Android,mobile,6.0,Chrome WebView,63.0.3239.111,1
 DZ,Oran,-0.6417,35.6911,Telecom Algeria,Cable/DSL,Android,mobile,4.0.4,Android Browser,4.0,2
-ZA,Cape Town,18.4167,-33.9167,MTN SA,Cellular,Android,mobile,6.0,Chrome WebView,50.0.2661.86,2
+ZA,Cape Town,18.4167,-33.9167,MTN SA,Cellular,Android,mobile,6.0,Chrome WebView,50.0.2661.86,1
 MX,Morelos,-102.6167,22.8833,Movistar México,Cellular,Android,mobile,6.0,Chrome WebView,44.0.2403.119,1
 AE,Abu Dhabi,54.3667,24.4667,Emirates Telecommunications Corporation,Cable/DSL,Android,mobile,7.1.1,Chrome,66.0.3359.158,2
-DZ,Oran,-0.6417,35.6911,Telecom Algeria,Cable/DSL,Android,mobile,4.2.2,Android Browser,4.0,2
-DZ,Djelfa,3.2518,34.6678,Telecom Algeria,41.96.0.0/12,Android,mobile,4.1.2,Android Browser,4.0,1
+DZ,Oran,-0.6417,35.6911,Telecom Algeria,Cable/DSL,Android,mobile,4.2.2,Android Browser,4.0,1
+DZ,Djelfa,3.2518,34.6678,Telecom Algeria,41.96.0.0/12,Android,mobile,4.1.2,Android Browser,4.0,2
 NP,Kathmandu,85.3167,27.7167,Vianet Communications Pvt.,Cable/DSL,Android,mobile,5.1.1,Chrome,66.0.3359.158,1
 NP,Beltar,82.8713,27.8022,"Subisu Cablenet Pvt Ltd, Baluwatar, Kathmandu, Nepal",103.232.152.0/22,Android,mobile,7.0,Chrome,63.0.3239.111,1
-TH,Huai Khwang,100.579,13.7768,True Internet,Cellular,Android,mobile,6.1,Chrome WebView,43.0.2357.121,1
+TH,Huai Khwang,100.579,13.7768,True Internet,Cellular,Android,mobile,6.1,Chrome WebView,43.0.2357.121,2
 AE,Abu Dhabi,54.3667,24.4667,Emirates Telecommunications Corporation,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,1
 NP,Kathmandu,85.3145,27.7142,Arrownet Pvt.Ltd,103.58.144.0/23,Android,mobile,5.1.1,Chrome,66.0.3359.158,1
 NP,Kathmandu,85.3167,27.7167,Vianet Communications Pvt.,Cable/DSL,Android,mobile,6.0,Chrome,66.0.3359.158,1
@@ -4524,31 +4525,31 @@ NP,Kathmandu,85.3167,27.7167,ClassicTech Pvt.,Cable/DSL,Android,mobile,5.1,Chrom
 NP,Patan,85.3333,27.6667,Otel Communication Pvt.,Cable/DSL,Android,mobile,7.1.1,Chrome,66.0.3359.158,1
 AE,Al Ain,55.7606,24.1917,Emirates Telecommunications Corporation,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,2
 SA,Riyadh,46.7152,24.6537,Etihad Jawraa Company for communication and inform,Cellular,Android,tablet,7.1.2,Chrome,64.0.3282.137,2
-UG,Kampala,32.5656,0.3156,ZAINUGAS,Cable/DSL,Android,mobile,4.4.2,Android Browser,4.0,1
-FR,Lorient,-3.3667,47.75,Orange,Cable/DSL,Android,mobile,8.0.0,Chrome,66.0.3359.158,2
+UG,Kampala,32.5656,0.3156,ZAINUGAS,Cable/DSL,Android,mobile,4.4.2,Android Browser,4.0,2
+FR,Lorient,-3.3667,47.75,Orange,Cable/DSL,Android,mobile,8.0.0,Chrome,66.0.3359.158,1
 PE,Lima,-77.05,-12.05,Claro Peru,Cellular,Android,mobile,6.0,Chrome,66.0.3359.158,2
 FR,Saujon,-0.837,45.74,SFR,Cable/DSL,Android,mobile,7.1.1,Chrome,56.0.2924.87,2
-IN,Coimbatore,76.9614,10.9925,Airtel,Cellular,Android,mobile,6.0.1,UCBrowser,12.5.0.1109,1
-DZ,Laghouat,2.8833,33.8,Telecom Algeria,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,1
-MK,Skopje,21.4314,41.9965,Makedonski Telekom AD-Skopje,Cellular,Android,mobile,6.0,Chrome WebView,66.0.3359.126,1
+IN,Coimbatore,76.9614,10.9925,Airtel,Cellular,Android,mobile,6.0.1,UCBrowser,12.5.0.1109,2
+DZ,Laghouat,2.8833,33.8,Telecom Algeria,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,2
+MK,Skopje,21.4314,41.9965,Makedonski Telekom AD-Skopje,Cellular,Android,mobile,6.0,Chrome WebView,66.0.3359.126,2
 TN,Tunis,10.1711,36.8061,Tunisie Telecom,Cable/DSL,Android,mobile,6.0,Android Browser,4.0,1
-IN,Chennai,80.2833,13.0833,Bharti Airtel,Cellular,Android,mobile,7.0,UCBrowser,12.5.0.1109,1
+IN,Chennai,80.2833,13.0833,Bharti Airtel,Cellular,Android,mobile,7.0,UCBrowser,12.5.0.1109,2
 QA,Doha,51.5333,25.2867,OOREDOO,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,1
-HK,Central,114.15,22.2833,Hutchison Global Communications,Cellular,Android,mobile,4.4.2,Android Browser,4.0,2
+HK,Central,114.15,22.2833,Hutchison Global Communications,Cellular,Android,mobile,4.4.2,Android Browser,4.0,1
 ES,Madrid,-3.7026,40.4165,Jazz Telecom S.A.,Cable/DSL,Android,mobile,6.0.1,Chrome,55.0.2883.91,1
-VN,Soc Trang,105.98,9.6033,Viettel Group,Cable/DSL,Android,mobile,6.0,Chrome WebView,44.0.2403.119,1
+VN,Soc Trang,105.98,9.6033,Viettel Group,Cable/DSL,Android,mobile,6.0,Chrome WebView,44.0.2403.119,2
 NP,Kathmandu,85.3167,27.7167,WorldLink Communications Pvt,Cable/DSL,Android,mobile,7.0,Chrome,67.0.3396.68,1
 NP,Kathmandu,85.3167,27.7167,ClassicTech Pvt.,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,1
 ZA,Johannesburg,28.0583,-26.2309,Vodacom,Cellular,Android,tablet,5.1,Chrome WebView,58.0.3029.83,1
 UA,Kiev,30.5238,50.4547,Kyivstar PJSC,Cellular,Android,mobile,6.0,Android Browser,4.0,1
-FR,Trappes,2.0178,48.7741,SFR,Cable/DSL,Android,mobile,5.1.1,Samsung Browser,6.4,1
+FR,Trappes,2.0178,48.7741,SFR,Cable/DSL,Android,mobile,5.1.1,Samsung Browser,6.4,2
 ES,Barcelona,2.1741,41.3984,Vodafone Spain,Cellular,Android,mobile,7.0,Chrome,66.0.3359.158,1
 NA,Windhoek,17.0836,-22.57,MTC Namibia,Cellular,Android,mobile,5.1.1,Chrome WebView,65.0.3325.109,2
 TZ,Dar es Salaam,39.2833,-6.8,Mic Tanzania Ltd,Cellular,Android,mobile,7.0,Chrome,66.0.3359.158,1
 NP,Kathmandu,85.3167,27.7167,Vianet Communications Pvt.,Cable/DSL,Android,mobile,6.0.1,Chrome,66.0.3359.158,1
 DZ,'Ain el Bell,3.2289,34.3437,Telecom Algeria,41.96.0.0/12,Android,mobile,4.0.4,Android Browser,4.0,1
 KE,Nairobi,36.8167,-1.2833,Kenya Education Network,Cable/DSL,Android,mobile,6.0.1,Chrome,67.0.3396.68,1
-MX,Tijuana,-117.0167,32.5333,"Telefonos del Noroeste, S.A. de C.V.",Cable/DSL,Android,mobile,6.0.1,Facebook,174.0.0.54.96,1
+MX,Tijuana,-117.0167,32.5333,"Telefonos del Noroeste, S.A. de C.V.",Cable/DSL,Android,mobile,6.0.1,Facebook,174.0.0.54.96,2
 KH,Phnom Penh,104.916,11.5625,SOUTH EAST ASIA TELECOM (Cambodia) Co.,Cable/DSL,Android,mobile,5.1,Android Browser,4.0,1
 TH,Bangkok,100.4833,13.75,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,66.0.3359.158,2
 NP,Kathmandu,85.3167,27.7167,"Subisu Cablenet (Pvt) Ltd, Baluwatar, Kathmandu, N",Cable/DSL,Android,mobile,6.0.1,Chrome,66.0.3359.158,1
@@ -4556,18 +4557,18 @@ NP,Kathmandu,85.3167,27.7167,Nepal Telecom,Cable/DSL,Android,mobile,7.0,Chrome,6
 AZ,Baku,49.8822,40.3953,Baksell,Cable/DSL,Android,mobile,6.0,Chrome,66.0.3359.158,1
 TH,Bangkok,100.4833,13.7333,True Internet,Cable/DSL,Android,mobile,5.1,Android Browser,4.0,1
 FR,Bressuire,-0.4497,46.9847,SFR,Cable/DSL,Android,mobile,6.0,Chrome WebView,66.0.3359.158,1
-AM,Yerevan,44.5136,40.1811,VEON Armenia CJSC,Cellular,Android,mobile,6.0,Chrome WebView,66.0.3359.158,1
+AM,Yerevan,44.5136,40.1811,VEON Armenia CJSC,Cellular,Android,mobile,6.0,Chrome WebView,66.0.3359.158,2
 LB,Beirut,35.5097,33.8719,IncoNet Data Management sal,Cable/DSL,Android,mobile,6.0,Chrome,66.0.3359.158,1
-TH,Bangkok,100.531,13.7625,DTAC,Cellular,Android,desktop,5.1,Android Browser,4.0,2
+TH,Bangkok,100.531,13.7625,DTAC,Cellular,Android,desktop,5.1,Android Browser,4.0,1
 NP,Kathmandu,85.3167,27.7167,Nepal International Internet Gateway,Cable/DSL,Android,mobile,6.0.1,Chrome,66.0.3359.158,1
-PE,Lima,-77.05,-12.05,Claro Peru,Cellular,Android,mobile,5.1,Chrome,50.0.2661.89,1
+PE,Lima,-77.05,-12.05,Claro Peru,Cellular,Android,mobile,5.1,Chrome,50.0.2661.89,2
 BD,Dhaka,90.4086,23.7231,DeVoteD NBN,Cellular,Android,mobile,5.1,Chrome WebView,50.0.2661.86,2
-DZ,Khemis el Khechna,3.3306,36.6486,Telecom Algeria,Cable/DSL,Android,mobile,4.1.2,Chrome,28.0.1500.94,1
+DZ,Khemis el Khechna,3.3306,36.6486,Telecom Algeria,Cable/DSL,Android,mobile,4.1.2,Chrome,28.0.1500.94,2
 RO,Cluj-Napoca,23.6,46.7667,Orange Romania,Cellular,Android,mobile,6.0,Chrome,67.0.3396.68,2
 NP,Jawalakhel,85.3167,27.6667,WorldLink Communications Pvt,Cable/DSL,Android,mobile,7.0,Chrome,67.0.3396.68,1
 LT,Kaunas,23.8924,54.9038,UAB Bite Lietuva,84.15.0.0/16,Android,mobile,5.0.2,Android Browser,4.0,1
 NP,Patan,85.3333,27.6667,WorldLink Communications Pvt,Cable/DSL,Android,mobile,7.0,Chrome,63.0.3239.111,1
-GH,Accra,-0.2167,5.55,MTN Ghana,Cellular,Android,desktop,,Opera Mini,23.0.2254,2
+GH,Accra,-0.2167,5.55,MTN Ghana,Cellular,Android,desktop,,Opera Mini,23.0.2254,1
 ES,Barcelona,2.159,41.3888,Vodafone Spain,Cellular,Android,mobile,8.0.0,Chrome,66.0.3359.158,1
 NP,Kathmandu,85.3167,27.7167,Vianet Communications Pvt.,Cable/DSL,Android,mobile,8.1.0,Chrome,67.0.3396.68,1
 ES,Valencia,-0.3667,39.4667,Vodafone Spain,Cellular,Android,mobile,7.0,Chrome,66.0.3359.158,1
@@ -4579,43 +4580,43 @@ VN,Pleiku,108,13.9833,Vietnam Posts And Telecommunications Group,Cable/DSL,Andro
 MK,Bitola,21.3403,41.0311,One Macedonia,Cellular,Android,mobile,6.0,Chrome,50.0.2661.89,2
 US,Wichita Falls,-98.5301,33.8466,Time Warner Cable,Cable/DSL,Android,tablet,4.4.4,Chrome,66.0.3359.158,2
 ES,Valencia,-0.3774,39.4698,Vodafone Spain,Cellular,Android,mobile,7.0,Chrome,66.0.3359.158,1
-DZ,Sougueur,1.4961,35.1857,Telecom Algeria,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,2
+DZ,Sougueur,1.4961,35.1857,Telecom Algeria,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,1
 KZ,Astana,71.4278,51.1811,Kcell JSC,Cellular,Android,mobile,5.1,Android Browser,4.0,1
 DZ,Guelma,7.5033,36.4145,Telecom Algeria,Cable/DSL,Android,mobile,6.0,Chrome,50.0.2661.89,2
 ID,Jakarta,106.8294,-6.1744,PT Indosat Tbk.,Cellular,Android,mobile,6.0,UCBrowser,12.5.0.1109,2
 NP,Jawalakhel,85.3167,27.6667,WorldLink Communications Pvt,Cable/DSL,Android,tablet,8.0.0,Chrome,66.0.3359.158,1
-DE,Hamburg,10,53.55,O2 Deutschland,Cellular,Android,mobile,5.1,Chrome,62.0.3202.84,2
+DE,Hamburg,10,53.55,O2 Deutschland,Cellular,Android,mobile,5.1,Chrome,62.0.3202.84,1
 TT,Chaguanas,-61.4167,10.5167,Telecommunication Services of Trinidad and Tobago,190.58.0.0/15,Android,mobile,5.1.1,Samsung Browser,3.3,2
 NP,Kathmandu,85.3167,27.7167,Websurfer Nepal Internet Service Provider,Cable/DSL,Android,mobile,7.1.1,Chrome,66.0.3359.158,1
 KZ,Shymkent,69.6,42.3,Kcell JSC,Cellular,Android,mobile,7.0,Chrome,66.0.3359.126,2
 MM,Magway,94.9167,20.15,Myanma Posts and Telecommunications,Cellular,iOS,mobile,9.2.1,Facebook,145.0.0.59.86,2
 IQ,Najaf,44.3147,31.9961,Al Atheer Telecommunication-Iraq Co. Ltd. Incorpor,Cable/DSL,Android,tablet,4.4.4,Chrome,66.0.3359.158,2
-VN,Buon Ma Thuot,108.05,12.6667,Vietnam Posts And Telecommunications Group,Cable/DSL,Android,mobile,6.0,Chrome WebView,44.0.2403.119,1
+VN,Buon Ma Thuot,108.05,12.6667,Vietnam Posts And Telecommunications Group,Cable/DSL,Android,mobile,6.0,Chrome WebView,44.0.2403.119,2
 KE,Nairobi,36.8155,-1.2841,CKL1-ASN,154.76.0.0/14,Android,mobile,7.0,Android Browser,4.0,2
 NP,Kathmandu,85.3167,27.7167,Techminds Networks Pvt.,Cable/DSL,Android,mobile,6.0,Chrome,66.0.3359.158,1
 NP,Jawalakhel,85.3167,27.6667,WorldLink Communications Pvt,Cable/DSL,Android,mobile,6.0.1,Chrome,66.0.3359.158,1
-PT,Rio Tinto,-8.5612,41.177,Vodafone Portugal - Communicacoes Pessoais S.A.,213.30.0.0/17,Android,mobile,6.0,Chrome,65.0.3325.109,1
+PT,Rio Tinto,-8.5612,41.177,Vodafone Portugal - Communicacoes Pessoais S.A.,213.30.0.0/17,Android,mobile,6.0,Chrome,65.0.3325.109,2
 KE,Nairobi,36.8155,-1.2841,CKL1-ASN,154.76.0.0/14,Android,mobile,7.1.1,Android Browser,4.0,1
 FR,La Talaudiere,4.4317,45.4809,Orange,Cable/DSL,Android,mobile,8.0.0,Chrome,66.0.3359.158,2
 NP,Kathmandu,85.3167,27.7167,WorldLink Communications Pvt,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,1
 HT,Port-au-Prince,-72.335,18.5392,Alpha Communications Network,Cellular,Android,mobile,7.1.1,Chrome WebView,56.0.2924.87,1
-TH,Huai Khwang,100.579,13.7768,True Internet,Cellular,Android,mobile,6.0,Chrome WebView,44.0.2403.119,1
+TH,Huai Khwang,100.579,13.7768,True Internet,Cellular,Android,mobile,6.0,Chrome WebView,44.0.2403.119,2
 NP,Kathmandu,85.3167,27.7167,Nepal Telecom,Cable/DSL,Android,mobile,5.1.1,Chrome,63.0.3239.111,1
 ES,Madrid,-3.7026,40.4165,Orange Espana,Cellular,Android,mobile,5.1,Android Browser,4.0,2
 DZ,'Ain Deheb,1.5478,34.8447,Optimum-Telecom-Algeria,Cellular,Android,mobile,6.0,Chrome WebView,44.0.2403.119,1
 FR,Cergy,2.0058,49.0249,Bouygues Telecom,Cable/DSL,Android,mobile,6.0.1,Chrome WebView,66.0.3359.158,1
 VN,Tay Ninh,106.1,11.3,Viettel Group,Cellular,Android,mobile,4.4.2,Chrome,66.0.3359.158,2
-ID,Padang,100.3677,-0.9532,PT Telkom Indonesia,Cable/DSL,Android,mobile,5.0.2,UCBrowser,12.5.0.1109,2
+ID,Padang,100.3677,-0.9532,PT Telkom Indonesia,Cable/DSL,Android,mobile,5.0.2,UCBrowser,12.5.0.1109,1
 NP,Patan,85.3333,27.6667,Otel Communication Pvt.,Cable/DSL,Android,tablet,4.4.2,Chrome,66.0.3359.158,1
 FR,Cannes,6.9943,43.5497,Bouygues Telecom,Cable/DSL,Android,mobile,7.0,Chrome WebView,66.0.3359.158,1
 IQ,Baghdad,44.3939,33.3386,EarthLink Iraq,Cable/DSL,Android,tablet,4.4.4,Chrome,66.0.3359.158,1
 NP,Kathmandu,85.3167,27.7167,Techminds Networks Pvt.,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,1
 NP,Kathmandu,85.3167,27.7167,Nepal Telecom,Cable/DSL,Android,mobile,7.1.1,Chrome,66.0.3359.158,1
-PE,Lima,-77.05,-12.05,Claro Peru,Cellular,Android,mobile,7.0,Chrome,55.0.2883.91,1
+PE,Lima,-77.05,-12.05,Claro Peru,Cellular,Android,mobile,7.0,Chrome,55.0.2883.91,2
 NP,Kathmandu,85.3167,27.7167,Vianet Communications Pvt.,Cable/DSL,Android,mobile,8.0.0,Chrome,66.0.3359.158,1
 US,Kankakee,-87.9259,41.119,Comcast Business,Cable/DSL,Android,tablet,4.4.4,Android Browser,4.0,2
 NP,Kathmandu,85.3167,27.7167,Nepal Telecom,Cable/DSL,Android,mobile,4.4.4,Chrome,66.0.3359.158,1
-DZ,Boghni,3.9531,36.5422,Telecom Algeria,Cable/DSL,Android,mobile,4.0.4,Android Browser,4.0,2
+DZ,Boghni,3.9531,36.5422,Telecom Algeria,Cable/DSL,Android,mobile,4.0.4,Android Browser,4.0,1
 TH,Bangkok,100.4562,13.7083,True Internet,Cellular,Android,desktop,6.0,Chrome WebView,44.0.2403.119,2
 NP,Narayangadh,84.4167,27.6833,Techminds Networks Pvt.,Cable/DSL,Android,mobile,8.0.0,Chrome,66.0.3359.158,2
 NP,Kathmandu,85.3167,27.7167,WorldLink Communications Pvt,Cable/DSL,Android,mobile,5.1.1,Chrome,55.0.2883.91,1
@@ -4627,12 +4628,12 @@ KE,Nairobi,36.8155,-1.2841,CKL1-ASN,154.76.0.0/14,Android,mobile,7.0,Chrome WebV
 NP,Kathmandu,85.3167,27.7167,Nepal Telecom,Cable/DSL,Android,mobile,4.3,Chrome,66.0.3359.158,1
 NP,Jawalakhel,85.3167,27.6667,WorldLink Communications Pvt,Cable/DSL,Android,mobile,5.1.1,Chrome,66.0.3359.126,1
 TR,Istanbul,28.9757,41.0197,TT Mobil Iletisim Hizmetleri A.S,37.154.0.0/15,Android,mobile,8.0.0,Chrome,66.0.3359.158,2
-QA,Doha,51.5333,25.2867,Vodafone Qatar Q.S.C.,Cable/DSL,Android,mobile,5.1.1,Opera,46.3.2246.127744,2
+QA,Doha,51.5333,25.2867,Vodafone Qatar Q.S.C.,Cable/DSL,Android,mobile,5.1.1,Opera,46.3.2246.127744,1
 VN,Hanoi,105.85,21.0333,FPT Telecom Company,Cable/DSL,Windows,desktop,10,Chrome,64.4.3282.222,1
 NP,Kathmandu,85.3167,27.7167,"Subisu Cablenet (Pvt) Ltd, Baluwatar, Kathmandu, N",Cable/DSL,Android,mobile,4.4.2,Chrome,66.0.3359.158,1
-DZ,El Oued,4.1667,35.9833,Optimum-Telecom-Algeria,Cellular,Android,mobile,5.0.2,Chrome,65.0.3325.109,2
+DZ,El Oued,4.1667,35.9833,Optimum-Telecom-Algeria,Cellular,Android,mobile,5.0.2,Chrome,65.0.3325.109,1
 BD,Dhaka,90.4086,23.7231,Banglalink,Cellular,Android,mobile,5.1.1,Android Browser,4.0,1
-TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,2
+TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,1
 NP,Kathmandu,85.3167,27.7167,Techminds Networks Pvt.,Cable/DSL,Android,mobile,5.1,Chrome,66.0.3359.158,1
 NP,Narayangadh,84.4167,27.6833,Techminds Networks Pvt.,Cable/DSL,Android,mobile,6.0.1,Chrome,66.0.3359.158,1
 NP,Kathmandu,85.3167,27.7167,Vianet Communications Pvt.,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,1
@@ -4649,18 +4650,18 @@ US,Farmville,-77.5876,35.5988,AT&T Services,Corporate,Android,tablet,5.0.2,Andro
 SN,Dakar,-17.4381,14.6708,TIGO SENEGAL,Cable/DSL,Android,mobile,4.2.2,Chrome,31.0.1650.59,1
 ES,Madrid,-3.7026,40.4165,Vodafone Spain,Cellular,Android,mobile,7.0,Chrome WebView,64.0.3282.137,1
 KE,Nairobi,36.8167,-1.2833,Wananchi-,Cable/DSL,Android,mobile,4.2.2,Chrome,66.0.3359.158,2
-DZ,Bordj Bou Arreridj,4.7727,36.0721,Optimum-Telecom-Algeria,129.45.0.0/17,Android,mobile,6.0.1,Chrome,55.0.2883.91,2
-IQ,Baghdad,44.3939,33.3386,Al Atheer Telecommunication-Iraq Co. Ltd. Incorpor,Cellular,Android,tablet,4.4.4,Chrome,65.0.3325.109,2
+DZ,Bordj Bou Arreridj,4.7727,36.0721,Optimum-Telecom-Algeria,129.45.0.0/17,Android,mobile,6.0.1,Chrome,55.0.2883.91,1
+IQ,Baghdad,44.3939,33.3386,Al Atheer Telecommunication-Iraq Co. Ltd. Incorpor,Cellular,Android,tablet,4.4.4,Chrome,65.0.3325.109,1
 NP,Kathmandu,85.3167,27.7167,Techminds Networks Pvt.,Cable/DSL,Android,mobile,7.1.2,Chrome,66.0.3359.158,1
 NP,Kathmandu,85.3167,27.7167,Arrownet Pvt.Ltd,Cable/DSL,Android,mobile,6.0,Chrome,66.0.3359.158,1
-ES,Madrid,-3.6837999999999997,40.4167,Vodafone Spain,Cellular,Android,mobile,6.0.1,Chrome WebView,55.0.2883.91,2
+ES,Madrid,-3.6837999999999997,40.4167,Vodafone Spain,Cellular,Android,mobile,6.0.1,Chrome WebView,55.0.2883.91,1
 NP,Kathmandu,85.3167,27.7167,WorldLink Communications Pvt,Cable/DSL,Android,mobile,6.0,Chrome,66.0.3359.158,1
 NP,Kathmandu,85.3167,27.7167,"Subisu Cablenet (Pvt) Ltd, Baluwatar, Kathmandu, N",Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,1
 AE,Sharjah,55.4033,25.3573,Emirates Telecommunications Corporation,Cable/DSL,Android,mobile,6.0,Chrome,66.0.3359.158,1
-AE,Sharjah,55.4033,25.3573,Emirates Telecommunications Corporation,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,2
+AE,Sharjah,55.4033,25.3573,Emirates Telecommunications Corporation,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,1
 BR,São Paulo,-46.6417,-23.5733,Tim Celular S.A.,Cellular,Android,mobile,5.1,Android Browser,4.0,2
 DZ,Blida,2.8289,36.4686,Telecom Algeria,Cable/DSL,Android,mobile,4.1.2,Android Browser,4.0,1
-SA,Jeddah,39.2192,21.5169,SaudiNet,Cable/DSL,Android,mobile,7.0,Chrome,67.0.3396.68,2
+SA,Jeddah,39.2192,21.5169,SaudiNet,Cable/DSL,Android,mobile,7.0,Chrome,67.0.3396.68,1
 TN,Bizerte,9.8739,37.2744,Tunisie Telecom,Cable/DSL,Android,mobile,6.0.1,Samsung Browser,6.4,1
 IN,Madurai,78.1167,9.9333,Bharti Airtel,Cable/DSL,Android,mobile,6.0.1,UCBrowser,12.5.0.1109,2
 BD,Dhaka,90.4086,23.7231,DeVoteD NBN,Cellular,Android,mobile,6.0.1,Android Browser,4.0,1
@@ -4677,7 +4678,7 @@ NP,Kathmandu,85.3167,27.7167,"Subisu Cablenet (Pvt) Ltd, Baluwatar, Kathmandu, N
 NP,Kathmandu,85.3167,27.7167,Nepal Telecom,Cable/DSL,Android,mobile,6.0.1,Chrome,66.0.3359.126,1
 MA,Casablanca,-7.6192,33.5928,Inwi Mobile,Cellular,Android,mobile,4.4.2,Android Browser,4.0,1
 IT,Milan,9.2007,45.4743,Wind Tre,Cellular,iOS,mobile,11.3,WebKit,605.1.15,2
-FR,Nantes,-1.5524,47.2165,Va Solutions S.r.l.,Cable/DSL,Android,mobile,5.1.1,Chrome,66.0.3359.158,2
+FR,Nantes,-1.5524,47.2165,Va Solutions S.r.l.,Cable/DSL,Android,mobile,5.1.1,Chrome,66.0.3359.158,1
 NP,Kathmandu,85.3167,27.7167,Nepal Telecom,Cable/DSL,Android,mobile,5.1.1,Chrome,66.0.3359.158,1
 VN,Hanoi,105.85,21.0333,Viettel Group,Cable/DSL,Android,mobile,6.0,Chrome WebView,44.0.2403.119,2
 KH,Phnom Penh,104.916,11.5625,Cogetel Online,Cable/DSL,Android,mobile,5.1.1,Samsung Browser,6.4,2
@@ -4685,13 +4686,13 @@ PL,Wrocław,17.0333,51.1,Orange Polska,Cable/DSL,iOS,mobile,11.3,Mobile Safari,1
 NP,Kathmandu,85.3167,27.7167,Nepal Telecom,Cable/DSL,Android,mobile,4.4.2,Chrome,63.0.3239.111,1
 IR,Tehran,51.3304,35.7261,Iran Telecommunication Company PJS,Cellular,Android,mobile,7.0,Chrome WebView,64.0.3282.137,1
 TH,Huai Khwang,100.579,13.7768,True Internet,Cellular,Android,mobile,5.1.1,Chrome WebView,66.0.3359.158,2
-UA,Kiev,30.5167,50.4333,lifecell,Cellular,Android,mobile,6.0,Chrome WebView,66.0.3359.158,1
+UA,Kiev,30.5167,50.4333,lifecell,Cellular,Android,mobile,6.0,Chrome WebView,66.0.3359.158,2
 NP,Kathmandu,85.3167,27.7167,Cherry World Communication Pvt,Cable/DSL,Android,mobile,6.0.1,Chrome,62.0.3202.84,1
-PY,Villa Hayes,-57.5236,-25.0931,Telecel,Cellular,Android,tablet,5.0.2,Chrome,66.0.3359.126,1
+PY,Villa Hayes,-57.5236,-25.0931,Telecel,Cellular,Android,tablet,5.0.2,Chrome,66.0.3359.126,2
 AE,Dubai,55.3047,25.2582,Emirates Telecommunications Corporation,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,1
 BO,La Paz,-68.15,-16.5,Entel S.A. - EntelNet,Cable/DSL,Android,mobile,6.0.1,Chrome,56.0.2924.87,1
 ES,Sant Cugat del Vallès,2.0833,41.4667,Vodafone Spain,Cellular,Android,mobile,7.0,Chrome,66.0.3359.158,1
-SD,Ar Rahad,30.65,12.7167,Sudatel,Cellular,Android,mobile,6.0.1,Chrome,56.0.2924.87,1
+SD,Ar Rahad,30.65,12.7167,Sudatel,Cellular,Android,mobile,6.0.1,Chrome,56.0.2924.87,2
 NP,Pokhara,83.9833,28.2333,Websurfer Nepal Internet Service Provider,Cable/DSL,Android,mobile,4.4.4,Chrome,63.0.3239.111,1
 ZW,Harare,31.0447,-17.8178,Liquid Telecommunications Ltd,Cable/DSL,Android,desktop,,Opera Mini,32.0.2254,1
 US,Concord,-80.6748,35.4198,Time Warner Cable,Cable/DSL,Android,mobile,5.0.2,Android Browser,4.0,2
@@ -4710,9 +4711,9 @@ NP,Jawalakhel,85.3167,27.6667,WorldLink Communications Pvt,Cable/DSL,Android,mob
 NP,Jawalakhel,85.3167,27.6667,WorldLink Communications Pvt,Cable/DSL,Android,mobile,5.0,Chrome,66.0.3359.158,1
 UA,Kyiv,30.5303,50.458,Kyivstar PJSC,46.211.0.0/16,Android,mobile,6.0,Android Browser,4.0,2
 NP,Kathmandu,85.3167,27.7167,WorldLink Communications Pvt,Cable/DSL,Android,mobile,7.0,Chrome,67.0.3396.68,2
-VN,Ho Chi Minh City,106.6438,10.8142,SaiGon Tourist cable Televition Company,Cable/DSL,Android,mobile,6.0,Facebook,174.0.0.54.96,2
+VN,Ho Chi Minh City,106.6438,10.8142,SaiGon Tourist cable Televition Company,Cable/DSL,Android,mobile,6.0,Facebook,174.0.0.54.96,1
 MX,Cuautla,-98.95,18.8,izzi,Cable/DSL,Android,mobile,6.0.1,Chrome WebView,66.0.3359.158,1
-DZ,Oran,-0.6417,35.6911,Telecom Algeria,Cable/DSL,Android,mobile,6.0,Chrome,50.0.2661.89,2
+DZ,Oran,-0.6417,35.6911,Telecom Algeria,Cable/DSL,Android,mobile,6.0,Chrome,50.0.2661.89,1
 MX,Mexico City,-99.1386,19.4342,"Cablevisión, S.A. de C.V.",Cable/DSL,Android,mobile,5.1,Chrome WebView,66.0.3359.158,1
 IR,Tehran,51.3336,35.727,Mobile Communication Company of Iran PLC,5.208.0.0/13,Android,mobile,6.0,Chrome,66.0.3359.158,2
 TH,Bangkok,100.4167,13.7167,True Internet,Cellular,Android,mobile,6.0.1,Chrome WebView,66.0.3359.158,1
@@ -4724,9 +4725,9 @@ NP,Kathmandu,85.3167,27.7167,"Subisu Cablenet (Pvt) Ltd, Baluwatar, Kathmandu, N
 NP,Kathmandu,85.3167,27.7167,Nepal Telecom,Cable/DSL,Android,mobile,6.0.1,Chrome,67.0.3396.68,1
 MM,Magway,94.9167,20.15,Myanma Posts and Telecommunications,Cellular,iOS,mobile,10.2,Facebook,88.1.0.64.70,1
 NP,Kathmandu,85.3167,27.7167,Nepal Telecom,Cable/DSL,Android,mobile,6.0.1,Chrome,65.0.3325.109,1
-RO,Cluj-Napoca,23.6,46.7667,Orange Romania,Cellular,Android,mobile,5.1.1,Chrome,65.0.3325.109,1
+RO,Cluj-Napoca,23.6,46.7667,Orange Romania,Cellular,Android,mobile,5.1.1,Chrome,65.0.3325.109,2
 NP,Kathmandu,85.3167,27.7167,"Subisu Cablenet (Pvt) Ltd, Baluwatar, Kathmandu, N",Cable/DSL,Android,tablet,4.4.2,Chrome,67.0.3396.68,1
-KE,Nairobi,36.8167,-1.2833,Safaricom Limited,Cellular,Android,mobile,6.0,Chrome,66.0.3359.126,1
+KE,Nairobi,36.8167,-1.2833,Safaricom Limited,Cellular,Android,mobile,6.0,Chrome,66.0.3359.126,2
 IT,Sesto San Giovanni,9.2258,45.5333,Wind Telecomunicazioni,Cellular,Android,tablet,7.1.1,Chrome WebView,63.0.3239.111,2
 VN,Hanoi,105.85,21.0333,Viettel Group,Cable/DSL,Android,mobile,7.0,Chrome WebView,66.0.3359.158,2
 NP,Kathmandu,85.3145,27.7142,Smart Telecom Pvt. Ltd,103.94.220.0/22,Android,mobile,7.1.2,Chrome,61.0.3163.98,1
@@ -4736,7 +4737,7 @@ DZ,Ain Beida,7.3893,35.792,Telecom Algeria,105.96.0.0/12,Android,mobile,4.1.2,An
 NP,Kathmandu,85.3167,27.7167,Vianet Communications Pvt.,Cable/DSL,Android,mobile,6.0.1,Chrome,67.0.3396.68,1
 PE,Lima,-77.05,-12.05,Claro Peru,Cellular,Android,mobile,7.0,Chrome,66.0.3359.158,1
 TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,5.1,Android Browser,4.0,1
-IN,Chennai,80.2833,13.0833,Bharti Airtel,Cellular,Android,mobile,7.0,UCBrowser,12.5.0.1109,1
+IN,Chennai,80.2833,13.0833,Bharti Airtel,Cellular,Android,mobile,7.0,UCBrowser,12.5.0.1109,2
 DZ,Blida,2.8289,36.4686,Telecom Algeria,Cable/DSL,Android,mobile,6.0,Chrome,66.0.3359.158,2
 MX,Jojutla,-99.1833,18.6,Megacable,Cable/DSL,Android,mobile,6.0,Chrome WebView,66.0.3359.158,1
 FR,Strasbourg,7.7455,48.5839,Caisse Federale de Credit Mutuel SA,Cellular,Android,mobile,7.0,Chrome,66.0.3359.126,2
@@ -4751,18 +4752,18 @@ NP,Kathmandu,85.3167,27.7167,WorldLink Communications Pvt,Cable/DSL,Android,mobi
 AZ,Baku,49.8822,40.3953,Nar,Cellular,Android,mobile,4.2.2,Chrome,31.0.1650.59,2
 IR,Isfahan,51.6776,32.6572,Iran Cell Service and Communication Company,Cellular,Android,mobile,4.2.2,Android Browser,4.0,1
 NP,Kathmandu,85.3167,27.7167,WorldLink Communications Pvt,Cable/DSL,Android,mobile,5.1.1,Chrome,66.0.3359.158,1
-ID,Semarang,110.4203,-6.9932,Three Indonesia,Cellular,Android,mobile,6.0.1,UCBrowser,11.4.8.1012,2
+ID,Semarang,110.4203,-6.9932,Three Indonesia,Cellular,Android,mobile,6.0.1,UCBrowser,11.4.8.1012,1
 NP,Kathmandu,85.3167,27.7167,WorldLink Communications Pvt,Cable/DSL,Android,mobile,5.1,Chrome,61.0.3163.98,1
 NP,Kathmandu,85.3167,27.7167,WorldLink Communications Pvt,Cable/DSL,Android,mobile,8.1.0,Chrome,66.0.3359.158,2
 NP,Kathmandu,85.3145,27.7142,Arrownet Pvt.Ltd,103.58.144.0/23,Android,mobile,4.4.2,Chrome,66.0.3359.158,1
 KE,Nairobi,36.8167,-1.2833,Airtel Kenya,Cable/DSL,Android,mobile,7.0,Android Browser,4.0,2
 NP,Kathmandu,85.3167,27.7167,WorldLink Communications Pvt,Cable/DSL,Android,tablet,5.1,Chrome,66.0.3359.158,1
-KE,Nairobi,36.8167,-1.2833,Airtel Kenya,Cable/DSL,Android,mobile,7.0,Chrome,62.0.3202.84,1
+KE,Nairobi,36.8167,-1.2833,Airtel Kenya,Cable/DSL,Android,mobile,7.0,Chrome,62.0.3202.84,2
 FR,Lille,3.0586,50.633,Bouygues Telecom,Cable/DSL,Android,mobile,7.0,Chrome WebView,67.0.3396.68,1
 MM,Yangon,96.1667,16.7833,Myanma Posts and Telecommunications,Cable/DSL,iOS,mobile,10.3.3,Facebook,68.0.0.49.70,2
 ES,Madrid,-3.6837999999999997,40.4167,Vodafone Spain,Cellular,Android,mobile,6.0,Chrome,53.0.2785.124,1
 NP,Kathmandu,85.3167,27.7167,WorldLink Communications Pvt,Cable/DSL,Android,mobile,5.1,Chrome,66.0.3359.158,1
-IN,Vellore,79.1333,12.9333,Bharti Airtel,Cellular,Android,mobile,6.0.1,UCBrowser,12.5.0.1109,2
+IN,Vellore,79.1333,12.9333,Bharti Airtel,Cellular,Android,mobile,6.0.1,UCBrowser,12.5.0.1109,1
 DZ,Constantine,6.6172,36.368,Optimum-Telecom-Algeria,129.45.0.0/17,Android,mobile,4.4.2,Android Browser,4.0,2
 AE,Abu Dhabi,54.3667,24.4667,Emirates Telecommunications Corporation,Cable/DSL,Android,mobile,6.0,Chrome,67.0.3396.68,2
 NA,Windhoek,17.0836,-22.57,Telecom Namibia,Cable/DSL,Android,mobile,6.0,Chrome WebView,66.0.3359.158,2
@@ -4771,12 +4772,12 @@ MA,Casablanca,-7.6192,33.5928,Inwi Mobile,Cellular,Android,tablet,4.4.4,Chrome,4
 NP,Kathmandu,85.3167,27.7167,Nepal Telecom,Cable/DSL,Android,mobile,5.0.2,Chrome,66.0.3359.158,1
 NP,Kathmandu,85.3167,27.7167,Vianet Communications Pvt.,Cable/DSL,Android,mobile,6.0.1,Chrome,55.0.2883.91,1
 NP,Kathmandu,85.3167,27.7167,WorldLink Communications Pvt,Cable/DSL,Android,mobile,4.4.4,Chrome,65.0.3325.109,1
-IN,Chennai,80.2833,13.0833,Bharti Airtel,Cellular,Android,mobile,7.1.1,UCBrowser,12.2.5.1102,1
-ID,Jakarta,106.8294,-6.1744,PT Excelcomindo Pratama,Cellular,Android,mobile,7.1.2,UCBrowser,12.5.0.1109,2
+IN,Chennai,80.2833,13.0833,Bharti Airtel,Cellular,Android,mobile,7.1.1,UCBrowser,12.2.5.1102,2
+ID,Jakarta,106.8294,-6.1744,PT Excelcomindo Pratama,Cellular,Android,mobile,7.1.2,UCBrowser,12.5.0.1109,1
 NP,Kathmandu,85.3167,27.7167,WorldLink Communications Pvt,Cable/DSL,Android,mobile,4.4.4,Chrome,66.0.3359.158,1
 ID,Jakarta,106.8294,-6.1744,PT Excelcomindo Pratama,Cellular,Android,tablet,4.4.2,Chrome,67.0.3396.68,1
 NP,Kathmandu,85.3167,27.7167,WorldLink Communications Pvt,Cable/DSL,Android,mobile,5.1.1,Chrome,66.0.3359.158,1
-GF,Cayenne,-52.3333,4.9333,Outremer Telecom,Cellular,Android,mobile,5.1.1,Chrome,55.0.2883.91,1
+GF,Cayenne,-52.3333,4.9333,Outremer Telecom,Cellular,Android,mobile,5.1.1,Chrome,55.0.2883.91,2
 LK,Colombo,79.8436,6.9392,Etisalat Lanka (Pvt),Cable/DSL,Android,mobile,5.0,Facebook,96.0.0.7.216,1
 ES,Valladolid,-4.7344,41.6547,Vodafone Spain,31.4.0.0/16,Android,mobile,4.1.2,Android Browser,4.0,1
 DZ,Ain Defla,1.9679,36.264,Telecom Algeria,Cable/DSL,Android,mobile,5.1,Chrome,46.0.2490.76,2
@@ -4788,7 +4789,7 @@ NP,Patan,85.3333,27.6667,Nepal Telecom,Cable/DSL,Android,mobile,7.1.2,Chrome,67.
 NP,Bharatpur,84.4354,27.6798,Chitrawan Unique Net Private Limited,103.207.80.0/22,Android,mobile,7.0,Chrome,67.0.3396.68,1
 NP,Kathmandu,85.3167,27.7167,Cherry World Communication Pvt,Cable/DSL,Android,mobile,7.0,Chrome,67.0.3396.68,1
 NP,Patan,85.3333,27.6667,Otel Communication Pvt.,Cable/DSL,Android,mobile,8.0.0,Chrome,66.0.3359.158,1
-CL,Santiago,-70.6667,-33.45,Claro Chile,Cellular,Android,mobile,6.0,Chrome,66.0.3359.158,2
+CL,Santiago,-70.6667,-33.45,Claro Chile,Cellular,Android,mobile,6.0,Chrome,66.0.3359.158,1
 CL,Santiago,-70.6667,-33.45,Movistar Movil Chile,Cellular,iOS,mobile,11.3,WebKit,605.1.15,2
 CL,Santiago,-70.6667,-33.45,Claro Chile,Cellular,Android,mobile,6.0,Chrome,66.0.3359.158,1
 NP,Dailekh,81.7333,28.8333,Nepal Telecom,Cable/DSL,Android,mobile,5.1.1,Chrome,67.0.3396.68,1
@@ -4797,7 +4798,7 @@ TH,Bangkok,100.4562,13.7083,True Internet,Cellular,Android,mobile,5.1,Android Br
 MX,Mexico City,-99.1386,19.4342,Axtel,Cable/DSL,Android,mobile,4.4.2,Chrome,40.0.2214.109,2
 NP,Kathmandu,85.3167,27.7167,"Subisu Cablenet (Pvt) Ltd, Baluwatar, Kathmandu, N",Cable/DSL,Android,mobile,6.0.1,Chrome,66.0.3359.158,1
 TH,Bangkok,100.4889,13.7594,AIS Mobile,Cellular,Android,tablet,4.4.4,Android Browser,4.0,1
-PA,Panama City,-79.5197,8.9936,Cable & Wireless Panama,Cable/DSL,Android,tablet,4.1.2,Android Browser,4.0,1
+PA,Panama City,-79.5197,8.9936,Cable & Wireless Panama,Cable/DSL,Android,tablet,4.1.2,Android Browser,4.0,2
 TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,5.1.1,Chrome WebView,66.0.3359.126,1
 NP,Kathmandu,85.3167,27.7167,Nepal Telecom,Cable/DSL,Android,mobile,6.0,Chrome,67.0.3396.68,1
 MA,Rabat,-6.8443000000000005,34.0138,Maroc Telecom,Cellular,Android,mobile,5.1,Android Browser,4.0,2
@@ -4810,16 +4811,16 @@ BD,Dhaka,90.4086,23.7231,TM International Bangladesh,Cable/DSL,Android,mobile,4.
 BD,Cox's Bazar,92.0119,21.4424,TM International Bangladesh,103.242.20.0/22,Android,mobile,6.0.1,Android Browser,4.0,1
 LB,Tripoli,35.85,34.4333,Wave Net LLC,Cable/DSL,Android,mobile,7.0,Chrome,67.0.3396.68,2
 HU,Szolnok,20.2,47.1833,UPC Magyarorszag,Cable/DSL,Android,mobile,6.0,Chrome,66.0.3359.158,2
-IN,Bengaluru,77.5833,12.9833,Bharti Airtel,Cable/DSL,Android,mobile,5.1,UCBrowser,11.4.8.1012,2
+IN,Bengaluru,77.5833,12.9833,Bharti Airtel,Cable/DSL,Android,mobile,5.1,UCBrowser,11.4.8.1012,1
 CL,Santiago,-70.6667,-33.45,Movistar Movil Chile,Cellular,iOS,mobile,11.3,Mobile Safari,11.0,2
 NP,Kathmandu,85.3167,27.7167,WorldLink Communications Pvt,Cable/DSL,Android,mobile,7.0,Chrome,67.0.3396.68,1
 NP,Kathmandu,85.3167,27.7167,Arrownet Pvt.Ltd,Cable/DSL,Android,mobile,7.0,Chrome,66.0.3359.158,1
 PE,Lima,-77.05,-12.05,Claro Peru,Cellular,Android,tablet,6.0,Android Browser,4.0,1
 NP,Jawalakhel,85.3167,27.6667,WorldLink Communications Pvt,Cable/DSL,Android,mobile,4.4.4,Chrome,66.0.3359.158,1
-VN,Ba Ria,108.6833,14.7,Viettel Group,Cable/DSL,Android,mobile,5.1,Android Browser,4.0,1
+VN,Ba Ria,108.6833,14.7,Viettel Group,Cable/DSL,Android,mobile,5.1,Android Browser,4.0,2
 US,Hagerstown,-77.7128,39.6291,Antietam Broadband,Cable/DSL,Chromium OS,desktop,10452.96.0,Chrome,66.0.3359.181,1
 IR,Tehran,51.3336,35.727,Mobile Communication Company of Iran PLC,5.208.0.0/13,Android,mobile,7.0,Chrome,64.0.3282.137,2
-CI,Abidjan,-4.0127,5.3097,Mtn Cote D'ivoire S.A,Cable/DSL,Android,mobile,6.0,Chrome WebView,63.0.3239.111,2
+CI,Abidjan,-4.0127,5.3097,Mtn Cote D'ivoire S.A,Cable/DSL,Android,mobile,6.0,Chrome WebView,63.0.3239.111,1
 CI,Agboville,-4.2132,5.928,Mtn Cote D'ivoire S.A,Cable/DSL,Android,mobile,5.1,Chrome WebView,50.0.2661.86,2
 TH,Bangkok,100.4833,13.7333,True Internet,Cellular,Android,mobile,7.0,MIUI Browser,9.4.11,2
 KE,Nairobi,36.8155,-1.2841,SAFARICOM-LIMITED,197.176.0.0/13,Android,mobile,5.1,Chrome,55.0.2883.77,1
