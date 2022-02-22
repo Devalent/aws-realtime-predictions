@@ -12,8 +12,8 @@ export class InfrastructureStack extends Stack {
   constructor(scope: Construct, id: string, props?: StackProps) {
     super(scope, id, props);
 
-    const bucketDag = new cdk.aws_s3.Bucket(this, 'bucket-dag', {
-      bucketName: `${name}-dag`,
+    const bucketCode = new cdk.aws_s3.Bucket(this, 'bucket-code', {
+      bucketName: `${name}-code`,
     });
 
     const bucketData = new cdk.aws_s3.Bucket(this, 'bucket-data', {
@@ -40,7 +40,7 @@ export class InfrastructureStack extends Stack {
                 's3:*',
               ],
               resources: [
-                `${bucketDag.bucketArn}*`,
+                `${bucketCode.bucketArn}*`,
                 `${bucketData.bucketArn}*`,
               ],
             }),
@@ -57,7 +57,7 @@ export class InfrastructureStack extends Stack {
       command: {
         name: 'glueetl',
         pythonVersion: '3',
-        scriptLocation: `s3://${bucketDag.bucketName}/conversions_etl.py`,
+        scriptLocation: `s3://${bucketCode.bucketName}/conversions_etl.py`,
       },
       glueVersion: '3.0',
       workerType: 'Standard',
@@ -85,7 +85,44 @@ export class InfrastructureStack extends Stack {
       },
     });
 
-    // new cdk.aws_databrew.
+    const roleSagemaker = new cdk.aws_iam.Role(this, 'role-sagemaker', {
+      roleName: `${name}-sagemaker-pipeline`,
+      assumedBy: new cdk.aws_iam.ServicePrincipal('sagemaker.amazonaws.com'),
+      managedPolicies: [
+        {
+          managedPolicyArn: 'arn:aws:iam::aws:policy/AmazonSageMakerFullAccess',
+        },
+      ],
+      inlinePolicies: {
+        'inline-policy-1': new cdk.aws_iam.PolicyDocument({
+          statements: [
+            new cdk.aws_iam.PolicyStatement({
+              effect: cdk.aws_iam.Effect.ALLOW,
+              actions: [
+                "s3:AbortMultipartUpload",
+                "s3:DeleteObject",
+                "s3:GetObject",
+                "s3:GetObjectVersion",
+                "s3:PutObject",
+              ],
+              resources: [
+                `arn:aws:s3:::${bucketCode.bucketName}*`,
+                `arn:aws:s3:::${bucketData.bucketName}*`,
+                "arn:aws:s3:::sagemaker-*",
+              ],
+            }),
+          ],
+        }),
+      },
+    });
+
+    new cdk.aws_sagemaker.CfnPipeline(this, 'sg-pipeline', {
+      pipelineDefinition: {
+        PipelineDefinitionBody: JSON.stringify(require('../pipeline/pipeline.json')),
+      },
+      pipelineName: name,
+      roleArn: roleSagemaker.roleArn,
+    });
 
     new cdk.aws_stepfunctions.CfnStateMachine(this, 'state', {
       stateMachineName: `${name}-pipeline`,
@@ -110,7 +147,5 @@ export class InfrastructureStack extends Stack {
         }
       },
     });
-
-    new cdk.aws_glue.
   }
 }
