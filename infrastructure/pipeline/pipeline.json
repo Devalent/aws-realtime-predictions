@@ -7,17 +7,16 @@
             "Type": "String"
         },
         {
-            "DefaultValue": 1,
-            "Name": "ProcessingInstanceCount",
-            "Type": "Integer"
-        },
-        {
             "DefaultValue": "ml.m5.xlarge",
             "Name": "TrainingInstanceType",
             "Type": "String"
         },
         {
             "Name": "InputDataUrl",
+            "Type": "String"
+        },
+        {
+            "Name": "CampaignID",
             "Type": "String"
         }
     ],
@@ -67,7 +66,7 @@
                             "S3Output": {
                                 "LocalPath": "/opt/ml/processing/train",
                                 "S3UploadMode": "EndOfJob",
-                                "S3Uri": "s3://realtime-predictions-data/preprocess-2022-02-24-14-36-42-753/output/train"
+                                "S3Uri": "s3://realtime-predictions-data/preprocess-2022-02-24-17-42-07-611/output/train"
                             }
                         },
                         {
@@ -76,7 +75,7 @@
                             "S3Output": {
                                 "LocalPath": "/opt/ml/processing/validation",
                                 "S3UploadMode": "EndOfJob",
-                                "S3Uri": "s3://realtime-predictions-data/preprocess-2022-02-24-14-36-42-753/output/validation"
+                                "S3Uri": "s3://realtime-predictions-data/preprocess-2022-02-24-17-42-07-611/output/validation"
                             }
                         },
                         {
@@ -85,7 +84,7 @@
                             "S3Output": {
                                 "LocalPath": "/opt/ml/processing/test",
                                 "S3UploadMode": "EndOfJob",
-                                "S3Uri": "s3://realtime-predictions-data/preprocess-2022-02-24-14-36-42-753/output/test"
+                                "S3Uri": "s3://realtime-predictions-data/preprocess-2022-02-24-17-42-07-611/output/test"
                             }
                         },
                         {
@@ -94,7 +93,7 @@
                             "S3Output": {
                                 "LocalPath": "/opt/ml/processing/columns",
                                 "S3UploadMode": "EndOfJob",
-                                "S3Uri": "s3://realtime-predictions-data/preprocess-2022-02-24-14-36-42-753/output/columns"
+                                "S3Uri": "s3://realtime-predictions-data/preprocess-2022-02-24-17-42-07-611/output/columns"
                             }
                         },
                         {
@@ -103,16 +102,14 @@
                             "S3Output": {
                                 "LocalPath": "/opt/ml/processing/classes",
                                 "S3UploadMode": "EndOfJob",
-                                "S3Uri": "s3://realtime-predictions-data/preprocess-2022-02-24-14-36-42-753/output/classes"
+                                "S3Uri": "s3://realtime-predictions-data/preprocess-2022-02-24-17-42-07-611/output/classes"
                             }
                         }
                     ]
                 },
                 "ProcessingResources": {
                     "ClusterConfig": {
-                        "InstanceCount": {
-                            "Get": "Parameters.ProcessingInstanceCount"
-                        },
+                        "InstanceCount": 1,
                         "InstanceType": {
                             "Get": "Parameters.ProcessingInstanceType"
                         },
@@ -175,7 +172,7 @@
                 },
                 "ProfilerRuleConfigurations": [
                     {
-                        "RuleConfigurationName": "ProfilerReport-1645713402",
+                        "RuleConfigurationName": "ProfilerReport-1645724528",
                         "RuleEvaluatorImage": "895741380848.dkr.ecr.us-west-2.amazonaws.com/sagemaker-debugger-rules:latest",
                         "RuleParameters": {
                             "rule_to_invoke": "ProfilerReport"
@@ -256,7 +253,7 @@
                             "S3Output": {
                                 "LocalPath": "/opt/ml/processing/evaluation",
                                 "S3UploadMode": "EndOfJob",
-                                "S3Uri": "s3://realtime-predictions-data/evaluate-2022-02-24-14-36-41-696/output/evaluation"
+                                "S3Uri": "s3://realtime-predictions-data/evaluate-2022-02-24-17-42-08-647/output/evaluation"
                             }
                         }
                     ]
@@ -302,43 +299,23 @@
                 "IfSteps": [
                     {
                         "Arguments": {
-                            "InferenceSpecification": {
-                                "Containers": [
-                                    {
-                                        "Image": "246618743249.dkr.ecr.us-west-2.amazonaws.com/sagemaker-xgboost:1.0-1-cpu-py3",
-                                        "ModelDataUrl": {
-                                            "Get": "Steps.TrainModel.ModelArtifacts.S3ModelArtifacts"
-                                        }
-                                    }
-                                ],
-                                "SupportedContentTypes": [
-                                    "text/csv"
-                                ],
-                                "SupportedRealtimeInferenceInstanceTypes": [
-                                    "ml.t2.medium"
-                                ],
-                                "SupportedResponseMIMETypes": [
-                                    "text/csv"
-                                ],
-                                "SupportedTransformInstanceTypes": [
-                                    "ml.m5.large"
-                                ]
+                            "campaign": {
+                                "Get": "Parameters.CampaignID"
                             },
-                            "ModelApprovalStatus": "Approved",
-                            "ModelMetrics": {
-                                "Bias": {},
-                                "Explainability": {},
-                                "ModelQuality": {
-                                    "Statistics": {
-                                        "ContentType": "application/json",
-                                        "S3Uri": "s3://realtime-predictions-data/evaluate-2022-02-24-14-36-41-696/output/evaluation/evaluation.json"
-                                    }
-                                }
+                            "classes": {
+                                "Get": "Steps.PreprocessData.ProcessingOutputConfig.Outputs['classes'].S3Output.S3Uri"
                             },
-                            "ModelPackageGroupName": "realtime-predictions"
+                            "columns": {
+                                "Get": "Steps.PreprocessData.ProcessingOutputConfig.Outputs['columns'].S3Output.S3Uri"
+                            },
+                            "model": {
+                                "Get": "Steps.TrainModel.ModelArtifacts.S3ModelArtifacts"
+                            }
                         },
-                        "Name": "RegisterModel",
-                        "Type": "RegisterModel"
+                        "FunctionArn": "arn:aws:lambda:us-west-2:028812918682:function:realtime-predictions-production-deployment",
+                        "Name": "DeployModel",
+                        "OutputParameters": [],
+                        "Type": "Lambda"
                     }
                 ]
             },

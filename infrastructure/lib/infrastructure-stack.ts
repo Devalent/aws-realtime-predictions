@@ -154,6 +154,16 @@ export class InfrastructureStack extends Stack {
               resources: [
                 `arn:aws:s3:::${bucketCode.bucketName}*`,
                 `arn:aws:s3:::${bucketData.bucketName}*`,
+                `arn:aws:s3:::${bucketModel.bucketName}*`,
+              ],
+            }),
+            new cdk.aws_iam.PolicyStatement({
+              effect: cdk.aws_iam.Effect.ALLOW,
+              actions: [
+                "lambda:InvokeFunction",
+              ],
+              resources: [
+                `arn:aws:lambda:${this.region}:${this.account}:function:${name}*`,
               ],
             }),
           ],
@@ -306,7 +316,11 @@ export class InfrastructureStack extends Stack {
                 {
                   "Name": "InputDataUrl",
                   "Value.$": "$.query.QueryExecution.ResultConfiguration.OutputLocation"
-                }
+                },
+                {
+                  "Name": "CampaignID",
+                  "Value.$": "$.campaign"
+                },
               ]
             },
             "Resource": "arn:aws:states:::aws-sdk:sagemaker:startPipelineExecution",

@@ -7,10 +7,7 @@ import sagemaker.session
 
 from sagemaker.estimator import Estimator
 from sagemaker.inputs import TrainingInput
-from sagemaker.model_metrics import (
-    MetricsSource,
-    ModelMetrics,
-)
+from sagemaker.lambda_helper import Lambda
 from sagemaker.processing import (
     ProcessingInput,
     ProcessingOutput,
@@ -24,6 +21,9 @@ from sagemaker.workflow.condition_step import (
 from sagemaker.workflow.functions import (
     JsonGet,
 )
+from sagemaker.workflow.lambda_step import (
+    LambdaStep,
+)
 from sagemaker.workflow.parameters import (
     ParameterInteger,
     ParameterString,
@@ -34,17 +34,20 @@ from sagemaker.workflow.steps import (
     ProcessingStep,
     TrainingStep,
 )
-from sagemaker.workflow.step_collections import RegisterModel
 
 BASE_DIR = os.path.dirname(os.path.realpath(__file__))
 
 
 def get_pipeline(
     region,
+    account,
     role,
     code_bucket,
     data_bucket,
+    lambda_deployment,
 ):
+    role = f"arn:aws:iam::{account}:role/{role}"
+
     boto_session = boto3.Session(region_name=region)
 
     sagemaker_client = boto_session.client("sagemaker")
@@ -56,8 +59,6 @@ def get_pipeline(
         default_bucket=data_bucket,
     )
 
-    processing_instance_count = ParameterInteger(
-        name="ProcessingInstanceCount", default_value=1)
     processing_instance_type = ParameterString(
         name="ProcessingInstanceType", default_value="ml.m5.xlarge"
     )
@@ -67,11 +68,14 @@ def get_pipeline(
     input_data = ParameterString(
         name="InputDataUrl",
     )
+    campaign_id = ParameterString(
+        name="CampaignID",
+    )
 
     sklearn_processor = SKLearnProcessor(
         framework_version="0.23-1",
         instance_type=processing_instance_type,
-        instance_count=processing_instance_count,
+        instance_count=1,
         base_job_name="preprocess",
         sagemaker_session=sagemaker_session,
         role=role,
@@ -178,25 +182,19 @@ def get_pipeline(
         property_files=[evaluation_report],
     )
 
-    model_metrics = ModelMetrics(
-        model_statistics=MetricsSource(
-            s3_uri="{}/evaluation.json".format(
-                step_eval.arguments["ProcessingOutputConfig"]["Outputs"][0]["S3Output"]["S3Uri"]
-            ),
-            content_type="application/json"
-        )
+    lambda_func = Lambda(
+        function_arn=f'arn:aws:lambda:{region}:{account}:function:{lambda_deployment}',
+        session=sagemaker_session,
     )
-    step_register = RegisterModel(
-        name="RegisterModel",
-        estimator=xgb_train,
-        model_data=step_train.properties.ModelArtifacts.S3ModelArtifacts,
-        content_types=["text/csv"],
-        response_types=["text/csv"],
-        inference_instances=["ml.t2.medium"],
-        transform_instances=["ml.m5.large"],
-        model_package_group_name="realtime-predictions",
-        approval_status="Approved",
-        model_metrics=model_metrics,
+    step_lambda = LambdaStep(
+        name="DeployModel",
+        lambda_func=lambda_func,
+        inputs={
+            "campaign": campaign_id,
+            "model": step_train.properties.ModelArtifacts.S3ModelArtifacts,
+            "columns": step_process.properties.ProcessingOutputConfig.Outputs["columns"].S3Output.S3Uri,
+            "classes": step_process.properties.ProcessingOutputConfig.Outputs["classes"].S3Output.S3Uri,
+        },
     )
 
     cond_lte = ConditionLessThanOrEqualTo(
@@ -210,7 +208,7 @@ def get_pipeline(
     step_cond = ConditionStep(
         name="CheckEvaluation",
         conditions=[cond_lte],
-        if_steps=[step_register],
+        if_steps=[step_lambda],
         else_steps=[],
     )
 
@@ -218,9 +216,9 @@ def get_pipeline(
         name="realtime-predictions",
         parameters=[
             processing_instance_type,
-            processing_instance_count,
             training_instance_type,
             input_data,
+            campaign_id,
         ],
         steps=[step_process, step_train, step_eval, step_cond],
         sagemaker_session=sagemaker_session,
@@ -231,9 +229,11 @@ def get_pipeline(
 if __name__ == '__main__':
     pipeline = get_pipeline(
         "us-west-2",
-        "arn:aws:iam::028812918682:role/realtime-predictions-sagemaker-pipeline",
+        "028812918682",
+        "realtime-predictions-sagemaker-pipeline",
         "realtime-predictions-code",
         "realtime-predictions-data",
+        "realtime-predictions-production-deployment",
     )
 
     filepath = os.path.join(os.path.dirname(
