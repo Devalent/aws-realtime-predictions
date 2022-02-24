@@ -90,7 +90,7 @@ def get_pipeline(
     image_uri = sagemaker.image_uris.retrieve(
         framework="xgboost",
         region=region,
-        version="1.0-1",
+        version="1.3-1",
         py_version="py3",
         instance_type=training_instance_type,
     )

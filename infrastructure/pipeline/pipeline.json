@@ -109,7 +109,7 @@
         {
             "Arguments": {
                 "AlgorithmSpecification": {
-                    "TrainingImage": "246618743249.dkr.ecr.us-west-2.amazonaws.com/sagemaker-xgboost:1.0-1-cpu-py3",
+                    "TrainingImage": "246618743249.dkr.ecr.us-west-2.amazonaws.com/sagemaker-xgboost:1.3-1",
                     "TrainingInputMode": "File"
                 },
                 "HyperParameters": {
@@ -158,7 +158,7 @@
                 },
                 "ProfilerRuleConfigurations": [
                     {
-                        "RuleConfigurationName": "ProfilerReport-1645543492",
+                        "RuleConfigurationName": "ProfilerReport-1645549599",
                         "RuleEvaluatorImage": "895741380848.dkr.ecr.us-west-2.amazonaws.com/sagemaker-debugger-rules:latest",
                         "RuleParameters": {
                             "rule_to_invoke": "ProfilerReport"
@@ -187,7 +187,7 @@
                         "python3",
                         "/opt/ml/processing/input/code/evaluate.py"
                     ],
-                    "ImageUri": "246618743249.dkr.ecr.us-west-2.amazonaws.com/sagemaker-xgboost:1.0-1-cpu-py3"
+                    "ImageUri": "246618743249.dkr.ecr.us-west-2.amazonaws.com/sagemaker-xgboost:1.3-1"
                 },
                 "ProcessingInputs": [
                     {
@@ -288,7 +288,7 @@
                             "InferenceSpecification": {
                                 "Containers": [
                                     {
-                                        "Image": "246618743249.dkr.ecr.us-west-2.amazonaws.com/sagemaker-xgboost:1.0-1-cpu-py3",
+                                        "Image": "246618743249.dkr.ecr.us-west-2.amazonaws.com/sagemaker-xgboost:1.3-1",
                                         "ModelDataUrl": {
                                             "Get": "Steps.TrainModel.ModelArtifacts.S3ModelArtifacts"
                                         }
