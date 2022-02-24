@@ -6,7 +6,7 @@
   },
   "scripts": {
     "bootstrap": "cdk bootstrap",
-    "deploy": "python3 pipeline/pipeline.py && cdk deploy"
+    "deploy": "bash pipeline/upload.sh && python3 pipeline/pipeline.py && cdk deploy"
   },
   "devDependencies": {
     "@types/node": "^16.11.23",

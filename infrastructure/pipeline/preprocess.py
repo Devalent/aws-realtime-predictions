@@ -1,57 +1,44 @@
-"""Feature engineers the abalone dataset."""
 import argparse
+import json
 import logging
 import os
 import pathlib
-import requests
 import tempfile
 
 import boto3
 import numpy as np
 import pandas as pd
-
-from sklearn.compose import ColumnTransformer
-from sklearn.impute import SimpleImputer
-from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import StandardScaler, OneHotEncoder
+import urllib.parse
 
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 logger.addHandler(logging.StreamHandler())
 
+feature_columns_names = ["country", "dos", "dtype", "dbrowser"]
+class_column_name = "offer"
 
-# Since we get a headerless CSV file we specify the column names here.
-feature_columns_names = [
-    "sex",
-    "length",
-    "diameter",
-    "height",
-    "whole_weight",
-    "shucked_weight",
-    "viscera_weight",
-    "shell_weight",
-]
-label_column = "rings"
+base_dir = "/opt/ml/processing"
+# base_dir = "temp"
 
-feature_columns_dtype = {
-    "sex": str,
-    "length": np.float64,
-    "diameter": np.float64,
-    "height": np.float64,
-    "whole_weight": np.float64,
-    "shucked_weight": np.float64,
-    "viscera_weight": np.float64,
-    "shell_weight": np.float64,
-}
-label_column_dtype = {"rings": np.float64}
+def codes_dictionary_one(unique_values):
+  dic = {}
+  count = 0
+  for i in unique_values:
+    if i in dic:
+      count += 0
+    else:
+      if i == 0 or i == '0,0':
+        dic[i] = 0  
+      else:
+        dic[i] = count
+        count += 1
+              
+  return dic
 
-
-def merge_two_dicts(x, y):
-    """Merges two dicts, returning a new copy."""
-    z = x.copy()
-    z.update(y)
-    return z
-
+def add_encoded_column(df, dictionary, column):
+  res = df[column].replace(dictionary)
+  df.drop([column], axis='columns', inplace=True)
+  df[column] = res
 
 if __name__ == "__main__":
     logger.debug("Starting preprocessing.")
@@ -59,62 +46,60 @@ if __name__ == "__main__":
     parser.add_argument("--input-data", type=str, required=True)
     args = parser.parse_args()
 
-    base_dir = "/opt/ml/processing"
-    pathlib.Path(f"{base_dir}/data").mkdir(parents=True, exist_ok=True)
+    pathlib.Path(f"{base_dir}").mkdir(parents=True, exist_ok=True)
     input_data = args.input_data
     bucket = input_data.split("/")[2]
     key = "/".join(input_data.split("/")[3:])
 
     logger.info("Downloading data from bucket: %s, key: %s", bucket, key)
-    fn = f"{base_dir}/data/abalone-dataset.csv"
+    fn = f"{base_dir}/dataset.csv"
     s3 = boto3.resource("s3")
     s3.Bucket(bucket).download_file(key, fn)
 
     logger.debug("Reading downloaded data.")
-    df = pd.read_csv(
-        fn,
-        header=None,
-        names=feature_columns_names + [label_column],
-        dtype=merge_two_dicts(feature_columns_dtype, label_column_dtype),
-    )
+    df = pd.read_csv(fn)
     os.unlink(fn)
 
-    logger.debug("Defining transformers.")
-    numeric_features = list(feature_columns_names)
-    numeric_features.remove("sex")
-    numeric_transformer = Pipeline(
-        steps=[("imputer", SimpleImputer(strategy="median")), ("scaler", StandardScaler())]
-    )
+    logger.debug("Transforming data.")
 
-    categorical_features = ["sex"]
-    categorical_transformer = Pipeline(
-        steps=[
-            ("imputer", SimpleImputer(strategy="constant", fill_value="missing")),
-            ("onehot", OneHotEncoder(handle_unknown="ignore")),
-        ]
-    )
+    df = df.drop('city', 1)
+    df = df.drop('network', 1)
 
-    preprocess = ColumnTransformer(
-        transformers=[
-            ("num", numeric_transformer, numeric_features),
-            ("cat", categorical_transformer, categorical_features),
-        ]
-    )
+    X = df[feature_columns_names]
+    y = df[[class_column_name]]
 
-    logger.info("Applying transforms.")
-    y = df.pop("rings")
-    X_pre = preprocess.fit_transform(df)
-    y_pre = y.to_numpy().reshape(len(y), 1)
+    for i in X.columns.values:
+      X[i] = X[i].fillna('None')
 
-    X = np.concatenate((y_pre, X_pre), axis=1)
+    d = {' ': 'None'}
+    X = X.replace(d)
 
-    logger.info("Splitting %d rows of data into train, validation, test datasets.", len(X))
-    np.random.shuffle(X)
+    X = pd.get_dummies(X)
+    X.rename(columns=lambda x: urllib.parse.quote(x), inplace=True)
+
+    unique_values_offer = pd.unique(y[class_column_name]).tolist()
+    dic_offer = codes_dictionary_one(unique_values_offer)
+    add_encoded_column(y, dic_offer, class_column_name)
+
+    X['class'] = y['offer'].values
+
+    logger.info("Splitting into train, validation, test datasets.")
+    X.sample(frac=1).reset_index(drop=True)
     train, validation, test = np.split(X, [int(0.7 * len(X)), int(0.85 * len(X))])
 
     logger.info("Writing out datasets to %s.", base_dir)
-    pd.DataFrame(train).to_csv(f"{base_dir}/train/train.csv", header=False, index=False)
-    pd.DataFrame(validation).to_csv(
-        f"{base_dir}/validation/validation.csv", header=False, index=False
+    pd.DataFrame(train).to_csv(
+      f"{base_dir}/train/train.csv", header=False, index=False
     )
-    pd.DataFrame(test).to_csv(f"{base_dir}/test/test.csv", header=False, index=False)
+    pd.DataFrame(validation).to_csv(
+      f"{base_dir}/validation/validation.csv", header=False, index=False
+    )
+    pd.DataFrame(test).to_csv(
+      f"{base_dir}/test/test.csv", header=False, index=False
+    )
+
+    with open(f"{base_dir}/columns/columns.json", 'w') as f:
+      json.dump(list(X.columns.values), f)
+      
+    with open(f"{base_dir}/classes/classes.json", 'w') as f:
+      json.dump(dic_offer, f)

@@ -1,4 +1,4 @@
-import { Stack, StackProps } from 'aws-cdk-lib';
+import { Duration, Stack, StackProps } from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import * as cdk from 'aws-cdk-lib';
 
@@ -19,6 +19,21 @@ export class InfrastructureStack extends Stack {
 
     const bucketData = new cdk.aws_s3.Bucket(this, 'bucket-data', {
       bucketName: `${name}-data`,
+      lifecycleRules: [
+        {
+          id: 'expire',
+          enabled: true,
+          expiration: Duration.days(1),
+        },
+      ],
+    });
+
+    const bucketModel = new cdk.aws_s3.Bucket(this, 'bucket-model', {
+      bucketName: `${name}-model`,
+    });
+
+    const bucketRaw = new cdk.aws_s3.Bucket(this, 'bucket-raw', {
+      bucketName: `${name}-raw`,
     });
 
     const roleGlue = new cdk.aws_iam.Role(this, 'role-glue', {
@@ -36,6 +51,7 @@ export class InfrastructureStack extends Stack {
                 "s3:*",
               ],
               resources: [
+                `${bucketRaw.bucketArn}*`,
                 `${bucketData.bucketArn}*`,
               ],
             }),
@@ -63,7 +79,7 @@ export class InfrastructureStack extends Stack {
           'classification': 'json',
         },
         storageDescriptor: {
-          location: `s3://${bucketData.bucketName}/database/`,
+          location: `s3://${bucketRaw.bucketName}/`,
           inputFormat: 'org.apache.hadoop.mapred.TextInputFormat',
           outputFormat: 'org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat',
           serdeInfo: {
@@ -224,6 +240,8 @@ export class InfrastructureStack extends Stack {
               ],
               resources: [
                 `arn:aws:s3:::${bucketData.bucketName}*`,
+                `arn:aws:s3:::${bucketModel.bucketName}*`,
+                `arn:aws:s3:::${bucketRaw.bucketName}*`,
               ],
             }),
             new cdk.aws_iam.PolicyStatement({
@@ -293,29 +311,29 @@ export class InfrastructureStack extends Stack {
             },
             "Resource": "arn:aws:states:::aws-sdk:sagemaker:startPipelineExecution",
             "ResultPath": "$.pipeline",
-            "Next": "PipelineWait"
+            "Next": "Wait"
           },
-          "PipelineWait": {
+          "Wait": {
             "Type": "Wait",
             "Seconds": 10,
-            "Next": "CheckPipeline"
+            "Next": "Check"
           },
-          "CheckPipeline": {
+          "Check": {
             "Type": "Task",
-            "Next": "PipelineChoice",
+            "Next": "Choice",
             "Parameters": {
               "PipelineExecutionArn.$": "$.pipeline.PipelineExecutionArn"
             },
             "Resource": "arn:aws:states:::aws-sdk:sagemaker:describePipelineExecution",
             "ResultPath": "$.result"
           },
-          "PipelineChoice": {
+          "Choice": {
             "Type": "Choice",
             "Choices": [
               {
                 "Variable": "$.result.PipelineExecutionStatus",
                 "StringEquals": "Succeeded",
-                "Next": "PipelineSuccess"
+                "Next": "Success"
               },
               {
                 "Or": [
@@ -328,16 +346,16 @@ export class InfrastructureStack extends Stack {
                     "StringEquals": "Stopped"
                   }
                 ],
-                "Next": "PipelineFailure"
+                "Next": "Failure"
               }
             ],
-            "Default": "PipelineWait"
+            "Default": "Wait"
           },
-          "PipelineSuccess": {
+          "Success": {
             "Type": "Pass",
             "End": true
           },
-          "PipelineFailure": {
+          "Failure": {
             "Type": "Fail"
           }
         }

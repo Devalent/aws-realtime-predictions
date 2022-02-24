@@ -38,6 +38,7 @@ from sagemaker.workflow.step_collections import RegisterModel
 
 BASE_DIR = os.path.dirname(os.path.realpath(__file__))
 
+
 def get_pipeline(
     region,
     role,
@@ -52,10 +53,11 @@ def get_pipeline(
         boto_session=boto_session,
         sagemaker_client=sagemaker_client,
         sagemaker_runtime_client=runtime_client,
-        default_bucket=code_bucket,
+        default_bucket=data_bucket,
     )
 
-    processing_instance_count = ParameterInteger(name="ProcessingInstanceCount", default_value=1)
+    processing_instance_count = ParameterInteger(
+        name="ProcessingInstanceCount", default_value=1)
     processing_instance_type = ParameterString(
         name="ProcessingInstanceType", default_value="ml.m5.xlarge"
     )
@@ -78,19 +80,26 @@ def get_pipeline(
         name="PreprocessData",
         processor=sklearn_processor,
         outputs=[
-            ProcessingOutput(destination=f's3://{data_bucket}/intermediate/train', output_name='train', source="/opt/ml/processing/train"),
-            ProcessingOutput(destination=f's3://{data_bucket}/intermediate/validation', output_name='validation', source="/opt/ml/processing/validation"),
-            ProcessingOutput(destination=f's3://{data_bucket}/intermediate/test', output_name='test', source="/opt/ml/processing/test"),
+            ProcessingOutput(output_name='train',
+                             source="/opt/ml/processing/train"),
+            ProcessingOutput(output_name='validation',
+                             source="/opt/ml/processing/validation"),
+            ProcessingOutput(output_name='test',
+                             source="/opt/ml/processing/test"),
+            ProcessingOutput(output_name='columns',
+                             source="/opt/ml/processing/columns"),
+            ProcessingOutput(output_name='classes',
+                             source="/opt/ml/processing/classes"),
         ],
-        code=os.path.join(BASE_DIR, "preprocess.py"),
+        code=f's3://{code_bucket}/preprocess.py',
         job_arguments=["--input-data", input_data],
     )
 
-    model_path = f"s3://{data_bucket}/intermediate/model/train"
+    model_path = f"s3://{data_bucket}"
     image_uri = sagemaker.image_uris.retrieve(
         framework="xgboost",
         region=region,
-        version="1.3-1",
+        version="1.0-1",
         py_version="py3",
         instance_type=training_instance_type,
     )
@@ -111,7 +120,7 @@ def get_pipeline(
         gamma=4,
         min_child_weight=6,
         subsample=0.7,
-        silent=0,
+        # silent=0,
     )
     step_train = TrainingStep(
         name="TrainModel",
@@ -162,9 +171,10 @@ def get_pipeline(
             ),
         ],
         outputs=[
-            ProcessingOutput(destination=f's3://{data_bucket}/intermediate/evaluation', output_name='evaluation', source="/opt/ml/processing/evaluation"),
+            ProcessingOutput(output_name='evaluation',
+                             source="/opt/ml/processing/evaluation"),
         ],
-        code=os.path.join(BASE_DIR, "evaluate.py"),
+        code=f's3://{code_bucket}/evaluate.py',
         property_files=[evaluation_report],
     )
 
@@ -217,14 +227,18 @@ def get_pipeline(
     )
     return pipeline
 
-if __name__ == '__main__':
-  pipeline = get_pipeline(
-    "us-west-2",
-    "arn:aws:iam::028812918682:role/realtime-predictions-sagemaker-pipeline",
-    "realtime-predictions-code",
-    "realtime-predictions-data",
-  )
 
-  with open("pipeline.json", "w") as f:
-    parsed = json.loads(pipeline.definition())
-    f.write(json.dumps(parsed, indent=4, sort_keys=True))
+if __name__ == '__main__':
+    pipeline = get_pipeline(
+        "us-west-2",
+        "arn:aws:iam::028812918682:role/realtime-predictions-sagemaker-pipeline",
+        "realtime-predictions-code",
+        "realtime-predictions-data",
+    )
+
+    filepath = os.path.join(os.path.dirname(
+        os.path.realpath(__file__)), 'pipeline.json')
+
+    with open(filepath, "w") as f:
+        parsed = json.loads(pipeline.definition())
+        f.write(json.dumps(parsed, indent=4, sort_keys=True))
