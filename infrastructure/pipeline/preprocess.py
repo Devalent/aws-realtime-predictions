@@ -16,9 +16,10 @@ logger.addHandler(logging.StreamHandler())
 
 feature_columns_names = ["country", "dos", "dtype", "dbrowser"]
 class_column_name = "offer"
+y_column_name = "class"
 
 base_dir = "/opt/ml/processing"
-# base_dir = "temp"
+#base_dir = "temp"
 
 def codes_dictionary_one(unique_values):
   dic = {}
@@ -62,9 +63,6 @@ if __name__ == "__main__":
 
     logger.debug("Transforming data.")
 
-    df = df.drop('city', 1)
-    df = df.drop('network', 1)
-
     X = df[feature_columns_names]
     y = df[[class_column_name]]
 
@@ -81,13 +79,20 @@ if __name__ == "__main__":
     dic_offer = codes_dictionary_one(unique_values_offer)
     add_encoded_column(y, dic_offer, class_column_name)
 
-    X['class'] = y['offer'].values
+    X.insert(loc=0, column=y_column_name, value=y[class_column_name].values)
 
     logger.info("Splitting into train, validation, test datasets.")
     X.sample(frac=1).reset_index(drop=True)
     train, validation, test = np.split(X, [int(0.7 * len(X)), int(0.85 * len(X))])
 
     logger.info("Writing out datasets to %s.", base_dir)
+
+    pathlib.Path(f"{base_dir}/train").mkdir(parents=True, exist_ok=True)
+    pathlib.Path(f"{base_dir}/validation").mkdir(parents=True, exist_ok=True)
+    pathlib.Path(f"{base_dir}/test").mkdir(parents=True, exist_ok=True)
+    pathlib.Path(f"{base_dir}/columns").mkdir(parents=True, exist_ok=True)
+    pathlib.Path(f"{base_dir}/classes").mkdir(parents=True, exist_ok=True)
+
     pd.DataFrame(train).to_csv(
       f"{base_dir}/train/train.csv", header=False, index=False
     )
@@ -102,4 +107,8 @@ if __name__ == "__main__":
       json.dump(list(X.columns.values), f)
       
     with open(f"{base_dir}/classes/classes.json", 'w') as f:
-      json.dump(dic_offer, f)
+      json.dump({
+        "classes": dic_offer,
+        "length": len(dic_offer),
+        "length_str": str(len(dic_offer)),
+      }, f)

@@ -71,6 +71,9 @@ def get_pipeline(
     campaign_id = ParameterString(
         name="CampaignID",
     )
+    model_id = ParameterString(
+        name="ModelID",
+    )
 
     sklearn_processor = SKLearnProcessor(
         framework_version="0.23-1",
@@ -79,6 +82,11 @@ def get_pipeline(
         base_job_name="preprocess",
         sagemaker_session=sagemaker_session,
         role=role,
+    )
+    classes_map = PropertyFile(
+        name="ClassesMap",
+        output_name="classes",
+        path="classes.json",
     )
     step_process = ProcessingStep(
         name="PreprocessData",
@@ -97,6 +105,7 @@ def get_pipeline(
         ],
         code=f's3://{code_bucket}/preprocess.py',
         job_arguments=["--input-data", input_data],
+        property_files=[classes_map],
     )
 
     model_path = f"s3://{data_bucket}"
@@ -117,14 +126,48 @@ def get_pipeline(
         role=role,
     )
     xgb_train.set_hyperparameters(
-        objective="reg:linear",
-        num_round=50,
-        max_depth=5,
-        eta=0.2,
-        gamma=4,
-        min_child_weight=6,
-        subsample=0.7,
-        # silent=0,
+        num_class=JsonGet(
+            step_name=step_process.name,
+            property_file=classes_map,
+            json_path="length_str"
+        ),
+        objective="multi:softprob",
+        eta='0.2',
+        gamma='4',
+        max_depth='6',
+        num_round='100',
+        eval_metric="mlogloss",
+        min_child_weight='6',
+        subsample='0.8',
+        # max_depth='5',
+        # eta='0.3',
+        # gamma='0.0',
+        # min_child_weight='1.0',
+        # subsample='1.0',
+        # csv_weights='0',
+        # booster='gbtree',
+        # max_delta_step='0',
+        # colsample_bytree='1.0',
+        # colsample_bylevel='1',
+        # alpha='0.0',
+        # sketch_eps='0.03',
+        # scale_pos_weight='1.0',
+        # updater='grow_colmaker,prune',
+        # dsplit='row',
+        # refresh_leaf='1',
+        # grow_policy='depthwise',
+        # max_leaves='0',
+        # max_bin='256',
+        # sample_type='uniform',
+        # normalize_type='tree',
+        # rate_drop='0.0',
+        # one_drop='0',
+        # skip_drop='0.0',
+        # lambda_bias='0.0',
+        # tweedie_variance_power='1.5',
+        # base_score='0.5',
+        # process_type='default',
+        # tree_method='auto',
     )
     step_train = TrainingStep(
         name="TrainModel",
@@ -145,42 +188,42 @@ def get_pipeline(
         },
     )
 
-    script_eval = ScriptProcessor(
-        image_uri=image_uri,
-        command=["python3"],
-        instance_type=processing_instance_type,
-        instance_count=1,
-        base_job_name="evaluate",
-        sagemaker_session=sagemaker_session,
-        role=role,
-    )
-    evaluation_report = PropertyFile(
-        name="EvaluationReport",
-        output_name="evaluation",
-        path="evaluation.json",
-    )
-    step_eval = ProcessingStep(
-        name="EvaluateModel",
-        processor=script_eval,
-        inputs=[
-            ProcessingInput(
-                source=step_train.properties.ModelArtifacts.S3ModelArtifacts,
-                destination="/opt/ml/processing/model",
-            ),
-            ProcessingInput(
-                source=step_process.properties.ProcessingOutputConfig.Outputs[
-                    "test"
-                ].S3Output.S3Uri,
-                destination="/opt/ml/processing/test",
-            ),
-        ],
-        outputs=[
-            ProcessingOutput(output_name='evaluation',
-                             source="/opt/ml/processing/evaluation"),
-        ],
-        code=f's3://{code_bucket}/evaluate.py',
-        property_files=[evaluation_report],
-    )
+    # script_eval = ScriptProcessor(
+    #     image_uri=image_uri,
+    #     command=["python3"],
+    #     instance_type=processing_instance_type,
+    #     instance_count=1,
+    #     base_job_name="evaluate",
+    #     sagemaker_session=sagemaker_session,
+    #     role=role,
+    # )
+    # evaluation_report = PropertyFile(
+    #     name="EvaluationReport",
+    #     output_name="evaluation",
+    #     path="evaluation.json",
+    # )
+    # step_eval = ProcessingStep(
+    #     name="EvaluateModel",
+    #     processor=script_eval,
+    #     inputs=[
+    #         ProcessingInput(
+    #             source=step_train.properties.ModelArtifacts.S3ModelArtifacts,
+    #             destination="/opt/ml/processing/model",
+    #         ),
+    #         ProcessingInput(
+    #             source=step_process.properties.ProcessingOutputConfig.Outputs[
+    #                 "test"
+    #             ].S3Output.S3Uri,
+    #             destination="/opt/ml/processing/test",
+    #         ),
+    #     ],
+    #     outputs=[
+    #         ProcessingOutput(output_name='evaluation',
+    #                          source="/opt/ml/processing/evaluation"),
+    #     ],
+    #     code=f's3://{code_bucket}/evaluate.py',
+    #     property_files=[evaluation_report],
+    # )
 
     lambda_func = Lambda(
         function_arn=f'arn:aws:lambda:{region}:{account}:function:{lambda_deployment}',
@@ -191,26 +234,27 @@ def get_pipeline(
         lambda_func=lambda_func,
         inputs={
             "campaign": campaign_id,
-            "model": step_train.properties.ModelArtifacts.S3ModelArtifacts,
+            "model": model_id,
+            "artifact": step_train.properties.ModelArtifacts.S3ModelArtifacts,
             "columns": step_process.properties.ProcessingOutputConfig.Outputs["columns"].S3Output.S3Uri,
             "classes": step_process.properties.ProcessingOutputConfig.Outputs["classes"].S3Output.S3Uri,
         },
     )
 
-    cond_lte = ConditionLessThanOrEqualTo(
-        left=JsonGet(
-            step_name=step_eval.name,
-            property_file=evaluation_report,
-            json_path="regression_metrics.mse.value"
-        ),
-        right=6.0,
-    )
-    step_cond = ConditionStep(
-        name="CheckEvaluation",
-        conditions=[cond_lte],
-        if_steps=[step_lambda],
-        else_steps=[],
-    )
+    # cond_lte = ConditionLessThanOrEqualTo(
+    #     left=JsonGet(
+    #         step_name=step_eval.name,
+    #         property_file=evaluation_report,
+    #         json_path="regression_metrics.mse.value"
+    #     ),
+    #     right=6.0,
+    # )
+    # step_cond = ConditionStep(
+    #     name="CheckEvaluation",
+    #     conditions=[cond_lte],
+    #     if_steps=[step_lambda],
+    #     else_steps=[],
+    # )
 
     pipeline = Pipeline(
         name="realtime-predictions",
@@ -219,8 +263,10 @@ def get_pipeline(
             training_instance_type,
             input_data,
             campaign_id,
+            model_id,
         ],
-        steps=[step_process, step_train, step_eval, step_cond],
+        # steps=[step_process, step_train, step_eval, step_cond],
+        steps=[step_process, step_train, step_lambda],
         sagemaker_session=sagemaker_session,
     )
     return pipeline
