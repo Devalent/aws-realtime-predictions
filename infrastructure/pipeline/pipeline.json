@@ -70,7 +70,7 @@
                             "S3Output": {
                                 "LocalPath": "/opt/ml/processing/train",
                                 "S3UploadMode": "EndOfJob",
-                                "S3Uri": "s3://realtime-predictions-data/preprocess-2022-02-26-13-08-49-554/output/train"
+                                "S3Uri": "s3://realtime-predictions-data/preprocess-2022-02-26-16-48-10-251/output/train"
                             }
                         },
                         {
@@ -79,7 +79,7 @@
                             "S3Output": {
                                 "LocalPath": "/opt/ml/processing/validation",
                                 "S3UploadMode": "EndOfJob",
-                                "S3Uri": "s3://realtime-predictions-data/preprocess-2022-02-26-13-08-49-554/output/validation"
+                                "S3Uri": "s3://realtime-predictions-data/preprocess-2022-02-26-16-48-10-251/output/validation"
                             }
                         },
                         {
@@ -88,7 +88,7 @@
                             "S3Output": {
                                 "LocalPath": "/opt/ml/processing/test",
                                 "S3UploadMode": "EndOfJob",
-                                "S3Uri": "s3://realtime-predictions-data/preprocess-2022-02-26-13-08-49-554/output/test"
+                                "S3Uri": "s3://realtime-predictions-data/preprocess-2022-02-26-16-48-10-251/output/test"
                             }
                         },
                         {
@@ -97,7 +97,7 @@
                             "S3Output": {
                                 "LocalPath": "/opt/ml/processing/columns",
                                 "S3UploadMode": "EndOfJob",
-                                "S3Uri": "s3://realtime-predictions-data/preprocess-2022-02-26-13-08-49-554/output/columns"
+                                "S3Uri": "s3://realtime-predictions-data/preprocess-2022-02-26-16-48-10-251/output/columns"
                             }
                         },
                         {
@@ -106,7 +106,7 @@
                             "S3Output": {
                                 "LocalPath": "/opt/ml/processing/classes",
                                 "S3UploadMode": "EndOfJob",
-                                "S3Uri": "s3://realtime-predictions-data/preprocess-2022-02-26-13-08-49-554/output/classes"
+                                "S3Uri": "s3://realtime-predictions-data/preprocess-2022-02-26-16-48-10-251/output/classes"
                             }
                         }
                     ]
@@ -142,7 +142,7 @@
                     "eta": "0.2",
                     "eval_metric": "mlogloss",
                     "gamma": "4",
-                    "max_depth": "6",
+                    "max_depth": "5",
                     "min_child_weight": "6",
                     "num_class": {
                         "Std:JsonGet": {
@@ -192,7 +192,7 @@
                 },
                 "ProfilerRuleConfigurations": [
                     {
-                        "RuleConfigurationName": "ProfilerReport-1645880930",
+                        "RuleConfigurationName": "ProfilerReport-1645894091",
                         "RuleEvaluatorImage": "895741380848.dkr.ecr.us-west-2.amazonaws.com/sagemaker-debugger-rules:latest",
                         "RuleParameters": {
                             "rule_to_invoke": "ProfilerReport"
@@ -216,26 +216,134 @@
         },
         {
             "Arguments": {
-                "artifact": {
-                    "Get": "Steps.TrainModel.ModelArtifacts.S3ModelArtifacts"
+                "AppSpecification": {
+                    "ContainerEntrypoint": [
+                        "python3",
+                        "/opt/ml/processing/input/code/evaluate.py"
+                    ],
+                    "ImageUri": "246618743249.dkr.ecr.us-west-2.amazonaws.com/sagemaker-xgboost:1.0-1-cpu-py3"
                 },
-                "campaign": {
-                    "Get": "Parameters.CampaignID"
+                "ProcessingInputs": [
+                    {
+                        "AppManaged": false,
+                        "InputName": "input-1",
+                        "S3Input": {
+                            "LocalPath": "/opt/ml/processing/model",
+                            "S3CompressionType": "None",
+                            "S3DataDistributionType": "FullyReplicated",
+                            "S3DataType": "S3Prefix",
+                            "S3InputMode": "File",
+                            "S3Uri": {
+                                "Get": "Steps.TrainModel.ModelArtifacts.S3ModelArtifacts"
+                            }
+                        }
+                    },
+                    {
+                        "AppManaged": false,
+                        "InputName": "input-2",
+                        "S3Input": {
+                            "LocalPath": "/opt/ml/processing/test",
+                            "S3CompressionType": "None",
+                            "S3DataDistributionType": "FullyReplicated",
+                            "S3DataType": "S3Prefix",
+                            "S3InputMode": "File",
+                            "S3Uri": {
+                                "Get": "Steps.PreprocessData.ProcessingOutputConfig.Outputs['test'].S3Output.S3Uri"
+                            }
+                        }
+                    },
+                    {
+                        "AppManaged": false,
+                        "InputName": "code",
+                        "S3Input": {
+                            "LocalPath": "/opt/ml/processing/input/code",
+                            "S3CompressionType": "None",
+                            "S3DataDistributionType": "FullyReplicated",
+                            "S3DataType": "S3Prefix",
+                            "S3InputMode": "File",
+                            "S3Uri": "s3://realtime-predictions-code/evaluate.py"
+                        }
+                    }
+                ],
+                "ProcessingOutputConfig": {
+                    "Outputs": [
+                        {
+                            "AppManaged": false,
+                            "OutputName": "evaluation",
+                            "S3Output": {
+                                "LocalPath": "/opt/ml/processing/evaluation",
+                                "S3UploadMode": "EndOfJob",
+                                "S3Uri": "s3://realtime-predictions-data/evaluate-2022-02-26-16-48-11-133/output/evaluation"
+                            }
+                        }
+                    ]
                 },
-                "classes": {
-                    "Get": "Steps.PreprocessData.ProcessingOutputConfig.Outputs['classes'].S3Output.S3Uri"
+                "ProcessingResources": {
+                    "ClusterConfig": {
+                        "InstanceCount": 1,
+                        "InstanceType": {
+                            "Get": "Parameters.ProcessingInstanceType"
+                        },
+                        "VolumeSizeInGB": 30
+                    }
                 },
-                "columns": {
-                    "Get": "Steps.PreprocessData.ProcessingOutputConfig.Outputs['columns'].S3Output.S3Uri"
-                },
-                "model": {
-                    "Get": "Parameters.ModelID"
-                }
+                "RoleArn": "arn:aws:iam::028812918682:role/realtime-predictions-sagemaker-pipeline"
             },
-            "FunctionArn": "arn:aws:lambda:us-west-2:028812918682:function:realtime-predictions-production-deployment",
-            "Name": "DeployModel",
-            "OutputParameters": [],
-            "Type": "Lambda"
+            "Name": "EvaluateModel",
+            "PropertyFiles": [
+                {
+                    "FilePath": "evaluation.json",
+                    "OutputName": "evaluation",
+                    "PropertyFileName": "EvaluationReport"
+                }
+            ],
+            "Type": "Processing"
+        },
+        {
+            "Arguments": {
+                "Conditions": [
+                    {
+                        "LeftValue": {
+                            "Std:JsonGet": {
+                                "Path": "regression_metrics.hamming_loss.value",
+                                "PropertyFile": {
+                                    "Get": "Steps.EvaluateModel.PropertyFiles.EvaluationReport"
+                                }
+                            }
+                        },
+                        "RightValue": 0.4,
+                        "Type": "LessThanOrEqualTo"
+                    }
+                ],
+                "ElseSteps": [],
+                "IfSteps": [
+                    {
+                        "Arguments": {
+                            "artifact": {
+                                "Get": "Steps.TrainModel.ModelArtifacts.S3ModelArtifacts"
+                            },
+                            "campaign": {
+                                "Get": "Parameters.CampaignID"
+                            },
+                            "classes": {
+                                "Get": "Steps.PreprocessData.ProcessingOutputConfig.Outputs['classes'].S3Output.S3Uri"
+                            },
+                            "columns": {
+                                "Get": "Steps.PreprocessData.ProcessingOutputConfig.Outputs['columns'].S3Output.S3Uri"
+                            },
+                            "model": {
+                                "Get": "Parameters.ModelID"
+                            }
+                        },
+                        "FunctionArn": "arn:aws:lambda:us-west-2:028812918682:function:realtime-predictions-production-deployment",
+                        "Name": "DeployModel",
+                        "OutputParameters": [],
+                        "Type": "Lambda"
+                    }
+                ]
+            },
+            "Name": "CheckEvaluation",
+            "Type": "Condition"
         }
     ],
     "Version": "2020-12-01"
