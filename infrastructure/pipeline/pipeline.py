@@ -18,7 +18,9 @@ from sagemaker.workflow.conditions import ConditionLessThanOrEqualTo
 from sagemaker.workflow.condition_step import (
     ConditionStep,
 )
+from sagemaker.workflow.execution_variables import ExecutionVariables
 from sagemaker.workflow.functions import (
+    Join,
     JsonGet,
 )
 from sagemaker.workflow.lambda_step import (
@@ -93,26 +95,81 @@ def get_pipeline(
         processor=sklearn_processor,
         outputs=[
             ProcessingOutput(output_name='train',
-                             source="/opt/ml/processing/train"),
+                             source="/opt/ml/processing/train",
+                             destination=Join(
+                                    on="/",
+                                    values=[
+                                        "s3:/",
+                                        data_bucket,
+                                        "preprocess",
+                                        ExecutionVariables.PIPELINE_EXECUTION_ID,
+                                        "train",
+                                    ],
+                                ),
+                             ),
             ProcessingOutput(output_name='validation',
-                             source="/opt/ml/processing/validation"),
+                             source="/opt/ml/processing/validation",
+                             destination=Join(
+                                    on="/",
+                                    values=[
+                                        "s3:/",
+                                        data_bucket,
+                                        "preprocess",
+                                        ExecutionVariables.PIPELINE_EXECUTION_ID,
+                                        "validation",
+                                    ],
+                                ),
+                             ),
             ProcessingOutput(output_name='test',
-                             source="/opt/ml/processing/test"),
+                             source="/opt/ml/processing/test",
+                             destination=Join(
+                                    on="/",
+                                    values=[
+                                        "s3:/",
+                                        data_bucket,
+                                        "preprocess",
+                                        ExecutionVariables.PIPELINE_EXECUTION_ID,
+                                        "test",
+                                    ],
+                                ),
+                             ),
             ProcessingOutput(output_name='columns',
-                             source="/opt/ml/processing/columns"),
+                             source="/opt/ml/processing/columns",
+                             destination=Join(
+                                    on="/",
+                                    values=[
+                                        "s3:/",
+                                        data_bucket,
+                                        "preprocess",
+                                        ExecutionVariables.PIPELINE_EXECUTION_ID,
+                                        "columns",
+                                    ],
+                                ),
+                             ),
             ProcessingOutput(output_name='classes',
-                             source="/opt/ml/processing/classes"),
+                             source="/opt/ml/processing/classes",
+                             destination=Join(
+                                    on="/",
+                                    values=[
+                                        "s3:/",
+                                        data_bucket,
+                                        "preprocess",
+                                        ExecutionVariables.PIPELINE_EXECUTION_ID,
+                                        "classes",
+                                    ],
+                                ),
+                             ),
         ],
         code=f's3://{code_bucket}/preprocess.py',
         job_arguments=["--input-data", input_data],
         property_files=[classes_map],
     )
-
+    
     model_path = f"s3://{data_bucket}"
     image_uri = sagemaker.image_uris.retrieve(
         framework="xgboost",
         region=region,
-        version="1.0-1",
+        version="1.3-1",
         py_version="py3",
         instance_type=training_instance_type,
     )
@@ -190,7 +247,17 @@ def get_pipeline(
         ],
         outputs=[
             ProcessingOutput(output_name='evaluation',
-                             source="/opt/ml/processing/evaluation"),
+                             source="/opt/ml/processing/evaluation",
+                             destination=Join(
+                                    on="/",
+                                    values=[
+                                        "s3:/",
+                                        data_bucket,
+                                        "evaluation",
+                                        ExecutionVariables.PIPELINE_EXECUTION_ID,
+                                    ],
+                                ),
+                             ),
         ],
         code=f's3://{code_bucket}/evaluate.py',
         property_files=[evaluation_report],

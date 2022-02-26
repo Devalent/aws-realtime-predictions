@@ -185,7 +185,7 @@ export class InfrastructureStack extends Stack {
       modelName: name,
       containers: [
         {
-          image: `246618743249.dkr.ecr.us-west-2.amazonaws.com/sagemaker-xgboost:1.0-1-cpu-py3`,
+          image: `246618743249.dkr.ecr.us-west-2.amazonaws.com/sagemaker-xgboost:1.3-1-cpu-py3`,
           mode: 'MultiModel',
           modelDataUrl: `s3://${bucketModel.bucketName}/`,
         },
@@ -333,7 +333,7 @@ export class InfrastructureStack extends Stack {
           },
           "Wait": {
             "Type": "Wait",
-            "Seconds": 10,
+            "Seconds": 30,
             "Next": "Check"
           },
           "Check": {

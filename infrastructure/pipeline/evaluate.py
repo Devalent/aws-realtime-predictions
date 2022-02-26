@@ -54,7 +54,7 @@ if __name__ == "__main__":
     report_dict = {
         "regression_metrics": {
             "hamming_loss": {
-                "valeu": hloss,
+                "value": hloss,
             },
         },
     }
