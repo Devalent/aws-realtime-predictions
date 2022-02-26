@@ -2,6 +2,8 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
+      "@config": ["src/config.ts"],
+      "@domain/*": ["src/domain/*"],
       "@functions/*": ["src/functions/*"],
       "@libs/*": ["src/libs/*"]
     }
