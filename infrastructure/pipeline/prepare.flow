@@ -12,11 +12,11 @@
         "dataset_definition": {
           "__typename": "S3CreateDatasetDefinitionOutput",
           "datasetSourceType": "S3",
-          "name": "0059360a-e862-4652-aced-c7dd7b7931bb.csv",
+          "name": "input",
           "description": null,
           "s3ExecutionContext": {
             "__typename": "S3ExecutionContext",
-            "s3Uri": "s3://realtime-predictions-data/queries/0059360a-e862-4652-aced-c7dd7b7931bb.csv",
+            "s3Uri": "s3://realtime-predictions-data/queries/",
             "s3ContentType": "csv",
             "s3HasHeader": true,
             "s3FieldDelimiter": ",",
@@ -554,7 +554,7 @@
       "node_id": "0cc79b5b-68d4-4120-bb23-b3e6d7510a80",
       "type": "DESTINATION",
       "operator": "sagemaker.spark.s3_destination_0.1",
-      "name": "S3: output",
+      "name": "output",
       "parameters": {
         "output_config": {
           "compression": "none",
@@ -580,7 +580,7 @@
       "node_id": "d7b008a7-bcef-4c94-ba18-ac1ca129f1d3",
       "type": "DESTINATION",
       "operator": "sagemaker.spark.s3_destination_0.1",
-      "name": "S3: classes",
+      "name": "classes",
       "parameters": {
         "output_config": {
           "compression": "none",
