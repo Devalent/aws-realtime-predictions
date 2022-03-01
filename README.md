@@ -32,11 +32,11 @@ bash deploy.sh
 
 ## Project structure
 
-### `./data`
+### [data](./data)
 
 Test data that will be deployed to S3.
 
-### `./infrastructure`
+### [infrastructure](./infrastructure)
 
 AWS CDK project with infrastructure definition.
 
@@ -47,11 +47,11 @@ npm commands:
 * `npm run runtime` - deploy the runtime infrastructure (hourly costs incurred);
 * `npm run stop` - delete the runtime infrastructure.
 
-### `./pipeline`
+### [pipeline](./pipeline)
 
 SageMaker pipeline definitions and Python scripts.
 
-### `./service`
+### [service](./service)
 
 Serverless.js project with Lambda API.
 
