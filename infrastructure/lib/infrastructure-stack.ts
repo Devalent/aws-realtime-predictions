@@ -197,7 +197,7 @@ export class InfrastructureStack extends Stack {
     const sagemakerPipeline = new cdk.aws_sagemaker.CfnPipeline(this, 'sg-pipeline', {
       tags: tagsList,
       pipelineDefinition: {
-        PipelineDefinitionBody: JSON.stringify(require('../pipeline/pipeline.json')),
+        PipelineDefinitionBody: JSON.stringify(require('../../pipeline/pipeline.json')),
       },
       pipelineName: name,
       roleArn: roleSagemaker.roleArn,
