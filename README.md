@@ -10,9 +10,11 @@ See [this blog post](https://devalent.com/blog/automated-predictions-with-machin
 
 Optional:
 
-* [MaxMind](https://www.maxmind.com/) liense key (free)
+* [MaxMind](https://www.maxmind.com/) license key (free)
 
 ## Installation
+
+Before you proceed, set up `MAXMIND_LICENSE_KEY` environment variable with a valid license key. If not provided, IP address lookup will be disabled.
 
 Install all required dependencies with command:
 
@@ -52,3 +54,7 @@ SageMaker pipeline definitions and Python scripts.
 ### `./service`
 
 Serverless.js project with Lambda API.
+
+npm commands:
+
+* `npm run deploy` - deploy the service.
