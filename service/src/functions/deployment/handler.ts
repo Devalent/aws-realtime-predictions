@@ -11,6 +11,7 @@ import { PipelineEvent } from '@domain/pipeline';
 import { middyfy } from '@libs/lambda';
 
 const classField = 'class';
+const categoryField = 'category';
 
 const s3 = new S3Client({ region: config.region });
 const dynamodb = DynamoDBDocumentClient.from(new DynamoDBClient({ region: config.region }));
@@ -39,10 +40,12 @@ const handler = async (event:PipelineEvent) => {
   const artifactUrl = URI.parse(event.artifact);
   const classeslUrl = URI.parse(event.classes);
   const columnsUrl = URI.parse(event.columns);
-  
-  const [classes, columns] = await Promise.all([
+  const evaluationUrl = URI.parse(event.evaluation);
+
+  const [classes, columns, evaluation, res] = await Promise.all([
     getJson(classeslUrl.hostname, `${classeslUrl.path.substring(1)}/classes.json`),
     getJson(columnsUrl.hostname, `${columnsUrl.path.substring(1)}/columns.json`),
+    getJson(evaluationUrl.hostname, `${evaluationUrl.path.substring(1)}/evaluation.json`),
     s3.send(new CopyObjectCommand({
       CopySource: `${artifactUrl.hostname}${artifactUrl.path}`,
       Bucket: config.bucket_model,
@@ -54,11 +57,14 @@ const handler = async (event:PipelineEvent) => {
     campaign: event.campaign,
     model: event.model,
     modified: Math.round(Date.now() / 1000),
-    columns: columns.filter(x => x && x !== classField),
+    columns: columns.filter(x => x && x !== classField && x !== categoryField),
     classes: Object.keys(classes.classes).reduce((res, x) => {
       res[x] = classes.classes[x].toString();
       return res;
     }, {} as ModelEndpoint['classes']),
+    evaluation: {
+      hamming_loss: evaluation['regression_metrics']['hamming_loss']['value'],
+    },
   };
 
   console.log(entry);
@@ -73,10 +79,12 @@ const handler = async (event:PipelineEvent) => {
     const oldEntry = oldItem as ModelEndpoint;
 
     try {
-      await s3.send(new DeleteObjectCommand({
-        Bucket: config.bucket_model,
-        Key: `${oldEntry.model}.tar.gz`,
-      }));
+      if (oldEntry.model !== entry.model) {
+        await s3.send(new DeleteObjectCommand({
+          Bucket: config.bucket_model,
+          Key: `${oldEntry.model}.tar.gz`,
+        }));
+      }
     } catch (error) {
       console.error(error);
     }

@@ -4,6 +4,9 @@ export type ModelEndpoint = {
   modified:number;
   columns:string[];
   classes:{ [x:string]:string; };
+  evaluation:{
+    hamming_loss:number;
+  };
 };
 
 export type PredictionSource = {
@@ -19,4 +22,10 @@ export type PredictionSource = {
   dosversion?:string;
   dbrowser?:string;
   dbrowserversion?:string;
+};
+
+export type PredictionResult = {
+  index:number;
+  offer:string;
+  probability:number;
 };

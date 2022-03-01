@@ -9,6 +9,7 @@ from sagemaker.estimator import Estimator
 from sagemaker.inputs import TrainingInput
 from sagemaker.lambda_helper import Lambda
 from sagemaker.processing import (
+    Processor,
     ProcessingInput,
     ProcessingOutput,
     ScriptProcessor,
@@ -27,7 +28,6 @@ from sagemaker.workflow.lambda_step import (
     LambdaStep,
 )
 from sagemaker.workflow.parameters import (
-    ParameterInteger,
     ParameterString,
 )
 from sagemaker.workflow.pipeline import Pipeline
@@ -36,9 +36,6 @@ from sagemaker.workflow.steps import (
     ProcessingStep,
     TrainingStep,
 )
-
-BASE_DIR = os.path.dirname(os.path.realpath(__file__))
-
 
 def get_pipeline(
     region,
@@ -77,6 +74,160 @@ def get_pipeline(
         name="ModelID",
     )
 
+    datawrangler_image_uri = sagemaker.image_uris.retrieve(
+        framework="data-wrangler",
+        region=region,
+        version="1.x",
+        instance_type=processing_instance_type,
+    )
+    datawrangler_processor = Processor(
+        role=role,
+        image_uri=datawrangler_image_uri,
+        instance_count=1,
+        instance_type="ml.m5.4xlarge",
+        sagemaker_session=sagemaker_session,
+    )
+
+    flow_filepath = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'prepare.flow')
+
+    with open(flow_filepath, 'r') as f:
+        flow = json.load(f)
+
+    for node in flow['nodes']:
+        if node['type'] == 'SOURCE':
+            wrangler_input_name = node['parameters']['dataset_definition']['name']
+        if node['type'] == 'DESTINATION':
+            if node['name'] == 'S3: train':
+                wrangler_output_train = f"{node['node_id']}.{node['outputs'][0]['name']}"
+            if node['name'] == 'S3: validation':
+                wrangler_output_validation = f"{node['node_id']}.{node['outputs'][0]['name']}"
+            if node['name'] == 'S3: test':
+                wrangler_output_test = f"{node['node_id']}.{node['outputs'][0]['name']}"
+            if node['name'] == 'S3: classes':
+                wrangler_output_classes = f"{node['node_id']}.{node['outputs'][0]['name']}"
+            if node['name'] == 'S3: columns':
+                wrangler_output_columns = f"{node['node_id']}.{node['outputs'][0]['name']}"
+
+    wrangler_output_config = {
+        wrangler_output_train: {
+            "content_type": "CSV"
+        },
+        wrangler_output_validation: {
+            "content_type": "CSV"
+        },
+        wrangler_output_test: {
+            "content_type": "CSV"
+        },
+        # wrangler_output_classes: {
+        #     "content_type": "CSV"
+        # },
+        #  wrangler_output_columns: {
+        #     "content_type": "CSV"
+        # },
+    }
+
+    path_classes = Join(
+        on="/",
+        values=[
+            "s3:/",
+            data_bucket,
+            "prepared",
+            ExecutionVariables.PIPELINE_EXECUTION_ID,
+            "classes",
+        ],
+    )
+    path_columns = Join(
+        on="/",
+        values=[
+            "s3:/",
+            data_bucket,
+            "prepared",
+            ExecutionVariables.PIPELINE_EXECUTION_ID,
+            "columns",
+        ],
+    )
+    path_data_validation = Join(
+        on="/",
+        values=[
+            "s3:/",
+            data_bucket,
+            "prepared",
+            ExecutionVariables.PIPELINE_EXECUTION_ID,
+            "validation",
+        ],
+    )
+    path_data_test = Join(
+        on="/",
+        values=[
+            "s3:/",
+            data_bucket,
+            "prepared",
+            ExecutionVariables.PIPELINE_EXECUTION_ID,
+            "test",
+        ],
+    )
+    path_data_train = Join(
+        on="/",
+        values=[
+            "s3:/",
+            data_bucket,
+            "prepared",
+            ExecutionVariables.PIPELINE_EXECUTION_ID,
+            "train",
+        ],
+    )
+
+    step_prepare = ProcessingStep(
+        name="PrepareData",
+        processor=datawrangler_processor,
+        inputs=[
+            ProcessingInput(
+                input_name="flow",
+                source=f"s3://{code_bucket}/prepare.flow",
+                destination="/opt/ml/processing/flow",
+                s3_data_type="S3Prefix",
+                s3_input_mode="File",
+                s3_data_distribution_type="FullyReplicated"
+            ),
+            ProcessingInput(
+                input_name=wrangler_input_name,
+                source=input_data,
+                destination="/opt/ml/processing/input",
+                s3_data_type="S3Prefix",
+                s3_input_mode="File",
+                s3_data_distribution_type="FullyReplicated"
+            ),
+        ],
+        outputs=[
+            ProcessingOutput(output_name=wrangler_output_train,
+                             source="/opt/ml/processing/train",
+                             destination=path_data_train,
+                             app_managed=True,
+                            ),
+            ProcessingOutput(output_name=wrangler_output_validation,
+                             source="/opt/ml/processing/validation",
+                             destination=path_data_validation,
+                             app_managed=True,
+                            ),
+            ProcessingOutput(output_name=wrangler_output_test,
+                             source="/opt/ml/processing/test",
+                             destination=path_data_test,
+                             app_managed=True,
+                            ),
+            ProcessingOutput(output_name=wrangler_output_classes,
+                             source="/opt/ml/processing/classes",
+                             destination=path_classes,
+                             app_managed=True,
+                            ),
+            ProcessingOutput(output_name=wrangler_output_columns,
+                             source="/opt/ml/processing/columns",
+                             destination=path_columns,
+                             app_managed=True,
+                            ),
+        ],
+        job_arguments=[f"--output-config '{json.dumps(wrangler_output_config)}'"],
+    )
+
     sklearn_processor = SKLearnProcessor(
         framework_version="0.23-1",
         instance_type=processing_instance_type,
@@ -90,82 +241,53 @@ def get_pipeline(
         output_name="classes",
         path="classes.json",
     )
+
+    path_preprocessed_columns = Join(
+        on="/",
+        values=[
+            "s3:/",
+            data_bucket,
+            "preprocess",
+            ExecutionVariables.PIPELINE_EXECUTION_ID,
+            "columns",
+        ],
+    )
+    path_preprocessed_classes = Join(
+        on="/",
+        values=[
+            "s3:/",
+            data_bucket,
+            "preprocess",
+            ExecutionVariables.PIPELINE_EXECUTION_ID,
+            "classes",
+        ],
+    )
+
     step_process = ProcessingStep(
         name="PreprocessData",
         processor=sklearn_processor,
         outputs=[
-            ProcessingOutput(output_name='train',
-                             source="/opt/ml/processing/train",
-                             destination=Join(
-                                    on="/",
-                                    values=[
-                                        "s3:/",
-                                        data_bucket,
-                                        "preprocess",
-                                        ExecutionVariables.PIPELINE_EXECUTION_ID,
-                                        "train",
-                                    ],
-                                ),
-                             ),
-            ProcessingOutput(output_name='validation',
-                             source="/opt/ml/processing/validation",
-                             destination=Join(
-                                    on="/",
-                                    values=[
-                                        "s3:/",
-                                        data_bucket,
-                                        "preprocess",
-                                        ExecutionVariables.PIPELINE_EXECUTION_ID,
-                                        "validation",
-                                    ],
-                                ),
-                             ),
-            ProcessingOutput(output_name='test',
-                             source="/opt/ml/processing/test",
-                             destination=Join(
-                                    on="/",
-                                    values=[
-                                        "s3:/",
-                                        data_bucket,
-                                        "preprocess",
-                                        ExecutionVariables.PIPELINE_EXECUTION_ID,
-                                        "test",
-                                    ],
-                                ),
-                             ),
             ProcessingOutput(output_name='columns',
                              source="/opt/ml/processing/columns",
-                             destination=Join(
-                                    on="/",
-                                    values=[
-                                        "s3:/",
-                                        data_bucket,
-                                        "preprocess",
-                                        ExecutionVariables.PIPELINE_EXECUTION_ID,
-                                        "columns",
-                                    ],
-                                ),
+                             destination=path_preprocessed_columns,
                              ),
             ProcessingOutput(output_name='classes',
                              source="/opt/ml/processing/classes",
-                             destination=Join(
-                                    on="/",
-                                    values=[
-                                        "s3:/",
-                                        data_bucket,
-                                        "preprocess",
-                                        ExecutionVariables.PIPELINE_EXECUTION_ID,
-                                        "classes",
-                                    ],
-                                ),
+                             destination=path_preprocessed_classes,
                              ),
         ],
         code=f's3://{code_bucket}/preprocess.py',
-        job_arguments=["--input-data", input_data],
+        job_arguments=[
+            "--input-classes",
+            path_classes,
+            "--input-columns",
+            path_columns,
+        ],
         property_files=[classes_map],
+        depends_on=[step_prepare]
     )
     
-    model_path = f"s3://{data_bucket}"
+    model_path = f"s3://{data_bucket}/models"
     image_uri = sagemaker.image_uris.retrieve(
         framework="xgboost",
         region=region,
@@ -202,15 +324,11 @@ def get_pipeline(
         estimator=xgb_train,
         inputs={
             "train": TrainingInput(
-                s3_data=step_process.properties.ProcessingOutputConfig.Outputs[
-                    "train"
-                ].S3Output.S3Uri,
+                s3_data=path_data_train,
                 content_type="text/csv",
             ),
             "validation": TrainingInput(
-                s3_data=step_process.properties.ProcessingOutputConfig.Outputs[
-                    "validation"
-                ].S3Output.S3Uri,
+                s3_data=path_data_validation,
                 content_type="text/csv",
             ),
         },
@@ -230,6 +348,15 @@ def get_pipeline(
         output_name="evaluation",
         path="evaluation.json",
     )
+    path_evaluation = Join(
+        on="/",
+        values=[
+            "s3:/",
+            data_bucket,
+            "evaluation",
+            ExecutionVariables.PIPELINE_EXECUTION_ID,
+        ],
+    )
     step_eval = ProcessingStep(
         name="EvaluateModel",
         processor=script_eval,
@@ -238,28 +365,18 @@ def get_pipeline(
                 source=step_train.properties.ModelArtifacts.S3ModelArtifacts,
                 destination="/opt/ml/processing/model",
             ),
-            ProcessingInput(
-                source=step_process.properties.ProcessingOutputConfig.Outputs[
-                    "test"
-                ].S3Output.S3Uri,
-                destination="/opt/ml/processing/test",
-            ),
         ],
         outputs=[
             ProcessingOutput(output_name='evaluation',
                              source="/opt/ml/processing/evaluation",
-                             destination=Join(
-                                    on="/",
-                                    values=[
-                                        "s3:/",
-                                        data_bucket,
-                                        "evaluation",
-                                        ExecutionVariables.PIPELINE_EXECUTION_ID,
-                                    ],
-                                ),
+                             destination=path_evaluation,
                              ),
         ],
         code=f's3://{code_bucket}/evaluate.py',
+        job_arguments=[
+            "--input-test",
+            path_data_test,
+        ],
         property_files=[evaluation_report],
     )
 
@@ -274,8 +391,9 @@ def get_pipeline(
             "campaign": campaign_id,
             "model": model_id,
             "artifact": step_train.properties.ModelArtifacts.S3ModelArtifacts,
-            "columns": step_process.properties.ProcessingOutputConfig.Outputs["columns"].S3Output.S3Uri,
-            "classes": step_process.properties.ProcessingOutputConfig.Outputs["classes"].S3Output.S3Uri,
+            "columns": path_preprocessed_columns,
+            "classes": path_preprocessed_classes,
+            "evaluation": path_evaluation,
         },
     )
 
@@ -303,7 +421,7 @@ def get_pipeline(
             campaign_id,
             model_id,
         ],
-        steps=[step_process, step_train, step_eval, step_cond],
+        steps=[step_prepare, step_process, step_train, step_eval, step_cond],
         sagemaker_session=sagemaker_session,
     )
     return pipeline
@@ -319,8 +437,7 @@ if __name__ == '__main__':
         "realtime-predictions-production-deployment",
     )
 
-    filepath = os.path.join(os.path.dirname(
-        os.path.realpath(__file__)), 'pipeline.json')
+    filepath = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'pipeline.json')
 
     with open(filepath, "w") as f:
         parsed = json.loads(pipeline.definition())

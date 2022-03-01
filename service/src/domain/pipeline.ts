@@ -4,4 +4,5 @@ export type PipelineEvent = {
   artifact:string;
   columns:string;
   classes:string;
+  evaluation:string;
 };

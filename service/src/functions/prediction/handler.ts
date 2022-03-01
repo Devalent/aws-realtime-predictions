@@ -6,7 +6,7 @@ import * as querystring from 'querystring';
 import UAParser from 'ua-parser-js';
 
 import config from '@config';
-import { ModelEndpoint, PredictionSource } from '@domain/model';
+import { ModelEndpoint, PredictionResult, PredictionSource } from '@domain/model';
 import { formatJSONResponse } from '@libs/api-gateway';
 import { middyfy } from '@libs/lambda';
 import { getGeo2Ip } from '@libs/maxmind';
@@ -17,6 +17,7 @@ const sagemaker = new SageMakerRuntimeClient({ region: config.region });
 const categoricalFeatures:Array<keyof Pick<PredictionSource, 'country' | 'city' | 'isp' | 'network' | 'dos' | 'dbrowser' | 'dtype'>> = ['country', 'city', 'isp', 'network', 'dos', 'dbrowser', 'dtype'];
 const numericFeatures:Array<keyof Pick<PredictionSource, 'lat' | 'long'>> = ['lat', 'long'];
 const classField = 'class';
+const categoryField = 'category';
 const noneCategory = 'None';
 
 const handler = async (event:APIGatewayProxyEventV2):Promise<APIGatewayProxyResultV2> => {
@@ -92,6 +93,7 @@ const handler = async (event:APIGatewayProxyEventV2):Promise<APIGatewayProxyResu
         res.push(source[numeric] || 0);
         break;
       case x === classField:
+      case x === categoryField:
         break;
       default:
         res.push(0);
@@ -112,16 +114,45 @@ const handler = async (event:APIGatewayProxyEventV2):Promise<APIGatewayProxyResu
       Body: input,
     }));
 
+    const offers = Object.keys(endpoint.classes).reduce((res, x) => {
+      const index = parseInt(endpoint.classes[x]);
+
+      if (!isNaN(index)) {
+        res[index] = x;
+      }
+
+      return res;
+    }, Array(Object.keys(endpoint.classes).length).fill(undefined) as string[]);
+
     const output = Buffer.from(response).toString('utf-8');
+    const [probabilities] = JSON.parse(output) as number[][];
+
+    const predictions = probabilities
+      .reduce((res, probability, index) => {
+        const offer = offers[index];
+
+        if (offer && probability) {
+          res.push({ index, offer, probability });
+        }
+
+        return res;
+      }, [] as PredictionResult[])
+      .sort((a, b) => b.probability - a.probability);
+
+    const predicted = predictions[0] || null;
 
     return formatJSONResponse({
       input: input.toString('utf-8'),
       output,
+      predicted,
       source,
-      mappings: (endpoint.columns || []).reduce((res, x, i) => {
-        res[x] = encodings[i];
-        return res;
-      }, {} as { [x:string]:any; }),
+      predictions,
+      mappings: (endpoint.columns || [])
+        .filter(x => x !== classField && x !== categoryField)
+        .reduce((res, x, i) => {
+          res[x] = encodings[i];
+          return res;
+        }, {} as { [x:string]:any; }),
       endpoint,
     });
   } catch (error) {

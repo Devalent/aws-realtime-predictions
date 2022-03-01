@@ -1,111 +1,85 @@
 import argparse
 import json
 import logging
-import os
 import pathlib
-import tempfile
 
 import boto3
-import numpy as np
 import pandas as pd
-import urllib.parse
 
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 logger.addHandler(logging.StreamHandler())
 
 feature_columns_names = ["country", "dos", "dtype", "dbrowser"]
-class_column_name = "offer"
+class_column_name = "category"
 y_column_name = "class"
 
 base_dir = "/opt/ml/processing"
-#base_dir = "temp"
-
-def codes_dictionary_one(unique_values):
-  dic = {}
-  count = 0
-  for i in unique_values:
-    if i in dic:
-      count += 0
-    else:
-      if i == 0 or i == '0,0':
-        dic[i] = 0  
-      else:
-        dic[i] = count
-        count += 1
-              
-  return dic
-
-def add_encoded_column(df, dictionary, column):
-  res = df[column].replace(dictionary)
-  df.drop([column], axis='columns', inplace=True)
-  df[column] = res
+# base_dir = "temp"
 
 if __name__ == "__main__":
     logger.debug("Starting preprocessing.")
     parser = argparse.ArgumentParser()
-    parser.add_argument("--input-data", type=str, required=True)
+    parser.add_argument("--input-columns", type=str, required=True)
+    parser.add_argument("--input-classes", type=str, required=True)
     args = parser.parse_args()
 
     pathlib.Path(f"{base_dir}").mkdir(parents=True, exist_ok=True)
-    input_data = args.input_data
-    bucket = input_data.split("/")[2]
-    key = "/".join(input_data.split("/")[3:])
 
-    logger.info("Downloading data from bucket: %s, key: %s", bucket, key)
-    fn = f"{base_dir}/dataset.csv"
+    input_columns = args.input_columns
+    bucket_columns = input_columns.split("/")[2]
+    prefix_columns = "/".join(input_columns.split("/")[3:])
+    print(input_columns)
+
+    input_classes = args.input_classes
+    bucket_classes = input_classes.split("/")[2]
+    prefix_classes = "/".join(input_classes.split("/")[3:])
+    print(input_classes)
+
     s3 = boto3.resource("s3")
-    s3.Bucket(bucket).download_file(key, fn)
+    s3client = boto3.client("s3")
 
-    logger.debug("Reading downloaded data.")
-    df = pd.read_csv(fn)
-    os.unlink(fn)
+    response_columns = s3client.list_objects_v2(
+      Bucket=bucket_columns,
+      Prefix=prefix_columns,
+    )
+    key_columns = response_columns['Contents'][0]['Key']
 
-    logger.debug("Transforming data.")
+    logger.info("Downloading columns data from bucket: %s, key: %s", bucket_classes, key_columns)
+    file_columns = f"{base_dir}/rows.csv"
 
-    X = df[feature_columns_names]
-    y = df[[class_column_name]]
+    s3.Bucket(bucket_columns).download_file(key_columns, file_columns)
 
-    for i in X.columns.values:
-      X[i] = X[i].fillna('None')
+    response_classes = s3client.list_objects_v2(
+      Bucket=bucket_classes,
+      Prefix=prefix_classes,
+    )
+    key_classes = response_classes['Contents'][0]['Key']
 
-    d = {' ': 'None'}
-    X = X.replace(d)
+    logger.info("Downloading classes data from bucket: %s, key: %s", bucket_classes, key_classes)
+    file_classes = f"{base_dir}/classes.csv"
 
-    X = pd.get_dummies(X)
-    X.rename(columns=lambda x: urllib.parse.quote(x), inplace=True)
+    s3.Bucket(bucket_classes).download_file(key_classes, file_classes)
 
-    unique_values_offer = pd.unique(y[class_column_name]).tolist()
-    dic_offer = codes_dictionary_one(unique_values_offer)
-    add_encoded_column(y, dic_offer, class_column_name)
+    logger.debug("Processing columns.")
 
-    X.insert(loc=0, column=y_column_name, value=y[class_column_name].values)
-
-    logger.info("Splitting into train, validation, test datasets.")
-    X.sample(frac=1).reset_index(drop=True)
-    train, validation, test = np.split(X, [int(0.7 * len(X)), int(0.85 * len(X))])
-
-    logger.info("Writing out datasets to %s.", base_dir)
-
-    pathlib.Path(f"{base_dir}/train").mkdir(parents=True, exist_ok=True)
-    pathlib.Path(f"{base_dir}/validation").mkdir(parents=True, exist_ok=True)
-    pathlib.Path(f"{base_dir}/test").mkdir(parents=True, exist_ok=True)
     pathlib.Path(f"{base_dir}/columns").mkdir(parents=True, exist_ok=True)
-    pathlib.Path(f"{base_dir}/classes").mkdir(parents=True, exist_ok=True)
-
-    pd.DataFrame(train).to_csv(
-      f"{base_dir}/train/train.csv", header=False, index=False
-    )
-    pd.DataFrame(validation).to_csv(
-      f"{base_dir}/validation/validation.csv", header=False, index=False
-    )
-    pd.DataFrame(test).to_csv(
-      f"{base_dir}/test/test.csv", header=False, index=False
-    )
+    
+    df_columns = pd.read_csv(file_columns)
 
     with open(f"{base_dir}/columns/columns.json", 'w') as f:
-      json.dump(list(X.columns.values), f)
-      
+      json.dump(list(df_columns.columns.values), f)
+
+    logger.debug("Processing classes.")
+
+    pathlib.Path(f"{base_dir}/classes").mkdir(parents=True, exist_ok=True)
+
+    df_classes = pd.read_csv(file_classes)
+    dic_offer = {}
+
+    for index, row in df_classes.iterrows():
+      dic_offer[row['offer']] = int(row['category'])
+
     with open(f"{base_dir}/classes/classes.json", 'w') as f:
       json.dump({
         "classes": dic_offer,

@@ -98,7 +98,7 @@
       ]
     },
     {
-      "node_id": "fcb08fdb-38ba-42ad-bd7c-63ac646adad8",
+      "node_id": "c132cdc0-76f6-44ea-b1de-6ada68f63298",
       "type": "TRANSFORM",
       "operator": "sagemaker.spark.handle_outliers_0.1",
       "parameters": {
@@ -110,7 +110,7 @@
           "input_column": [
             "dbrowser"
           ],
-          "replacement_string": "None",
+          "replacement_string": "",
           "output_column": ""
         },
         "standard_deviation_numeric_outliers_parameters": {
@@ -135,7 +135,7 @@
       ]
     },
     {
-      "node_id": "70e04beb-8563-4f43-9f53-b55ccca9ae45",
+      "node_id": "817f2170-d734-408e-9600-1fcc88ad6467",
       "type": "TRANSFORM",
       "operator": "sagemaker.spark.handle_outliers_0.1",
       "parameters": {
@@ -147,7 +147,7 @@
           "input_column": [
             "dos"
           ],
-          "replacement_string": "None"
+          "replacement_string": ""
         },
         "standard_deviation_numeric_outliers_parameters": {
           "standard_deviations": 4
@@ -156,7 +156,7 @@
       "inputs": [
         {
           "name": "df",
-          "node_id": "fcb08fdb-38ba-42ad-bd7c-63ac646adad8",
+          "node_id": "c132cdc0-76f6-44ea-b1de-6ada68f63298",
           "output_name": "default"
         }
       ],
@@ -191,7 +191,7 @@
       "inputs": [
         {
           "name": "df",
-          "node_id": "70e04beb-8563-4f43-9f53-b55ccca9ae45",
+          "node_id": "817f2170-d734-408e-9600-1fcc88ad6467",
           "output_name": "default"
         }
       ],
@@ -289,7 +289,7 @@
       "inputs": [
         {
           "name": "df",
-          "node_id": "e9936e0e-5a7a-4899-a4e3-eddab427f573",
+          "node_id": "7b567f63-35ec-46c4-bd7d-535a04f23c20",
           "output_name": "default"
         }
       ],
@@ -324,13 +324,13 @@
       ]
     },
     {
-      "node_id": "ae1d626b-b39e-4ad6-926b-5aad5b24f5ee",
+      "node_id": "22075235-51a3-4194-ab97-f0cbc1cf93d7",
       "type": "TRANSFORM",
       "operator": "sagemaker.spark.encode_categorical_0.1",
       "parameters": {
         "operator": "One-hot encode",
         "one_hot_encode_parameters": {
-          "invalid_handling_strategy": "Error",
+          "invalid_handling_strategy": "Skip",
           "drop_last": false,
           "output_style": "Columns",
           "input_column": [
@@ -344,7 +344,7 @@
       "inputs": [
         {
           "name": "df",
-          "node_id": "e9936e0e-5a7a-4899-a4e3-eddab427f573",
+          "node_id": "7b567f63-35ec-46c4-bd7d-535a04f23c20",
           "output_name": "default"
         }
       ],
@@ -375,7 +375,7 @@
       "inputs": [
         {
           "name": "df",
-          "node_id": "ae1d626b-b39e-4ad6-926b-5aad5b24f5ee",
+          "node_id": "22075235-51a3-4194-ab97-f0cbc1cf93d7",
           "output_name": "default"
         }
       ],
@@ -386,13 +386,13 @@
       ]
     },
     {
-      "node_id": "b7abc2c6-0c27-4227-8eac-e105ab69ba7d",
+      "node_id": "73e21415-4312-42ec-b7d0-6540f38e5c3a",
       "type": "TRANSFORM",
       "operator": "sagemaker.spark.encode_categorical_0.1",
       "parameters": {
         "operator": "One-hot encode",
         "one_hot_encode_parameters": {
-          "invalid_handling_strategy": "Error",
+          "invalid_handling_strategy": "Skip",
           "drop_last": false,
           "output_style": "Columns",
           "input_column": [
@@ -417,13 +417,13 @@
       ]
     },
     {
-      "node_id": "a3649167-29ae-4e1a-a29e-424f2521fdde",
+      "node_id": "80a14812-eab5-4b0b-8dad-4f6c606f71f2",
       "type": "TRANSFORM",
       "operator": "sagemaker.spark.encode_categorical_0.1",
       "parameters": {
         "operator": "One-hot encode",
         "one_hot_encode_parameters": {
-          "invalid_handling_strategy": "Error",
+          "invalid_handling_strategy": "Skip",
           "drop_last": false,
           "output_style": "Columns",
           "input_column": [
@@ -437,7 +437,7 @@
       "inputs": [
         {
           "name": "df",
-          "node_id": "b7abc2c6-0c27-4227-8eac-e105ab69ba7d",
+          "node_id": "73e21415-4312-42ec-b7d0-6540f38e5c3a",
           "output_name": "default"
         }
       ],
@@ -516,7 +516,7 @@
       "inputs": [
         {
           "name": "df",
-          "node_id": "a3649167-29ae-4e1a-a29e-424f2521fdde",
+          "node_id": "80a14812-eab5-4b0b-8dad-4f6c606f71f2",
           "output_name": "default"
         }
       ],
@@ -551,36 +551,10 @@
       ]
     },
     {
-      "node_id": "0cc79b5b-68d4-4120-bb23-b3e6d7510a80",
-      "type": "DESTINATION",
-      "operator": "sagemaker.spark.s3_destination_0.1",
-      "name": "output",
-      "parameters": {
-        "output_config": {
-          "compression": "none",
-          "output_path": "s3://realtime-predictions-data/prepared/output/",
-          "output_content_type": "CSV",
-          "delimiter": ","
-        }
-      },
-      "inputs": [
-        {
-          "name": "default",
-          "node_id": "99b77ef6-0533-4e44-87ce-6cfbbe31a8c2",
-          "output_name": "default"
-        }
-      ],
-      "outputs": [
-        {
-          "name": "default"
-        }
-      ]
-    },
-    {
       "node_id": "d7b008a7-bcef-4c94-ba18-ac1ca129f1d3",
       "type": "DESTINATION",
       "operator": "sagemaker.spark.s3_destination_0.1",
-      "name": "classes",
+      "name": "S3: classes",
       "parameters": {
         "output_config": {
           "compression": "none",
@@ -593,6 +567,212 @@
         {
           "name": "default",
           "node_id": "88314376-e8c4-42d8-aab8-81b086a4ba78",
+          "output_name": "default"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "default"
+        }
+      ]
+    },
+    {
+      "node_id": "7b567f63-35ec-46c4-bd7d-535a04f23c20",
+      "type": "TRANSFORM",
+      "operator": "sagemaker.spark.cast_single_data_type_0.1",
+      "parameters": {
+        "column": "category",
+        "original_data_type": "Float",
+        "data_type": "long"
+      },
+      "inputs": [
+        {
+          "name": "df",
+          "node_id": "e9936e0e-5a7a-4899-a4e3-eddab427f573",
+          "output_name": "default"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "default"
+        }
+      ]
+    },
+    {
+      "node_id": "933af6ea-0126-4504-bd5d-e6bd0de30969",
+      "type": "TRANSFORM",
+      "operator": "sagemaker.spark.custom_pyspark_0.1",
+      "parameters": {
+        "code": "train, validation, test = df.randomSplit(weights = [0.70, 0.15, 0.15], seed = 13)\n\ndf = train"
+      },
+      "inputs": [
+        {
+          "name": "df",
+          "node_id": "99b77ef6-0533-4e44-87ce-6cfbbe31a8c2",
+          "output_name": "default"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "default"
+        }
+      ]
+    },
+    {
+      "node_id": "16d719f2-18ec-486a-88ad-8b4e87bfc2dd",
+      "type": "TRANSFORM",
+      "operator": "sagemaker.spark.custom_pyspark_0.1",
+      "parameters": {
+        "code": "train, validation, test = df.randomSplit(weights = [0.70, 0.15, 0.15], seed = 13)\n\ndf = validation"
+      },
+      "inputs": [
+        {
+          "name": "df",
+          "node_id": "99b77ef6-0533-4e44-87ce-6cfbbe31a8c2",
+          "output_name": "default"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "default"
+        }
+      ]
+    },
+    {
+      "node_id": "2cbebcf5-375c-459b-9c62-f50aabba7878",
+      "type": "TRANSFORM",
+      "operator": "sagemaker.spark.custom_pyspark_0.1",
+      "parameters": {
+        "code": "train, validation, test = df.randomSplit(weights = [0.70, 0.15, 0.15], seed = 13)\n\ndf = test"
+      },
+      "inputs": [
+        {
+          "name": "df",
+          "node_id": "99b77ef6-0533-4e44-87ce-6cfbbe31a8c2",
+          "output_name": "default"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "default"
+        }
+      ]
+    },
+    {
+      "node_id": "6da89dcf-e34c-41d2-8f4b-cca547484114",
+      "type": "DESTINATION",
+      "operator": "sagemaker.spark.s3_destination_0.1",
+      "name": "S3: validation",
+      "parameters": {
+        "output_config": {
+          "compression": "none",
+          "output_path": "s3://realtime-predictions-data/validation/",
+          "output_content_type": "CSV",
+          "delimiter": ","
+        }
+      },
+      "inputs": [
+        {
+          "name": "default",
+          "node_id": "16d719f2-18ec-486a-88ad-8b4e87bfc2dd",
+          "output_name": "default"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "default"
+        }
+      ]
+    },
+    {
+      "node_id": "4962bd0d-e739-4345-888b-66277b0aac83",
+      "type": "DESTINATION",
+      "operator": "sagemaker.spark.s3_destination_0.1",
+      "name": "S3: train",
+      "parameters": {
+        "output_config": {
+          "compression": "none",
+          "output_path": "s3://realtime-predictions-data/train/",
+          "output_content_type": "CSV",
+          "delimiter": ","
+        }
+      },
+      "inputs": [
+        {
+          "name": "default",
+          "node_id": "933af6ea-0126-4504-bd5d-e6bd0de30969",
+          "output_name": "default"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "default"
+        }
+      ]
+    },
+    {
+      "node_id": "9395920a-d1f6-41e9-9d70-be16c559cdce",
+      "type": "DESTINATION",
+      "operator": "sagemaker.spark.s3_destination_0.1",
+      "name": "S3: test",
+      "parameters": {
+        "output_config": {
+          "compression": "none",
+          "output_path": "s3://realtime-predictions-data/test/",
+          "output_content_type": "CSV",
+          "delimiter": ","
+        }
+      },
+      "inputs": [
+        {
+          "name": "default",
+          "node_id": "2cbebcf5-375c-459b-9c62-f50aabba7878",
+          "output_name": "default"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "default"
+        }
+      ]
+    },
+    {
+      "node_id": "ca55615a-cc4c-410b-a3a0-252b72f7799c",
+      "type": "TRANSFORM",
+      "operator": "sagemaker.spark.custom_sql_0.1",
+      "parameters": {
+        "sql": "SELECT *\nFROM df TABLESAMPLE(1 ROWS)"
+      },
+      "inputs": [
+        {
+          "name": "df",
+          "node_id": "99b77ef6-0533-4e44-87ce-6cfbbe31a8c2",
+          "output_name": "default"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "default"
+        }
+      ]
+    },
+    {
+      "node_id": "ae3ea46a-7f9f-4569-855c-2e73836d8518",
+      "type": "DESTINATION",
+      "operator": "sagemaker.spark.s3_destination_0.1",
+      "name": "S3: columns",
+      "parameters": {
+        "output_config": {
+          "compression": "none",
+          "output_path": "s3://realtime-predictions-data/columns/",
+          "output_content_type": "CSV",
+          "delimiter": ","
+        }
+      },
+      "inputs": [
+        {
+          "name": "default",
+          "node_id": "ca55615a-cc4c-410b-a3a0-252b72f7799c",
           "output_name": "default"
         }
       ],

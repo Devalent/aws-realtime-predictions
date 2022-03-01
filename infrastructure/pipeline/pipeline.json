@@ -37,9 +37,197 @@
             "Arguments": {
                 "AppSpecification": {
                     "ContainerArguments": [
-                        "--input-data",
+                        "--output-config '{\"4962bd0d-e739-4345-888b-66277b0aac83.default\": {\"content_type\": \"CSV\"}, \"6da89dcf-e34c-41d2-8f4b-cca547484114.default\": {\"content_type\": \"CSV\"}, \"9395920a-d1f6-41e9-9d70-be16c559cdce.default\": {\"content_type\": \"CSV\"}}'"
+                    ],
+                    "ImageUri": "174368400705.dkr.ecr.us-west-2.amazonaws.com/sagemaker-data-wrangler-container:1.x"
+                },
+                "ProcessingInputs": [
+                    {
+                        "AppManaged": false,
+                        "InputName": "flow",
+                        "S3Input": {
+                            "LocalPath": "/opt/ml/processing/flow",
+                            "S3CompressionType": "None",
+                            "S3DataDistributionType": "FullyReplicated",
+                            "S3DataType": "S3Prefix",
+                            "S3InputMode": "File",
+                            "S3Uri": "s3://realtime-predictions-code/prepare.flow"
+                        }
+                    },
+                    {
+                        "AppManaged": false,
+                        "InputName": "input",
+                        "S3Input": {
+                            "LocalPath": "/opt/ml/processing/input",
+                            "S3CompressionType": "None",
+                            "S3DataDistributionType": "FullyReplicated",
+                            "S3DataType": "S3Prefix",
+                            "S3InputMode": "File",
+                            "S3Uri": {
+                                "Get": "Parameters.InputDataUrl"
+                            }
+                        }
+                    }
+                ],
+                "ProcessingOutputConfig": {
+                    "Outputs": [
                         {
-                            "Get": "Parameters.InputDataUrl"
+                            "AppManaged": true,
+                            "OutputName": "4962bd0d-e739-4345-888b-66277b0aac83.default",
+                            "S3Output": {
+                                "LocalPath": "/opt/ml/processing/train",
+                                "S3UploadMode": "EndOfJob",
+                                "S3Uri": {
+                                    "Std:Join": {
+                                        "On": "/",
+                                        "Values": [
+                                            "s3:/",
+                                            "realtime-predictions-data",
+                                            "prepared",
+                                            {
+                                                "Get": "Execution.PipelineExecutionId"
+                                            },
+                                            "train"
+                                        ]
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "AppManaged": true,
+                            "OutputName": "6da89dcf-e34c-41d2-8f4b-cca547484114.default",
+                            "S3Output": {
+                                "LocalPath": "/opt/ml/processing/validation",
+                                "S3UploadMode": "EndOfJob",
+                                "S3Uri": {
+                                    "Std:Join": {
+                                        "On": "/",
+                                        "Values": [
+                                            "s3:/",
+                                            "realtime-predictions-data",
+                                            "prepared",
+                                            {
+                                                "Get": "Execution.PipelineExecutionId"
+                                            },
+                                            "validation"
+                                        ]
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "AppManaged": true,
+                            "OutputName": "9395920a-d1f6-41e9-9d70-be16c559cdce.default",
+                            "S3Output": {
+                                "LocalPath": "/opt/ml/processing/test",
+                                "S3UploadMode": "EndOfJob",
+                                "S3Uri": {
+                                    "Std:Join": {
+                                        "On": "/",
+                                        "Values": [
+                                            "s3:/",
+                                            "realtime-predictions-data",
+                                            "prepared",
+                                            {
+                                                "Get": "Execution.PipelineExecutionId"
+                                            },
+                                            "test"
+                                        ]
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "AppManaged": true,
+                            "OutputName": "d7b008a7-bcef-4c94-ba18-ac1ca129f1d3.default",
+                            "S3Output": {
+                                "LocalPath": "/opt/ml/processing/classes",
+                                "S3UploadMode": "EndOfJob",
+                                "S3Uri": {
+                                    "Std:Join": {
+                                        "On": "/",
+                                        "Values": [
+                                            "s3:/",
+                                            "realtime-predictions-data",
+                                            "prepared",
+                                            {
+                                                "Get": "Execution.PipelineExecutionId"
+                                            },
+                                            "classes"
+                                        ]
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "AppManaged": true,
+                            "OutputName": "ae3ea46a-7f9f-4569-855c-2e73836d8518.default",
+                            "S3Output": {
+                                "LocalPath": "/opt/ml/processing/columns",
+                                "S3UploadMode": "EndOfJob",
+                                "S3Uri": {
+                                    "Std:Join": {
+                                        "On": "/",
+                                        "Values": [
+                                            "s3:/",
+                                            "realtime-predictions-data",
+                                            "prepared",
+                                            {
+                                                "Get": "Execution.PipelineExecutionId"
+                                            },
+                                            "columns"
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+                "ProcessingResources": {
+                    "ClusterConfig": {
+                        "InstanceCount": 1,
+                        "InstanceType": "ml.m5.4xlarge",
+                        "VolumeSizeInGB": 30
+                    }
+                },
+                "RoleArn": "arn:aws:iam::028812918682:role/realtime-predictions-sagemaker-pipeline"
+            },
+            "Name": "PrepareData",
+            "Type": "Processing"
+        },
+        {
+            "Arguments": {
+                "AppSpecification": {
+                    "ContainerArguments": [
+                        "--input-classes",
+                        {
+                            "Std:Join": {
+                                "On": "/",
+                                "Values": [
+                                    "s3:/",
+                                    "realtime-predictions-data",
+                                    "prepared",
+                                    {
+                                        "Get": "Execution.PipelineExecutionId"
+                                    },
+                                    "classes"
+                                ]
+                            }
+                        },
+                        "--input-columns",
+                        {
+                            "Std:Join": {
+                                "On": "/",
+                                "Values": [
+                                    "s3:/",
+                                    "realtime-predictions-data",
+                                    "prepared",
+                                    {
+                                        "Get": "Execution.PipelineExecutionId"
+                                    },
+                                    "columns"
+                                ]
+                            }
                         }
                     ],
                     "ContainerEntrypoint": [
@@ -64,72 +252,6 @@
                 ],
                 "ProcessingOutputConfig": {
                     "Outputs": [
-                        {
-                            "AppManaged": false,
-                            "OutputName": "train",
-                            "S3Output": {
-                                "LocalPath": "/opt/ml/processing/train",
-                                "S3UploadMode": "EndOfJob",
-                                "S3Uri": {
-                                    "Std:Join": {
-                                        "On": "/",
-                                        "Values": [
-                                            "s3:/",
-                                            "realtime-predictions-data",
-                                            "preprocess",
-                                            {
-                                                "Get": "Execution.PipelineExecutionId"
-                                            },
-                                            "train"
-                                        ]
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "AppManaged": false,
-                            "OutputName": "validation",
-                            "S3Output": {
-                                "LocalPath": "/opt/ml/processing/validation",
-                                "S3UploadMode": "EndOfJob",
-                                "S3Uri": {
-                                    "Std:Join": {
-                                        "On": "/",
-                                        "Values": [
-                                            "s3:/",
-                                            "realtime-predictions-data",
-                                            "preprocess",
-                                            {
-                                                "Get": "Execution.PipelineExecutionId"
-                                            },
-                                            "validation"
-                                        ]
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "AppManaged": false,
-                            "OutputName": "test",
-                            "S3Output": {
-                                "LocalPath": "/opt/ml/processing/test",
-                                "S3UploadMode": "EndOfJob",
-                                "S3Uri": {
-                                    "Std:Join": {
-                                        "On": "/",
-                                        "Values": [
-                                            "s3:/",
-                                            "realtime-predictions-data",
-                                            "preprocess",
-                                            {
-                                                "Get": "Execution.PipelineExecutionId"
-                                            },
-                                            "test"
-                                        ]
-                                    }
-                                }
-                            }
-                        },
                         {
                             "AppManaged": false,
                             "OutputName": "columns",
@@ -187,6 +309,9 @@
                 },
                 "RoleArn": "arn:aws:iam::028812918682:role/realtime-predictions-sagemaker-pipeline"
             },
+            "DependsOn": [
+                "PrepareData"
+            ],
             "Name": "PreprocessData",
             "PropertyFiles": [
                 {
@@ -230,7 +355,18 @@
                                 "S3DataDistributionType": "FullyReplicated",
                                 "S3DataType": "S3Prefix",
                                 "S3Uri": {
-                                    "Get": "Steps.PreprocessData.ProcessingOutputConfig.Outputs['train'].S3Output.S3Uri"
+                                    "Std:Join": {
+                                        "On": "/",
+                                        "Values": [
+                                            "s3:/",
+                                            "realtime-predictions-data",
+                                            "prepared",
+                                            {
+                                                "Get": "Execution.PipelineExecutionId"
+                                            },
+                                            "train"
+                                        ]
+                                    }
                                 }
                             }
                         }
@@ -243,21 +379,32 @@
                                 "S3DataDistributionType": "FullyReplicated",
                                 "S3DataType": "S3Prefix",
                                 "S3Uri": {
-                                    "Get": "Steps.PreprocessData.ProcessingOutputConfig.Outputs['validation'].S3Output.S3Uri"
+                                    "Std:Join": {
+                                        "On": "/",
+                                        "Values": [
+                                            "s3:/",
+                                            "realtime-predictions-data",
+                                            "prepared",
+                                            {
+                                                "Get": "Execution.PipelineExecutionId"
+                                            },
+                                            "validation"
+                                        ]
+                                    }
                                 }
                             }
                         }
                     }
                 ],
                 "OutputDataConfig": {
-                    "S3OutputPath": "s3://realtime-predictions-data"
+                    "S3OutputPath": "s3://realtime-predictions-data/models"
                 },
                 "ProfilerConfig": {
-                    "S3OutputPath": "s3://realtime-predictions-data"
+                    "S3OutputPath": "s3://realtime-predictions-data/models"
                 },
                 "ProfilerRuleConfigurations": [
                     {
-                        "RuleConfigurationName": "ProfilerReport-1645901600",
+                        "RuleConfigurationName": "ProfilerReport-1646121289",
                         "RuleEvaluatorImage": "895741380848.dkr.ecr.us-west-2.amazonaws.com/sagemaker-debugger-rules:latest",
                         "RuleParameters": {
                             "rule_to_invoke": "ProfilerReport"
@@ -282,6 +429,23 @@
         {
             "Arguments": {
                 "AppSpecification": {
+                    "ContainerArguments": [
+                        "--input-test",
+                        {
+                            "Std:Join": {
+                                "On": "/",
+                                "Values": [
+                                    "s3:/",
+                                    "realtime-predictions-data",
+                                    "prepared",
+                                    {
+                                        "Get": "Execution.PipelineExecutionId"
+                                    },
+                                    "test"
+                                ]
+                            }
+                        }
+                    ],
                     "ContainerEntrypoint": [
                         "python3",
                         "/opt/ml/processing/input/code/evaluate.py"
@@ -300,20 +464,6 @@
                             "S3InputMode": "File",
                             "S3Uri": {
                                 "Get": "Steps.TrainModel.ModelArtifacts.S3ModelArtifacts"
-                            }
-                        }
-                    },
-                    {
-                        "AppManaged": false,
-                        "InputName": "input-2",
-                        "S3Input": {
-                            "LocalPath": "/opt/ml/processing/test",
-                            "S3CompressionType": "None",
-                            "S3DataDistributionType": "FullyReplicated",
-                            "S3DataType": "S3Prefix",
-                            "S3InputMode": "File",
-                            "S3Uri": {
-                                "Get": "Steps.PreprocessData.ProcessingOutputConfig.Outputs['test'].S3Output.S3Uri"
                             }
                         }
                     },
@@ -403,10 +553,45 @@
                                 "Get": "Parameters.CampaignID"
                             },
                             "classes": {
-                                "Get": "Steps.PreprocessData.ProcessingOutputConfig.Outputs['classes'].S3Output.S3Uri"
+                                "Std:Join": {
+                                    "On": "/",
+                                    "Values": [
+                                        "s3:/",
+                                        "realtime-predictions-data",
+                                        "preprocess",
+                                        {
+                                            "Get": "Execution.PipelineExecutionId"
+                                        },
+                                        "classes"
+                                    ]
+                                }
                             },
                             "columns": {
-                                "Get": "Steps.PreprocessData.ProcessingOutputConfig.Outputs['columns'].S3Output.S3Uri"
+                                "Std:Join": {
+                                    "On": "/",
+                                    "Values": [
+                                        "s3:/",
+                                        "realtime-predictions-data",
+                                        "preprocess",
+                                        {
+                                            "Get": "Execution.PipelineExecutionId"
+                                        },
+                                        "columns"
+                                    ]
+                                }
+                            },
+                            "evaluation": {
+                                "Std:Join": {
+                                    "On": "/",
+                                    "Values": [
+                                        "s3:/",
+                                        "realtime-predictions-data",
+                                        "evaluation",
+                                        {
+                                            "Get": "Execution.PipelineExecutionId"
+                                        }
+                                    ]
+                                }
                             },
                             "model": {
                                 "Get": "Parameters.ModelID"
