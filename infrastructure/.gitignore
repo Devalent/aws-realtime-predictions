@@ -2,7 +2,6 @@
 *.d.ts
 
 node_modules
-temp
 
 # CDK asset staging directory
 .cdk.staging

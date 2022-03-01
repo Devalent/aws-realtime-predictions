@@ -6,7 +6,7 @@
   },
   "scripts": {
     "bootstrap": "cdk bootstrap",
-    "deploy": "bash pipeline/upload.sh && python3 pipeline/pipeline.py && cdk deploy realtime-predictions && bash ../data/upload.sh",
+    "deploy": "bash ../pipeline/upload.sh && python3 ../pipeline/pipeline.py && cdk deploy realtime-predictions && bash ../data/upload.sh",
     "runtime": "cdk deploy --context RUNTIME=1 realtime-predictions-runtime",
     "stop": "cdk deploy --context RUNTIME=0 realtime-predictions-runtime"
   },
