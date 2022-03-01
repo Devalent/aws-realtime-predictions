@@ -24,7 +24,7 @@ export class RuntimeStack extends Stack {
     if (enabled === '1') {
       terminal
         .red('=========================================================================================================================================\n')
-        .red(`${emoji.get('money_with_wings')} ${emoji.get('money_with_wings')} ${emoji.get('money_with_wings')}\n`)
+        .red(`${emoji.get('moneybag')} ${emoji.get('moneybag')} ${emoji.get('moneybag')}\n`)
         .red(`Deploying the computational resources that will get billed hourly ($0.056).\n`)
         .red(`In order to stop these resources, run `)
         .bold.brightBlue('npm run stop')
