@@ -21,7 +21,7 @@ export class RuntimeStack extends Stack {
       return;
     }
 
-    if (Boolean(enabled)) {
+    if (enabled === '1') {
       terminal
         .red('=========================================================================================================================================\n')
         .red(`${emoji.get('rocket')} ${emoji.get('rocket')} ${emoji.get('rocket')}\n`)

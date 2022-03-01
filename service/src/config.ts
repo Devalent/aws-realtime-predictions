@@ -7,5 +7,6 @@ export default {
   bucket_model: 'realtime-predictions-model',
   table_model: 'realtime-predictions-production-model',
   sagemaker_endpoint: 'realtime-predictions-runtime',
+  glue_crawler: 'realtime-predictions',
   maxmind_license_key,
 } as const;

@@ -3,7 +3,7 @@ import * as emoji from 'node-emoji';
 import { terminal } from 'terminal-kit';
 
 import config from '@config';
-import { deployment, prediction } from '@functions/index';
+import { deployment, prediction, s3 } from '@functions/index';
 
 if (!config.maxmind_license_key) {
   terminal
@@ -67,11 +67,20 @@ const serverlessConfiguration:AWS = {
               `arn:aws:sagemaker:${config.region}:*:endpoint/${config.sagemaker_endpoint}*`,
             ],
           },
+          {
+            Effect: 'Allow',
+            Action: [
+              'glue:StartCrawler',
+            ],
+            Resource: [
+              `arn:aws:glue:${config.region}:*:crawler/${config.glue_crawler}`,
+            ],
+          },
         ],
       },
     },    
   },
-  functions: { deployment, prediction },
+  functions: { deployment, prediction, s3 },
   package: { individually: true },
   custom: {
     esbuild: {

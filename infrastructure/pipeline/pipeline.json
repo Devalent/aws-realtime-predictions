@@ -404,7 +404,7 @@
                 },
                 "ProfilerRuleConfigurations": [
                     {
-                        "RuleConfigurationName": "ProfilerReport-1646129173",
+                        "RuleConfigurationName": "ProfilerReport-1646132509",
                         "RuleEvaluatorImage": "895741380848.dkr.ecr.us-west-2.amazonaws.com/sagemaker-debugger-rules:latest",
                         "RuleParameters": {
                             "rule_to_invoke": "ProfilerReport"

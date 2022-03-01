@@ -38,6 +38,27 @@ export class InfrastructureStack extends Stack {
       bucketName: `${name}-raw`,
     });
 
+    const bucketRawTopic = new cdk.aws_sns.Topic(this, 's3-topic', {
+      topicName: `${name}-data-upload`,
+    });
+
+    const s3lambda = `arn:aws:lambda:${this.region}:${this.account}:function:${name}-production-s3`;
+
+    new cdk.aws_sns.Subscription(this, 's3-topic-subscription', {
+      protocol: cdk.aws_sns.SubscriptionProtocol.LAMBDA,
+      topic: bucketRawTopic,
+      endpoint: s3lambda,
+    });
+
+    new cdk.aws_lambda.CfnPermission(this, 's3-lambda-permission', {
+      sourceArn: bucketRawTopic.topicArn,
+      action: 'lambda:InvokeFunction',
+      functionName: s3lambda,
+      principal: 'sns.amazonaws.com',
+    });
+
+    bucketRaw.addObjectCreatedNotification(new cdk.aws_s3_notifications.SnsDestination(bucketRawTopic));
+
     const roleGlue = new cdk.aws_iam.Role(this, 'role-glue', {
       roleName: `${name}-glue`,
       assumedBy: new cdk.aws_iam.ServicePrincipal('glue.amazonaws.com'),
@@ -272,27 +293,7 @@ export class InfrastructureStack extends Stack {
       },
     });
 
-    const stateCrawler = new cdk.aws_stepfunctions.CfnStateMachine(this, 'state-crawler', {
-      tags: tagsList,
-      stateMachineName: `${name}-crawler`,
-      roleArn: roleStates.roleArn,
-      definition: {
-        "Comment": "Crawl source data.",
-        "StartAt": "Crawler",
-        "States": {
-          "Crawler": {
-            "Type": "Task",
-            "Parameters": {
-              "Name": crawler.name,
-            },
-            "Resource": "arn:aws:states:::aws-sdk:glue:startCrawler",
-            "End": true,
-          },
-        }
-      },
-    });
-
-    const statePipeline = new cdk.aws_stepfunctions.CfnStateMachine(this, 'state-pipeline', {
+    new cdk.aws_stepfunctions.CfnStateMachine(this, 'state-pipeline', {
       tags: tagsList,
       stateMachineName: `${name}-pipeline`,
       roleArn: roleStates.roleArn,
