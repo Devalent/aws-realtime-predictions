@@ -6,6 +6,6 @@ export default {
   region: 'us-west-2',
   bucket_model: 'realtime-predictions-model',
   table_model: 'realtime-predictions-production-model',
-  sagemaker_endpoint: 'realtime-predictions',
+  sagemaker_endpoint: 'realtime-predictions-runtime',
   maxmind_license_key,
 } as const;

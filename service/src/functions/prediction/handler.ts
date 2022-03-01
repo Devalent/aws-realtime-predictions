@@ -21,6 +21,8 @@ const categoryField = 'category';
 const noneCategory = 'None';
 
 const handler = async (event:APIGatewayProxyEventV2):Promise<APIGatewayProxyResultV2> => {
+  const notices = [] as string[];
+
   const geo2ip = await getGeo2Ip();
 
   const campaignId = event.pathParameters?.['campaign'];
@@ -50,6 +52,10 @@ const handler = async (event:APIGatewayProxyEventV2):Promise<APIGatewayProxyResu
     dbrowserversion: agent.getBrowser().version,
   };
 
+  if (!geo2ip) {
+    notices.push('MaxMind database was not enabled, IP address lookup is not available.');
+  }
+
   if (geo2ip && source.ip) {
     try {
       const [asn, city] = await Promise.all([
@@ -69,7 +75,7 @@ const handler = async (event:APIGatewayProxyEventV2):Promise<APIGatewayProxyResu
         source.lat = city.location?.latitude;
       }
     } catch (error) {
-      console.error('IP lookup error', error);
+      notices.push(`IP lookup error: ${error.message}`);
     }
   }
 
@@ -142,6 +148,7 @@ const handler = async (event:APIGatewayProxyEventV2):Promise<APIGatewayProxyResu
     const predicted = predictions[0] || null;
 
     return formatJSONResponse({
+      notices: notices.length > 0 ? notices : undefined,
       input: input.toString('utf-8'),
       output,
       predicted,
@@ -160,7 +167,7 @@ const handler = async (event:APIGatewayProxyEventV2):Promise<APIGatewayProxyResu
 
     return {
       statusCode: 500,
-      body: `"Inference error"`,
+      body: `"Inference error. Make sure that the runtime resources have been deployed. Error: ${error.message}"`,
     };
   }
 };

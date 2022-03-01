@@ -4,6 +4,7 @@ import boto3
 import json
 import sagemaker
 import sagemaker.session
+import sys
 
 from sagemaker.estimator import Estimator
 from sagemaker.inputs import TrainingInput
@@ -428,6 +429,9 @@ def get_pipeline(
 
 
 if __name__ == '__main__':
+    sys.stdout.write('Generating a pipeline definition...')
+    sys.stdout.flush()
+
     pipeline = get_pipeline(
         "us-west-2",
         "028812918682",

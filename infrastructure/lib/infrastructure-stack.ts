@@ -10,9 +10,11 @@ const tags:{ [x:string]:string; } = {
 const tagsList = Object.keys(tags).map((x) => ({ key: x, value: tags[x] }));
 
 export class InfrastructureStack extends Stack {
+  public readonly endpointConfig:cdk.aws_sagemaker.CfnEndpointConfig;
+
   constructor(scope: Construct, id: string, props?: StackProps) {
     super(scope, id, props);
-    
+
     const bucketCode = new cdk.aws_s3.Bucket(this, 'bucket-code', {
       bucketName: `${name}-code`,
     });
@@ -207,6 +209,8 @@ export class InfrastructureStack extends Stack {
       ],
     });
     sgEndpointConfig.addDependsOn(sgModel);
+
+    this.endpointConfig = sgEndpointConfig;
 
     const roleStates = new cdk.aws_iam.Role(this, 'role-state', {
       roleName: `${name}-state`,

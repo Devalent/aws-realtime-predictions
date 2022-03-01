@@ -1,10 +1,16 @@
 import type { AWS } from '@serverless/typescript';
+import * as emoji from 'node-emoji';
+import { terminal } from 'terminal-kit';
 
 import config from '@config';
 import { deployment, prediction } from '@functions/index';
 
 if (!config.maxmind_license_key) {
-  console.warn(`MAXMIND_LICENSE_KEY environment variable is not set. IP lookup will not be available.`);
+  terminal
+    .red('=========================================================================================================================================\n')
+    .red(`${emoji.get('rotating_light')} ${emoji.get('rotating_light')} ${emoji.get('rotating_light')}\n`)
+    .red(`MAXMIND_LICENSE_KEY environment variable was not set. IP address lookup will not be available.\n`)
+    .red('=========================================================================================================================================\n');
 }
 
 const serverlessConfiguration:AWS = {
@@ -39,7 +45,7 @@ const serverlessConfiguration:AWS = {
               's3:*',
             ],
             Resource: [
-              `arn:aws:s3:::${config.name}-*`,
+              `arn:aws:s3:::${config.bucket_model}*`,
             ],
           },
           {
@@ -48,7 +54,7 @@ const serverlessConfiguration:AWS = {
               'dynamodb:*',
             ],
             Resource: [
-              `arn:aws:dynamodb:${config.region}:*:table/${config.name}-${config.stage}*`,
+              `arn:aws:dynamodb:${config.region}:*:table/${config.table_model}*`,
             ],
           },
           {
@@ -58,7 +64,7 @@ const serverlessConfiguration:AWS = {
               'sagemaker:InvokeEndpoint',
             ],
             Resource: [
-              `arn:aws:sagemaker:${config.region}:*:endpoint/*`,
+              `arn:aws:sagemaker:${config.region}:*:endpoint/${config.sagemaker_endpoint}*`,
             ],
           },
         ],
