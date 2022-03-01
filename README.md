@@ -2,6 +2,10 @@
 
 See [this blog post](https://devalent.com/blog/automated-predictions-with-machine-learning-on-aws/) for details.
 
+<p align="center">
+  <img src="./img.png?raw=true" alt="" />
+</p>
+
 ## Prerequisites
 
 * Node.js
