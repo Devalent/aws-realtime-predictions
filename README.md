@@ -1,6 +1,6 @@
 # Automated Predictions with Machine Learning on AWS
 
-See [this blog post](https://devalent.com/blog/automated-predictions-with-machine-learning-on-aws/) for details.
+An end-to-end example of a serverless machine learning pipeline for multiclass classification on AWS with SageMaker Pipelines, Data Wrangler, Athena and XGBoost. See [this blog post](https://devalent.com/blog/automated-predictions-with-machine-learning-on-aws/) for details.
 
 <p align="center">
   <img src="./img.png?raw=true" alt="" />
