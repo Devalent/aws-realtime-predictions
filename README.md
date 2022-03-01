@@ -46,10 +46,10 @@ AWS CDK project with infrastructure definition.
 
 npm commands:
 
-* `npm run bootstrap` - deploy the AWS CDK;
-* `npm run deploy` - deploy the main infrastructure;
+* `npm run bootstrap` - deploy the AWS CDK (required when deploying for the first time);
+* `npm run deploy` - deploy the main infrastructure (no hourly costs);
 * `npm run runtime` - deploy the runtime infrastructure (hourly costs incurred);
-* `npm run stop` - delete the runtime infrastructure.
+* `npm run stop` - delete the runtime infrastructure (the data will be retained).
 
 ### [pipeline](./pipeline)
 
