@@ -229,27 +229,6 @@
       ]
     },
     {
-      "node_id": "ead8ee67-4475-44cb-92ab-1143cc4f8428",
-      "type": "VISUALIZATION",
-      "operator": "sagemaker.visualizations.histogram_0.1",
-      "parameters": {
-        "name": "Countries",
-        "x_axis": "country"
-      },
-      "inputs": [
-        {
-          "name": "df",
-          "node_id": "7053417d-137f-4999-8bf6-b83c737724e6",
-          "output_name": "default"
-        }
-      ],
-      "outputs": [
-        {
-          "name": "default"
-        }
-      ]
-    },
-    {
       "node_id": "70664058-c739-44e4-a6a1-6d504fb15e92",
       "type": "TRANSFORM",
       "operator": "sagemaker.spark.custom_pyspark_0.1",
@@ -773,6 +752,132 @@
         {
           "name": "default",
           "node_id": "ca55615a-cc4c-410b-a3a0-252b72f7799c",
+          "output_name": "default"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "default"
+        }
+      ]
+    },
+    {
+      "node_id": "35d26fef-a19e-4004-80c3-e3169210f6ab",
+      "type": "VISUALIZATION",
+      "operator": "sagemaker.visualizations.histogram_0.1",
+      "parameters": {
+        "name": "Browsers (before)",
+        "x_axis": "dbrowser"
+      },
+      "inputs": [
+        {
+          "name": "df",
+          "node_id": "e59ffb6a-d8e7-46f9-9d33-14dd514e240a",
+          "output_name": "default"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "default"
+        }
+      ]
+    },
+    {
+      "node_id": "f65dea4a-1ca5-423c-a635-43886cec22bf",
+      "type": "VISUALIZATION",
+      "operator": "sagemaker.visualizations.histogram_0.1",
+      "parameters": {
+        "name": "Browsers (after)",
+        "x_axis": "dbrowser"
+      },
+      "inputs": [
+        {
+          "name": "df",
+          "node_id": "c132cdc0-76f6-44ea-b1de-6ada68f63298",
+          "output_name": "default"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "default"
+        }
+      ]
+    },
+    {
+      "node_id": "a8414338-7bb0-4893-b59b-622cc44d9084",
+      "type": "VISUALIZATION",
+      "operator": "sagemaker.visualizations.histogram_0.1",
+      "parameters": {
+        "name": "OS (before)",
+        "x_axis": "dos"
+      },
+      "inputs": [
+        {
+          "name": "df",
+          "node_id": "c132cdc0-76f6-44ea-b1de-6ada68f63298",
+          "output_name": "default"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "default"
+        }
+      ]
+    },
+    {
+      "node_id": "3943f87b-e259-47bf-b73f-d4c971ea4875",
+      "type": "VISUALIZATION",
+      "operator": "sagemaker.visualizations.histogram_0.1",
+      "parameters": {
+        "name": "OS (after)",
+        "x_axis": "dos"
+      },
+      "inputs": [
+        {
+          "name": "df",
+          "node_id": "817f2170-d734-408e-9600-1fcc88ad6467",
+          "output_name": "default"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "default"
+        }
+      ]
+    },
+    {
+      "node_id": "e1fdb468-9818-4680-ad02-843ea76af2a2",
+      "type": "VISUALIZATION",
+      "operator": "sagemaker.visualizations.histogram_0.1",
+      "parameters": {
+        "name": "Country (before)",
+        "x_axis": "country"
+      },
+      "inputs": [
+        {
+          "name": "df",
+          "node_id": "817f2170-d734-408e-9600-1fcc88ad6467",
+          "output_name": "default"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "default"
+        }
+      ]
+    },
+    {
+      "node_id": "c5fb7a9c-6c85-4581-9092-124769f9b628",
+      "type": "VISUALIZATION",
+      "operator": "sagemaker.visualizations.histogram_0.1",
+      "parameters": {
+        "name": "Country (after)",
+        "x_axis": "country"
+      },
+      "inputs": [
+        {
+          "name": "df",
+          "node_id": "8132616b-9773-4a4e-a47b-067371252480",
           "output_name": "default"
         }
       ],
