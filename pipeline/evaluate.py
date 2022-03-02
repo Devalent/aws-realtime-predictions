@@ -54,8 +54,6 @@ if __name__ == "__main__":
     df.drop(df.columns[0], axis=1, inplace=True)
     X_test = xgboost.DMatrix(df.values)
 
-    num_class = len(np.unique(y_test))
-
     logger.debug("Loading model.")
     model_path = f"{base_dir}/model/model.tar.gz"
     with tarfile.open(model_path) as tar:
@@ -68,11 +66,10 @@ if __name__ == "__main__":
     logger.info("Performing predictions against test data.")
     predictions = model.predict(X_test)
 
+    num_class = len(np.unique(y_test))
     num_samples = y_test.shape[0]
     predictions = predictions.reshape(num_samples, num_class)
     pred_label = np.argmax(predictions, axis=1)
-
-    logger.debug("Calculating hamming loss.")
 
     hloss = hamming_loss(y_test, pred_label)
 

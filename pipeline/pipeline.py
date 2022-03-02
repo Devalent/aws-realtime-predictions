@@ -331,6 +331,7 @@ def get_pipeline(
         objective_metric_name="validation:mlogloss",
         objective_type="Minimize",
         hyperparameter_ranges={
+            # See https://xgboost.readthedocs.io/en/stable/parameter.html
             "alpha": ContinuousParameter(0.01, 10, scaling_type="Logarithmic"),
                 # It can be used in case of very high dimensionality so that the algorithm runs faster when implemented.
                 # Increasing this value will make model more conservative.
@@ -356,8 +357,8 @@ def get_pipeline(
                 # This will prevent overfitting. Lower values make the algorithm more conservative and prevents overfitting 
                 # but too small values might lead to under-fitting.
         },
-        max_jobs=10,
-        max_parallel_jobs=5,
+        max_jobs=10, # Create up to 10 models
+        max_parallel_jobs=5, # 5 parallel training job at a time
     )
     step_tune = TuningStep(
         name="Tuning",
