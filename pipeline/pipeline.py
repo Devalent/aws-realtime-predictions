@@ -317,7 +317,7 @@ def get_pipeline(
         eval_metric="mlogloss",
             # Multiclass negative log-likelihood
             # https://en.wikipedia.org/wiki/Likelihood_function#Log-likelihood
-        num_round='100',
+        num_round="100",
             # The number of rounds for boosting
         num_class=JsonGet(
             step_name=step_process.name,

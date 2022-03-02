@@ -34,6 +34,10 @@ The following command will deploy all resources and will launch an inference ser
 bash deploy.sh
 ```
 
+The deployed infrastructure is serverless and does not have any hourly costs associated to it when not used, except for the inference server, which costs $0.056 per hour. Consider shutting down the inference server when you don't need it (see `npm run stop` below). Shutting down the server does not remove any data.
+
+All resources are deployed to the Oregon region (`us-west-2`) and are managed by three CloudFormation stacks.
+
 ## Execution
 
 To start the ML pipeline execution, run the command:
