@@ -34,6 +34,16 @@ The following command will deploy all resources and will launch an inference ser
 bash deploy.sh
 ```
 
+## Execution
+
+To start the ML pipeline execution, run the command:
+
+```
+bash invoke.sh
+```
+
+It will return an AWS Console URL to the Step Functions pipeline that you can use to track the execution. Additionally, go to SageMaker and launch the Studio application to check the ML workflow progress.
+
 ## Project structure
 
 ### [data](./data)
