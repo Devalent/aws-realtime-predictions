@@ -3,7 +3,7 @@ import * as emoji from 'node-emoji';
 import { terminal } from 'terminal-kit';
 
 import config from '@config';
-import { deployment, prediction, s3 } from '@functions/index';
+import { deployment, execution, prediction, s3 } from '@functions/index';
 
 if (!config.maxmind_license_key) {
   terminal
@@ -77,11 +77,20 @@ const serverlessConfiguration:AWS = {
               `arn:aws:glue:${config.region}:*:crawler/${config.glue_crawler}`,
             ],
           },
+          {
+            Effect: 'Allow',
+            Action: [
+              'states:StartExecution',
+            ],
+            Resource: [
+              `arn:aws:states:${config.region}:*:stateMachine:${config.state_machine}*`,
+            ],
+          },
         ],
       },
     },    
   },
-  functions: { deployment, prediction, s3 },
+  functions: { deployment, execution, prediction, s3 },
   package: { individually: true },
   custom: {
     esbuild: {
