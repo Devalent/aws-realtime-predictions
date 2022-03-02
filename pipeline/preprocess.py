@@ -46,7 +46,7 @@ if __name__ == "__main__":
     key_columns = response_columns['Contents'][0]['Key']
 
     logger.info("Downloading columns data from bucket: %s, key: %s", bucket_classes, key_columns)
-    file_columns = f"{base_dir}/rows.csv"
+    file_columns = f"{base_dir}/columns.csv"
 
     s3.Bucket(bucket_columns).download_file(key_columns, file_columns)
 

@@ -45,6 +45,7 @@ const serverlessConfiguration:AWS = {
               's3:*',
             ],
             Resource: [
+              `arn:aws:s3:::${config.bucket_data}*`,
               `arn:aws:s3:::${config.bucket_model}*`,
             ],
           },

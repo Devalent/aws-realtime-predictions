@@ -17,21 +17,27 @@ const s3 = new S3Client({ region: config.region });
 const dynamodb = DynamoDBDocumentClient.from(new DynamoDBClient({ region: config.region }));
 
 const getJson = async (bucket:string, key:string):Promise<any> => {
-  return await s3.send(new GetObjectCommand({
-    Bucket: bucket,
-    Key: key,
-  })).then(async (x) => {
-    const stream = x.Body as Readable;
+  try {
+    return await s3.send(new GetObjectCommand({
+      Bucket: bucket,
+      Key: key,
+    })).then(async (x) => {
+      const stream = x.Body as Readable;
 
-    const data = await new Promise<Buffer>((resolve, reject) => {
-      const chunks:Buffer[] = [];
-      stream.on('data', chunk => chunks.push(chunk));
-      stream.once('end', () => resolve(Buffer.concat(chunks)));
-      stream.once('error', reject);
+      const data = await new Promise<Buffer>((resolve, reject) => {
+        const chunks:Buffer[] = [];
+        stream.on('data', chunk => chunks.push(chunk));
+        stream.once('end', () => resolve(Buffer.concat(chunks)));
+        stream.once('error', reject);
+      });
+
+      return JSON.parse(data.toString('utf-8'));
     });
+  } catch (error) {
+    console.log(key);
 
-    return JSON.parse(data.toString('utf-8'));
-  });
+    throw error;
+  }
 };
 
 const handler = async (event:PipelineEvent) => {
@@ -42,7 +48,7 @@ const handler = async (event:PipelineEvent) => {
   const columnsUrl = URI.parse(event.columns);
   const evaluationUrl = URI.parse(event.evaluation);
 
-  const [classes, columns, evaluation, res] = await Promise.all([
+  const [classes, columns, evaluation] = await Promise.all([
     getJson(classeslUrl.hostname, `${classeslUrl.path.substring(1)}/classes.json`),
     getJson(columnsUrl.hostname, `${columnsUrl.path.substring(1)}/columns.json`),
     getJson(evaluationUrl.hostname, `${evaluationUrl.path.substring(1)}/evaluation.json`),

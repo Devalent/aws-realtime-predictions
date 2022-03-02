@@ -36,6 +36,12 @@ from sagemaker.workflow.properties import PropertyFile
 from sagemaker.workflow.steps import (
     ProcessingStep,
     TrainingStep,
+    TuningStep,
+)
+from sagemaker.tuner import (
+    HyperparameterTuner,
+    ContinuousParameter,
+    IntegerParameter,
 )
 
 def get_pipeline(
@@ -179,7 +185,7 @@ def get_pipeline(
     )
 
     step_prepare = ProcessingStep(
-        name="PrepareData",
+        name="Wrangling",
         processor=datawrangler_processor,
         inputs=[
             ProcessingInput(
@@ -265,7 +271,7 @@ def get_pipeline(
     )
 
     step_process = ProcessingStep(
-        name="PreprocessData",
+        name="Preprocessing",
         processor=sklearn_processor,
         outputs=[
             ProcessingOutput(output_name='columns',
@@ -296,7 +302,7 @@ def get_pipeline(
         py_version="py3",
         instance_type=training_instance_type,
     )
-    xgb_train = Estimator(
+    xgb_estimator = Estimator(
         image_uri=image_uri,
         instance_type=training_instance_type,
         instance_count=1,
@@ -305,24 +311,57 @@ def get_pipeline(
         sagemaker_session=sagemaker_session,
         role=role,
     )
-    xgb_train.set_hyperparameters(
+    xgb_estimator.set_hyperparameters(
+        objective="multi:softprob",
+            # Multiclass with probabilities
+        eval_metric="mlogloss",
+            # Multiclass negative log-likelihood
+            # https://en.wikipedia.org/wiki/Likelihood_function#Log-likelihood
+        num_round='100',
+            # The number of rounds for boosting
         num_class=JsonGet(
             step_name=step_process.name,
             property_file=classes_map,
-            json_path="length_str"
+            json_path="length_str",
         ),
-        objective="multi:softprob",
-        eta='0.2',
-        gamma='4',
-        max_depth='5',
-        num_round='100',
-        eval_metric="mlogloss",
-        min_child_weight='6',
-        subsample='0.8',
+            # Number of classes
     )
-    step_train = TrainingStep(
-        name="TrainModel",
-        estimator=xgb_train,
+    xgb_tuner = HyperparameterTuner(
+        estimator=xgb_estimator,
+        objective_metric_name="validation:mlogloss",
+        objective_type="Minimize",
+        hyperparameter_ranges={
+            "alpha": ContinuousParameter(0.01, 10, scaling_type="Logarithmic"),
+                # It can be used in case of very high dimensionality so that the algorithm runs faster when implemented.
+                # Increasing this value will make model more conservative.
+            "eta": ContinuousParameter(0.01, 0.2),
+                # It is the step size shrinkage used in update to prevent overfitting.
+                # After each boosting step, we can directly get the weights of new features,
+                # and eta shrinks the feature weights to make the boosting process more conservative.
+            "gamma": ContinuousParameter(0.0, 0.5),
+                # A node is split only when the resulting split gives a positive reduction in the loss function.
+                # Gamma specifies the minimum loss reduction required to make a split.
+                # It makes the algorithm conservative. The values can vary depending on the loss function and should be tuned.
+            "min_child_weight": ContinuousParameter(1, 10),
+                # It defines the minimum sum of weights of all observations required in a child. It is used to control over-fitting.
+                # Higher values prevent a model from learning relations which might be highly specific to the particular sample selected for a tree.
+                # Too high values can lead to under-fitting. The larger min_child_weight is, the more conservative the algorithm will be.
+            "max_depth": IntegerParameter(3, 10),
+                # The maximum depth of a tree. It is used to control over-fitting as higher depth will allow model 
+                # to learn relations very specific to a particular sample.
+                # Increasing this value will make the model more complex and more likely to overfit.
+            "subsample": ContinuousParameter(0.5, 1),
+                # It denotes the fraction of observations to be randomly samples for each tree.
+                # Setting it to 0.5 means that XGBoost would randomly sample half of the training data prior to growing trees.
+                # This will prevent overfitting. Lower values make the algorithm more conservative and prevents overfitting 
+                # but too small values might lead to under-fitting.
+        },
+        max_jobs=10,
+        max_parallel_jobs=5,
+    )
+    step_tune = TuningStep(
+        name="Tuning",
+        tuner=xgb_tuner,
         inputs={
             "train": TrainingInput(
                 s3_data=path_data_train,
@@ -334,6 +373,21 @@ def get_pipeline(
             ),
         },
     )
+
+    # step_train = TrainingStep(
+    #     name="Training",
+    #     estimator=xgb_estimator,
+    #     inputs={
+    #         "train": TrainingInput(
+    #             s3_data=path_data_train,
+    #             content_type="text/csv",
+    #         ),
+    #         "validation": TrainingInput(
+    #             s3_data=path_data_validation,
+    #             content_type="text/csv",
+    #         ),
+    #     },
+    # )
 
     script_eval = ScriptProcessor(
         image_uri=image_uri,
@@ -359,11 +413,12 @@ def get_pipeline(
         ],
     )
     step_eval = ProcessingStep(
-        name="EvaluateModel",
+        name="Evaluating",
         processor=script_eval,
         inputs=[
             ProcessingInput(
-                source=step_train.properties.ModelArtifacts.S3ModelArtifacts,
+                # source=step_train.properties.ModelArtifacts.S3ModelArtifacts,
+                source=step_tune.get_top_model_s3_uri(top_k=0, s3_bucket=data_bucket, prefix="models"),
                 destination="/opt/ml/processing/model",
             ),
         ],
@@ -386,12 +441,13 @@ def get_pipeline(
         session=sagemaker_session,
     )
     step_lambda = LambdaStep(
-        name="DeployModel",
+        name="Deploying",
         lambda_func=lambda_func,
         inputs={
             "campaign": campaign_id,
             "model": model_id,
-            "artifact": step_train.properties.ModelArtifacts.S3ModelArtifacts,
+            # "artifact": step_train.properties.ModelArtifacts.S3ModelArtifacts,
+            "artifact": step_tune.get_top_model_s3_uri(top_k=0, s3_bucket=data_bucket, prefix="models"),
             "columns": path_preprocessed_columns,
             "classes": path_preprocessed_classes,
             "evaluation": path_evaluation,
@@ -407,7 +463,7 @@ def get_pipeline(
         right=0.4,
     )
     step_cond = ConditionStep(
-        name="CheckEvaluation",
+        name="Condition",
         conditions=[cond_lte],
         if_steps=[step_lambda],
         else_steps=[],
@@ -422,14 +478,14 @@ def get_pipeline(
             campaign_id,
             model_id,
         ],
-        steps=[step_prepare, step_process, step_train, step_eval, step_cond],
+        steps=[step_prepare, step_process, step_tune, step_eval, step_cond],
         sagemaker_session=sagemaker_session,
     )
     return pipeline
 
 
 if __name__ == '__main__':
-    sys.stdout.write('Generating a pipeline definition...')
+    sys.stdout.write('Generating a pipeline definition...\n')
     sys.stdout.flush()
 
     pipeline = get_pipeline(

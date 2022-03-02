@@ -192,7 +192,7 @@
                 },
                 "RoleArn": "arn:aws:iam::028812918682:role/realtime-predictions-sagemaker-pipeline"
             },
-            "Name": "PrepareData",
+            "Name": "Wrangling",
             "Type": "Processing"
         },
         {
@@ -310,9 +310,9 @@
                 "RoleArn": "arn:aws:iam::028812918682:role/realtime-predictions-sagemaker-pipeline"
             },
             "DependsOn": [
-                "PrepareData"
+                "Wrangling"
             ],
-            "Name": "PreprocessData",
+            "Name": "Preprocessing",
             "PropertyFiles": [
                 {
                     "FilePath": "classes.json",
@@ -324,107 +324,147 @@
         },
         {
             "Arguments": {
-                "AlgorithmSpecification": {
-                    "TrainingImage": "246618743249.dkr.ecr.us-west-2.amazonaws.com/sagemaker-xgboost:1.3-1",
-                    "TrainingInputMode": "File"
-                },
-                "HyperParameters": {
-                    "eta": "0.2",
-                    "eval_metric": "mlogloss",
-                    "gamma": "4",
-                    "max_depth": "5",
-                    "min_child_weight": "6",
-                    "num_class": {
-                        "Std:JsonGet": {
-                            "Path": "length_str",
-                            "PropertyFile": {
-                                "Get": "Steps.PreprocessData.PropertyFiles.ClassesMap"
-                            }
-                        }
+                "HyperParameterTuningJobConfig": {
+                    "HyperParameterTuningJobObjective": {
+                        "MetricName": "validation:mlogloss",
+                        "Type": "Minimize"
                     },
-                    "num_round": "100",
-                    "objective": "multi:softprob",
-                    "subsample": "0.8"
+                    "ParameterRanges": {
+                        "CategoricalParameterRanges": [],
+                        "ContinuousParameterRanges": [
+                            {
+                                "MaxValue": "10",
+                                "MinValue": "0.01",
+                                "Name": "alpha",
+                                "ScalingType": "Logarithmic"
+                            },
+                            {
+                                "MaxValue": "0.2",
+                                "MinValue": "0.01",
+                                "Name": "eta",
+                                "ScalingType": "Auto"
+                            },
+                            {
+                                "MaxValue": "0.5",
+                                "MinValue": "0.0",
+                                "Name": "gamma",
+                                "ScalingType": "Auto"
+                            },
+                            {
+                                "MaxValue": "10",
+                                "MinValue": "1",
+                                "Name": "min_child_weight",
+                                "ScalingType": "Auto"
+                            },
+                            {
+                                "MaxValue": "1",
+                                "MinValue": "0.5",
+                                "Name": "subsample",
+                                "ScalingType": "Auto"
+                            }
+                        ],
+                        "IntegerParameterRanges": [
+                            {
+                                "MaxValue": "10",
+                                "MinValue": "3",
+                                "Name": "max_depth",
+                                "ScalingType": "Auto"
+                            }
+                        ]
+                    },
+                    "ResourceLimits": {
+                        "MaxNumberOfTrainingJobs": 10,
+                        "MaxParallelTrainingJobs": 5
+                    },
+                    "Strategy": "Bayesian",
+                    "TrainingJobEarlyStoppingType": "Off"
                 },
-                "InputDataConfig": [
-                    {
-                        "ChannelName": "train",
-                        "ContentType": "text/csv",
-                        "DataSource": {
-                            "S3DataSource": {
-                                "S3DataDistributionType": "FullyReplicated",
-                                "S3DataType": "S3Prefix",
-                                "S3Uri": {
-                                    "Std:Join": {
-                                        "On": "/",
-                                        "Values": [
-                                            "s3:/",
-                                            "realtime-predictions-data",
-                                            "prepared",
-                                            {
-                                                "Get": "Execution.PipelineExecutionId"
-                                            },
-                                            "train"
-                                        ]
+                "TrainingJobDefinition": {
+                    "AlgorithmSpecification": {
+                        "TrainingImage": "246618743249.dkr.ecr.us-west-2.amazonaws.com/sagemaker-xgboost:1.3-1",
+                        "TrainingInputMode": "File"
+                    },
+                    "InputDataConfig": [
+                        {
+                            "ChannelName": "train",
+                            "ContentType": "text/csv",
+                            "DataSource": {
+                                "S3DataSource": {
+                                    "S3DataDistributionType": "FullyReplicated",
+                                    "S3DataType": "S3Prefix",
+                                    "S3Uri": {
+                                        "Std:Join": {
+                                            "On": "/",
+                                            "Values": [
+                                                "s3:/",
+                                                "realtime-predictions-data",
+                                                "prepared",
+                                                {
+                                                    "Get": "Execution.PipelineExecutionId"
+                                                },
+                                                "train"
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "ChannelName": "validation",
+                            "ContentType": "text/csv",
+                            "DataSource": {
+                                "S3DataSource": {
+                                    "S3DataDistributionType": "FullyReplicated",
+                                    "S3DataType": "S3Prefix",
+                                    "S3Uri": {
+                                        "Std:Join": {
+                                            "On": "/",
+                                            "Values": [
+                                                "s3:/",
+                                                "realtime-predictions-data",
+                                                "prepared",
+                                                {
+                                                    "Get": "Execution.PipelineExecutionId"
+                                                },
+                                                "validation"
+                                            ]
+                                        }
                                     }
                                 }
                             }
                         }
+                    ],
+                    "OutputDataConfig": {
+                        "S3OutputPath": "s3://realtime-predictions-data/models"
                     },
-                    {
-                        "ChannelName": "validation",
-                        "ContentType": "text/csv",
-                        "DataSource": {
-                            "S3DataSource": {
-                                "S3DataDistributionType": "FullyReplicated",
-                                "S3DataType": "S3Prefix",
-                                "S3Uri": {
-                                    "Std:Join": {
-                                        "On": "/",
-                                        "Values": [
-                                            "s3:/",
-                                            "realtime-predictions-data",
-                                            "prepared",
-                                            {
-                                                "Get": "Execution.PipelineExecutionId"
-                                            },
-                                            "validation"
-                                        ]
-                                    }
+                    "ResourceConfig": {
+                        "InstanceCount": 1,
+                        "InstanceType": {
+                            "Get": "Parameters.TrainingInstanceType"
+                        },
+                        "VolumeSizeInGB": 30
+                    },
+                    "RoleArn": "arn:aws:iam::028812918682:role/realtime-predictions-sagemaker-pipeline",
+                    "StaticHyperParameters": {
+                        "eval_metric": "mlogloss",
+                        "num_class": {
+                            "Std:JsonGet": {
+                                "Path": "length_str",
+                                "PropertyFile": {
+                                    "Get": "Steps.Preprocessing.PropertyFiles.ClassesMap"
                                 }
                             }
-                        }
-                    }
-                ],
-                "OutputDataConfig": {
-                    "S3OutputPath": "s3://realtime-predictions-data/models"
-                },
-                "ProfilerConfig": {
-                    "S3OutputPath": "s3://realtime-predictions-data/models"
-                },
-                "ProfilerRuleConfigurations": [
-                    {
-                        "RuleConfigurationName": "ProfilerReport-1646134307",
-                        "RuleEvaluatorImage": "895741380848.dkr.ecr.us-west-2.amazonaws.com/sagemaker-debugger-rules:latest",
-                        "RuleParameters": {
-                            "rule_to_invoke": "ProfilerReport"
-                        }
-                    }
-                ],
-                "ResourceConfig": {
-                    "InstanceCount": 1,
-                    "InstanceType": {
-                        "Get": "Parameters.TrainingInstanceType"
+                        },
+                        "num_round": "100",
+                        "objective": "multi:softprob"
                     },
-                    "VolumeSizeInGB": 30
-                },
-                "RoleArn": "arn:aws:iam::028812918682:role/realtime-predictions-sagemaker-pipeline",
-                "StoppingCondition": {
-                    "MaxRuntimeInSeconds": 86400
+                    "StoppingCondition": {
+                        "MaxRuntimeInSeconds": 86400
+                    }
                 }
             },
-            "Name": "TrainModel",
-            "Type": "Training"
+            "Name": "Tuning",
+            "Type": "Tuning"
         },
         {
             "Arguments": {
@@ -463,7 +503,18 @@
                             "S3DataType": "S3Prefix",
                             "S3InputMode": "File",
                             "S3Uri": {
-                                "Get": "Steps.TrainModel.ModelArtifacts.S3ModelArtifacts"
+                                "Std:Join": {
+                                    "On": "/",
+                                    "Values": [
+                                        "s3:/",
+                                        "realtime-predictions-data",
+                                        "models",
+                                        {
+                                            "Get": "Steps.Tuning.TrainingJobSummaries[0].TrainingJobName"
+                                        },
+                                        "output/model.tar.gz"
+                                    ]
+                                }
                             }
                         }
                     },
@@ -516,7 +567,7 @@
                 },
                 "RoleArn": "arn:aws:iam::028812918682:role/realtime-predictions-sagemaker-pipeline"
             },
-            "Name": "EvaluateModel",
+            "Name": "Evaluating",
             "PropertyFiles": [
                 {
                     "FilePath": "evaluation.json",
@@ -534,7 +585,7 @@
                             "Std:JsonGet": {
                                 "Path": "regression_metrics.hamming_loss.value",
                                 "PropertyFile": {
-                                    "Get": "Steps.EvaluateModel.PropertyFiles.EvaluationReport"
+                                    "Get": "Steps.Evaluating.PropertyFiles.EvaluationReport"
                                 }
                             }
                         },
@@ -547,7 +598,18 @@
                     {
                         "Arguments": {
                             "artifact": {
-                                "Get": "Steps.TrainModel.ModelArtifacts.S3ModelArtifacts"
+                                "Std:Join": {
+                                    "On": "/",
+                                    "Values": [
+                                        "s3:/",
+                                        "realtime-predictions-data",
+                                        "models",
+                                        {
+                                            "Get": "Steps.Tuning.TrainingJobSummaries[0].TrainingJobName"
+                                        },
+                                        "output/model.tar.gz"
+                                    ]
+                                }
                             },
                             "campaign": {
                                 "Get": "Parameters.CampaignID"
@@ -598,13 +660,13 @@
                             }
                         },
                         "FunctionArn": "arn:aws:lambda:us-west-2:028812918682:function:realtime-predictions-production-deployment",
-                        "Name": "DeployModel",
+                        "Name": "Deploying",
                         "OutputParameters": [],
                         "Type": "Lambda"
                     }
                 ]
             },
-            "Name": "CheckEvaluation",
+            "Name": "Condition",
             "Type": "Condition"
         }
     ],

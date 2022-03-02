@@ -4,6 +4,7 @@ export default {
   name: 'realtime-predictions',
   stage: 'production',
   region: 'us-west-2',
+  bucket_data: 'realtime-predictions-data',
   bucket_model: 'realtime-predictions-model',
   table_model: 'realtime-predictions-production-model',
   sagemaker_endpoint: 'realtime-predictions-runtime',
